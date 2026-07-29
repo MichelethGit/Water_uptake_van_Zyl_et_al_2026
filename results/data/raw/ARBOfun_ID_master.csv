@@ -1,0 +1,501 @@
+grid_location,tree_ID,species,species_code,genus,clade,evergreen,VIT_tree,block,planting_year,grid_row,grid_col,taxon_name_WCVP,species_name_new,taxon_authors_WCVP
+10_1,86,Larix decidua,Lar_dec,Larix,gymnosperm,FALSE,TRUE,C,2012,10,1,Larix decidua,FALSE,Mill.
+10_10,91,Salix cinerea,Sal_cin,Salix,angiosperm,FALSE,FALSE,E,2012,10,10,Salix cinerea,FALSE,L.
+10_11,92,Pseudotsuga menziesii,Pse_men,Pseudotsuga,gymnosperm,TRUE,FALSE,E,2012,10,11,Pseudotsuga menziesii,FALSE,(Mirb.) Franco
+10_12,93,Acer campestre,Ace_cam,Acer,angiosperm,FALSE,FALSE,E,2012,10,12,Acer campestre,FALSE,L.
+10_13,94,Sorbus intermedia,Sor_int,Sorbus,angiosperm,FALSE,FALSE,E,2012,10,13,Scandosorbus intermedia,TRUE,(Ehrh.) Sennikov
+10_14,544,Populus nigra,Pop_nig,Populus,angiosperm,FALSE,FALSE,E,2022,10,14,Populus nigra,FALSE,L.
+10_2,408,Cedrus libani,Ced_lib,Cedrus,gymnosperm,TRUE,FALSE,C,2014,10,2,Cedrus libani,FALSE,A.Rich.
+10_3,409,Tilia cordata,Til_cor,Tilia,angiosperm,FALSE,TRUE,C,2014,10,3,Tilia cordata,FALSE,Mill.
+10_4,87,Pseudotsuga menziesii,Pse_men,Pseudotsuga,gymnosperm,TRUE,TRUE,C,2012,10,4,Pseudotsuga menziesii,FALSE,(Mirb.) Franco
+10_5,410,Sambucus racemosa,Sam_rac,Sambucus,angiosperm,FALSE,FALSE,D,2014,10,5,Sambucus racemosa,FALSE,L.
+10_6,411,Acer platanoides,Ace_pla,Acer,angiosperm,FALSE,FALSE,D,2014,10,6,Acer platanoides,FALSE,L.
+10_7,89,Betula pubescens,Bet_pub,Betula,angiosperm,FALSE,FALSE,D,2012,10,7,Betula pubescens,FALSE,Ehrh.
+10_8,412,Euonymus europaeus,Euo_eur,Euonymus,angiosperm,FALSE,FALSE,D,2014,10,8,Euonymus europaeus,FALSE,L.
+10_9,90,Abies grandis,Abi_gra,Abies,gymnosperm,TRUE,FALSE,D,2012,10,9,Abies grandis,FALSE,(Douglas ex D.Don) Lindl.
+11_1,96,Pinus nigra,Pin_nig,Pinus,gymnosperm,TRUE,TRUE,C,2012,11,1,Pinus nigra,FALSE,J.F.Arnold
+11_10,103,Pinus strobus,Pin_str,Pinus,gymnosperm,TRUE,FALSE,E,2012,11,10,Pinus strobus,FALSE,L.
+11_11,104,Acer platanoides,Ace_pla,Acer,angiosperm,FALSE,FALSE,E,2012,11,11,Acer platanoides,FALSE,L.
+11_12,105,Sorbus aucuparia,Sor_auc,Sorbus,angiosperm,FALSE,FALSE,E,2012,11,12,Sorbus aucuparia,FALSE,L.
+11_13,106,Taxus baccata,Tax_bac,Taxus,gymnosperm,TRUE,FALSE,E,2012,11,13,Taxus baccata,FALSE,L.
+11_14,107,Juglans nigra,Jug_nig,Juglans,angiosperm,FALSE,FALSE,E,2012,11,14,Juglans nigra,FALSE,L.
+11_2,97,Alnus glutinosa,Aln_glu,Alnus,angiosperm,FALSE,TRUE,C,2012,11,2,Alnus glutinosa,FALSE,(L.) Gaertn.
+11_3,98,Corylus colurna,Cor_col,Corylus,angiosperm,FALSE,TRUE,C,2012,11,3,Corylus colurna,FALSE,L.
+11_4,414,Abies balsamea,Abi_bal,Abies,gymnosperm,TRUE,FALSE,C,2014,11,4,Abies balsamea,FALSE,(L.) Mill.
+11_5,99,Pinus contorta,Pin_con,Pinus,gymnosperm,TRUE,FALSE,D,2012,11,5,Pinus contorta,FALSE,Douglas ex Loudon
+11_6,100,Acer negundo,Ace_neg,Acer,angiosperm,FALSE,FALSE,D,2012,11,6,Acer negundo,FALSE,L.
+11_7,415,Celtis australis,Cel_aus,Celtis,angiosperm,FALSE,FALSE,D,2014,11,7,Celtis australis,FALSE,L.
+11_8,101,Pinus cembra,Pin_cem,Pinus,gymnosperm,TRUE,FALSE,D,2012,11,8,Pinus cembra,FALSE,L.
+11_9,102,Alnus incana,Aln_inc,Alnus,angiosperm,FALSE,FALSE,D,2012,11,9,Alnus incana,FALSE,(L.) Moench
+12_1,108,Acer platanoides,Ace_pla,Acer,angiosperm,FALSE,TRUE,C,2012,12,1,Acer platanoides,FALSE,L.
+12_10,115,Larix decidua,Lar_dec,Larix,gymnosperm,FALSE,FALSE,E,2012,12,10,Larix decidua,FALSE,Mill.
+12_11,418,Juniperus communis,Jun_com,Juniperus,gymnosperm,TRUE,FALSE,E,2014,12,11,Juniperus communis,FALSE,L.
+12_12,419,Salix viminalis,Sal_vim,Salix,angiosperm,FALSE,FALSE,E,2014,12,12,Salix viminalis,FALSE,L.
+12_13,117,Salix alba,Sal_alb,Salix,angiosperm,FALSE,FALSE,E,2012,12,13,Salix alba,FALSE,L.
+12_14,118,Quercus rubra,Que_rub,Quercus,angiosperm,FALSE,FALSE,E,2012,12,14,Quercus rubra,FALSE,L.
+12_2,109,Abies alba,Abi_alb,Abies,gymnosperm,TRUE,TRUE,C,2012,12,2,Abies alba,FALSE,Mill.
+12_3,110,Thuja occidentalis,Thu_occ,Thuja,gymnosperm,TRUE,TRUE,C,2012,12,3,Thuja occidentalis,FALSE,L.
+12_4,111,Pinus mugo,Pin_mug,Pinus,gymnosperm,TRUE,FALSE,C,2012,12,4,Pinus mugo,FALSE,Turra
+12_5,416,Pterocarya fraxinifolia,Pte_fra,Pterocarya,angiosperm,FALSE,FALSE,D,2014,12,5,Pterocarya fraxinifolia,FALSE,(Poir.) Spach
+12_6,112,Cedrus deodara,Ced_deo,Cedrus,gymnosperm,TRUE,TRUE,D,2012,12,6,Cedrus deodara,FALSE,(Roxb. ex D.Don) G.Don
+12_7,113,Acer saccharinum,Ace_sac,Acer,angiosperm,FALSE,FALSE,D,2012,12,7,Acer saccharinum,FALSE,L.
+12_8,417,Mespilus germanica,Mes_ger,Mespilus,angiosperm,FALSE,FALSE,D,2014,12,8,Crataegus germanica,TRUE,(L.) Kuntze
+12_9,114,Alnus glutinosa,Aln_glu,Alnus,angiosperm,FALSE,FALSE,D,2012,12,9,Alnus glutinosa,FALSE,(L.) Gaertn.
+13_1,119,Populus nigra,Pop_nig,Populus,angiosperm,FALSE,FALSE,C,2012,13,1,Populus nigra,FALSE,L.
+13_10,125,Fraxinus excelsior,Fra_exc,Fraxinus,angiosperm,FALSE,FALSE,E,2012,13,10,Fraxinus excelsior,FALSE,L.
+13_11,126,Crataegus laevigata,Cra_lae,Crataegus,angiosperm,FALSE,FALSE,E,2012,13,11,Crataegus laevigata,FALSE,(Poir.) DC.
+13_12,127,Prunus padus,Pru_pad,Prunus,angiosperm,FALSE,FALSE,E,2012,13,12,Prunus padus,FALSE,L.
+13_13,423,Quercus pubescens,Que_pub,Quercus,angiosperm,FALSE,FALSE,E,2014,13,13,Quercus pubescens,FALSE,Willd.
+13_14,424,Pinus mugo,Pin_mug,Pinus,gymnosperm,TRUE,FALSE,E,2014,13,14,Pinus mugo,FALSE,Turra
+13_2,420,Thuja plicata,Thu_pli,Thuja,gymnosperm,TRUE,FALSE,C,2014,13,2,Thuja plicata,FALSE,Donn ex D.Don
+13_3,421,Zelkova carpinifolia,Zel_car,Zelkova,angiosperm,FALSE,FALSE,C,BOGA2014/2017,13,3,Zelkova carpinifolia,FALSE,(Pall.) K.Koch
+13_4,120,Sorbus domestica,Sor_dom,Sorbus,angiosperm,FALSE,TRUE,C,2012,13,4,Cormus domestica,TRUE,(L.) Spach
+13_5,121,Salix fragilis,Sal_fra,Salix,angiosperm,FALSE,TRUE,D,2012,13,5,Salix fragilis,FALSE,L.
+13_6,122,Pyrus communis,Pyr_com,Pyrus,angiosperm,FALSE,FALSE,D,2012,13,6,Pyrus communis,FALSE,L.
+13_7,123,Sorbus aucuparia,Sor_auc,Sorbus,angiosperm,FALSE,TRUE,D,2012,13,7,Sorbus aucuparia,FALSE,L.
+13_8,124,Populus nigra,Pop_nig,Populus,angiosperm,FALSE,FALSE,D,2012,13,8,Populus nigra,FALSE,L.
+13_9,422,Celtis occidentalis,Cel_occ,Celtis,angiosperm,FALSE,FALSE,D,2014,13,9,Celtis occidentalis,FALSE,L.
+14_1,545,Abies nordmanniana,Abi_nor,Abies,gymnosperm,TRUE,FALSE,C,2022,14,1,Abies nordmanniana,FALSE,(Steven) Spach
+14_10,547,Morus nigra,Mor_nig,Morus,angiosperm,FALSE,FALSE,E,2022,14,10,Morus nigra,FALSE,L.
+14_11,133,Prunus serotina,Pru_ser,Prunus,angiosperm,FALSE,FALSE,E,2012,14,11,Prunus serotina,FALSE,Ehrh.
+14_12,134,Pinus sylvestris,Pin_syl,Pinus,gymnosperm,TRUE,FALSE,E,2012,14,12,Pinus sylvestris,FALSE,L.
+14_13,431,Gleditsia triacanthos,Gle_tri,Gleditsia,angiosperm,FALSE,FALSE,E,2014,14,13,Gleditsia triacanthos,FALSE,L.
+14_14,135,Salix triandra,Sal_tri,Salix,angiosperm,FALSE,FALSE,E,2012,14,14,Salix triandra,FALSE,L.
+14_2,426,Gleditsia triacanthos,Gle_tri,Gleditsia,angiosperm,FALSE,FALSE,C,2014,14,2,Gleditsia triacanthos,FALSE,L.
+14_3,609,Fagus orientalis,Fag_ori,Fagus,angiosperm,FALSE,FALSE,C,2025,14,3,Fagus orientalis,FALSE,Lipsky
+14_4,129,Robinia pseudoacacia,Rob_pse,Robinia,angiosperm,FALSE,TRUE,C,2012,14,4,Robinia pseudoacacia,FALSE,L.
+14_5,130,Sorbus intermedia,Sor_int,Sorbus,angiosperm,FALSE,FALSE,D,2012,14,5,Scandosorbus intermedia,TRUE,(Ehrh.) Sennikov
+14_6,428,Platanus acerifolia,Pla_ace,Platanus,angiosperm,FALSE,TRUE,D,2014,14,6,Platanus hispanica,TRUE,Mill. ex Münchh.
+14_7,546,Ostrya carpinifolia,Ost_car,Ostrya,angiosperm,FALSE,FALSE,D,2022,14,7,Ostrya carpinifolia,FALSE,Scop.
+14_8,132,Salix triandra,Sal_tri,Salix,angiosperm,FALSE,FALSE,D,2012,14,8,Salix triandra,FALSE,L.
+14_9,606,Fagus orientalis,Fag_ori,Fagus,angiosperm,FALSE,FALSE,D,2025,14,9,Fagus orientalis,FALSE,Lipsky
+15_1,136,Picea glauca,Pic_gla,Picea,gymnosperm,TRUE,FALSE,C,2012,15,1,Picea laxa,TRUE,(Münchh.) Sarg.
+15_10,434,Tilia platyphyllos,Til_pla,Tilia,angiosperm,FALSE,FALSE,E,2014,15,10,Tilia platyphyllos,FALSE,Scop.
+15_11,143,Robinia pseudoacacia,Rob_pse,Robinia,angiosperm,FALSE,FALSE,E,2012,15,11,Robinia pseudoacacia,FALSE,L.
+15_12,435,Thuja plicata,Thu_pli,Thuja,gymnosperm,TRUE,FALSE,E,2014,15,12,Thuja plicata,FALSE,Donn ex D.Don
+15_13,144,Juglans regia,Jug_reg,Juglans,angiosperm,FALSE,FALSE,E,2012,15,13,Juglans regia,FALSE,L.
+15_2,137,Betula pendula,Bet_pen,Betula,angiosperm,FALSE,TRUE,C,2012,15,2,Betula pendula,FALSE,Roth
+15_3,432,Celtis occidentalis,Cel_occ,Celtis,angiosperm,FALSE,FALSE,C,2014,15,3,Celtis occidentalis,FALSE,L.
+15_4,138,Cedrus deodara,Ced_deo,Cedrus,gymnosperm,TRUE,TRUE,C,2012,15,4,Cedrus deodara,FALSE,(Roxb. ex D.Don) G.Don
+15_5,139,Ulmus laevis,Ulm_lae,Ulmus,angiosperm,FALSE,TRUE,D,2012,15,5,Ulmus laevis,FALSE,Pall.
+15_6,140,Taxus baccata,Tax_bac,Taxus,gymnosperm,TRUE,TRUE,D,2012,15,6,Taxus baccata,FALSE,L.
+15_7,433,Tsuga heterophylla,Tsu_het,Tsuga,gymnosperm,TRUE,FALSE,D,2014,15,7,Tsuga heterophylla,FALSE,(Raf.) Sarg.
+15_8,141,Ulmus minor,Ulm_min,Ulmus,angiosperm,FALSE,TRUE,D,2012,15,8,Ulmus minor,FALSE,Mill.
+15_9,142,Malus sylvestris,Mal_syl,Malus,angiosperm,FALSE,FALSE,D,2012,15,9,Malus sylvestris,FALSE,(L.) Mill.
+16_1,436,Mespilus germanica,Mes_ger,Mespilus,angiosperm,FALSE,FALSE,C,2014,16,1,Crataegus germanica,TRUE,(L.) Kuntze
+16_10,151,Sorbus torminalis,Sor_tor,Sorbus,angiosperm,FALSE,FALSE,E,2012,16,10,Torminalis glaberrima,TRUE,(Gand.) Sennikov & Kurtto
+16_11,152,Pinus cembra,Pin_cem,Pinus,gymnosperm,TRUE,FALSE,E,2012,16,11,Pinus cembra,FALSE,L.
+16_12,153,Abies alba,Abi_alb,Abies,gymnosperm,TRUE,FALSE,E,2012,16,12,Abies alba,FALSE,Mill.
+16_13,154,Salix fragilis,Sal_fra,Salix,angiosperm,FALSE,FALSE,E,2012,16,13,Salix fragilis,FALSE,L.
+16_2,145,Ulmus laevis,Ulm_lae,Ulmus,angiosperm,FALSE,TRUE,C,2012,16,2,Ulmus laevis,FALSE,Pall.
+16_3,437,Morus nigra,Mor_nig,Morus,angiosperm,FALSE,FALSE,C,2014,16,3,Morus nigra,FALSE,L.
+16_4,146,Sorbus intermedia,Sor_int,Sorbus,angiosperm,FALSE,FALSE,C,2012,16,4,Scandosorbus intermedia,TRUE,(Ehrh.) Sennikov
+16_5,147,Fraxinus ornus,Fra_orn,Fraxinus,angiosperm,FALSE,FALSE,D,2012,16,5,Fraxinus ornus,FALSE,L.
+16_6,148,Sorbus aria,Sor_ari,Sorbus,angiosperm,FALSE,FALSE,D,2012,16,6,Aria edulis,TRUE,(Willd.) M.Roem.
+16_7,149,Fagus sylvatica,Fag_syl,Fagus,angiosperm,FALSE,FALSE,D,2012,16,7,Fagus sylvatica,FALSE,L.
+16_8,438,Tilia cordata,Til_cor,Tilia,angiosperm,FALSE,FALSE,D,2014,16,8,Tilia cordata,FALSE,Mill.
+16_9,150,Quercus rubra,Que_rub,Quercus,angiosperm,FALSE,FALSE,D,2012,16,9,Quercus rubra,FALSE,L.
+17_1,155,Fagus sylvatica,Fag_syl,Fagus,angiosperm,FALSE,TRUE,C,2012,17,1,Fagus sylvatica,FALSE,L.
+17_10,161,Pyrus communis,Pyr_com,Pyrus,angiosperm,FALSE,FALSE,E,2012,17,10,Pyrus communis,FALSE,L.
+17_11,442,Picea abies,Pic_abi,Picea,gymnosperm,TRUE,FALSE,E,2014,17,11,Picea abies,FALSE,(L.) H.Karst.
+17_12,549,Fraxinus pennsylvanica,Fra_pen,Fraxinus,angiosperm,FALSE,FALSE,E,2022,17,12,Fraxinus pennsylvanica,FALSE,Marshall
+17_13,162,Acer pseudoplatanus,Ace_pse,Acer,angiosperm,FALSE,FALSE,E,2012,17,13,Acer pseudoplatanus,FALSE,L.
+17_2,156,Quercus robur,Que_rob,Quercus,angiosperm,FALSE,TRUE,C,2012,17,2,Quercus robur,FALSE,L.
+17_3,548,Pyrus communis,Pyr_com,Pyrus,angiosperm,FALSE,FALSE,C,2022,17,3,Pyrus communis,FALSE,L.
+17_4,158,Acer negundo,Ace_neg,Acer,angiosperm,FALSE,TRUE,C,2012,17,4,Acer negundo,FALSE,L.
+17_5,159,Fraxinus excelsior,Fra_exc,Fraxinus,angiosperm,FALSE,TRUE,D,2012,17,5,Fraxinus excelsior,FALSE,L.
+17_6,439,Picea abies,Pic_abi,Picea,gymnosperm,TRUE,FALSE,D,2014,17,6,Picea abies,FALSE,(L.) H.Karst.
+17_7,440,Abies balsamea,Abi_bal,Abies,gymnosperm,TRUE,FALSE,D,2014,17,7,Abies balsamea,FALSE,(L.) Mill.
+17_8,441,Thuja plicata,Thu_pli,Thuja,gymnosperm,TRUE,FALSE,D,2014,17,8,Thuja plicata,FALSE,Donn ex D.Don
+17_9,160,Crataegus monogyna,Cra_mon,Crataegus,angiosperm,FALSE,FALSE,D,2012,17,9,Crataegus monogyna,FALSE,Jacq.
+18_1,163,Salix triandra,Sal_tri,Salix,angiosperm,FALSE,FALSE,C,2012,18,1,Salix triandra,FALSE,L.
+18_10,170,Ulmus laevis,Ulm_lae,Ulmus,angiosperm,FALSE,TRUE,E,2012,18,10,Ulmus laevis,FALSE,Pall.
+18_11,171,Quercus cerris,Que_cer,Quercus,angiosperm,FALSE,FALSE,E,2012,18,11,Quercus cerris,FALSE,L.
+18_12,593,Tsuga canadensis,Tsu_can,Tsuga,gymnosperm,TRUE,FALSE,E,2025,18,12,Tsuga canadensis,FALSE,(L.) Carrière
+18_13,553,Quercus frainetto,Que_fra,Quercus,angiosperm,FALSE,FALSE,E,2022,18,13,Quercus frainetto,FALSE,Ten.
+18_2,164,Tsuga canadensis,Tsu_can,Tsuga,gymnosperm,TRUE,TRUE,C,2012,18,2,Tsuga canadensis,FALSE,(L.) Carrière
+18_3,550,Quercus petraea,Que_pet,Quercus,angiosperm,FALSE,FALSE,C,2022,18,3,Quercus petraea,FALSE,(Matt.) Liebl.
+18_4,444,Picea pungens,Pic_pun,Picea,gymnosperm,TRUE,FALSE,C,2014,18,4,Picea pungens,FALSE,Engelm.
+18_5,551,Quercus robur,Que_rob,Quercus,angiosperm,FALSE,FALSE,D,2022,18,5,Quercus robur,FALSE,L.
+18_6,167,Pseudotsuga menziesii,Pse_men,Pseudotsuga,gymnosperm,TRUE,FALSE,D,2012,18,6,Pseudotsuga menziesii,FALSE,(Mirb.) Franco
+18_7,445,Morus nigra,Mor_nig,Morus,angiosperm,FALSE,FALSE,D,2014,18,7,Morus nigra,FALSE,L.
+18_8,168,Betula pendula,Bet_pen,Betula,angiosperm,FALSE,FALSE,D,2012,18,8,Betula pendula,FALSE,Roth
+18_9,169,Salix cinerea,Sal_cin,Salix,angiosperm,FALSE,FALSE,D,2012,18,9,Salix cinerea,FALSE,L.
+19_1,173,Populus tremula,Pop_tre,Populus,angiosperm,FALSE,TRUE,C,2012,19,1,Populus tremula,FALSE,L.
+19_10,179,Salix caprea,Sal_cap,Salix,angiosperm,FALSE,FALSE,E,2012,19,10,Salix caprea,FALSE,L.
+19_11,180,Alnus glutinosa,Aln_glu,Alnus,angiosperm,FALSE,FALSE,E,2012,19,11,Alnus glutinosa,FALSE,(L.) Gaertn.
+19_12,447,Acer monspessulanum,Ace_mon,Acer,angiosperm,FALSE,FALSE,E,2014,19,12,Acer monspessulanum,FALSE,L.
+19_13,182,Picea sitchensis,Pic_sit,Picea,gymnosperm,TRUE,FALSE,E,2012,19,13,Picea sitchensis,FALSE,(Bong.) Carrière
+19_2,174,Fraxinus ornus,Fra_orn,Fraxinus,angiosperm,FALSE,FALSE,C,2012,19,2,Fraxinus ornus,FALSE,L.
+19_3,175,Acer pseudoplatanus,Ace_pse,Acer,angiosperm,FALSE,TRUE,C,2012,19,3,Acer pseudoplatanus,FALSE,L.
+19_4,176,Juniperus communis,Jun_com,Juniperus,gymnosperm,TRUE,FALSE,C,2012,19,4,Juniperus communis,FALSE,L.
+19_5,177,Prunus serotina,Pru_ser,Prunus,angiosperm,FALSE,FALSE,D,2012,19,5,Prunus serotina,FALSE,Ehrh.
+19_9,178,Pinus ponderosa,Pin_pon,Pinus,gymnosperm,TRUE,FALSE,D,2012,19,9,Pinus ponderosa,FALSE,Douglas ex C.Lawson
+1_1,356,Sambucus nigra,Sam_nig,Sambucus,angiosperm,FALSE,FALSE,C,2014,1,1,Sambucus nigra,FALSE,L.
+1_10,530,Sorbus aria,Sor_ari,Sorbus,angiosperm,FALSE,FALSE,E,2022,1,10,Aria edulis,TRUE,(Willd.) M.Roem.
+1_11,361,Nyssa sylvatica,Nys_syl,Nyssa,angiosperm,FALSE,FALSE,E,2014,1,11,Nyssa sylvatica,FALSE,Marshall
+1_12,362,Tsuga heterophylla,Tsu_het,Tsuga,gymnosperm,TRUE,FALSE,E,2014,1,12,Tsuga heterophylla,FALSE,(Raf.) Sarg.
+1_13,531,Malus sylvestris,Mal_syl,Malus,angiosperm,FALSE,FALSE,E,2022,1,13,Malus sylvestris,FALSE,(L.) Mill.
+1_14,364,Abies balsamea,Abi_bal,Abies,gymnosperm,TRUE,FALSE,E,2014,1,14,Abies balsamea,FALSE,(L.) Mill.
+1_2,529,Salix pentandra,Sal_pen,Salix,angiosperm,FALSE,FALSE,C,2022,1,2,Salix pentandra,FALSE,L.
+1_3,357,Platanus acerifolia,Pla_ace,Platanus,angiosperm,FALSE,TRUE,C,2014,1,3,Platanus hispanica,TRUE,Mill. ex Münchh.
+1_4,2,Prunus padus,Pru_pad,Prunus,angiosperm,FALSE,FALSE,C,2012,1,4,Prunus padus,FALSE,L.
+1_5,3,Pinus mugo,Pin_mug,Pinus,gymnosperm,TRUE,FALSE,D,2012,1,5,Pinus mugo,FALSE,Turra
+1_6,358,Quercus pubescens,Que_pub,Quercus,angiosperm,FALSE,FALSE,D,2014,1,6,Quercus pubescens,FALSE,Willd.
+1_7,4,Morus alba,Mor_alb,Morus,angiosperm,FALSE,FALSE,D,2012,1,7,Morus alba,FALSE,L.
+1_8,581,Salix alba,Sal_alb,Salix,angiosperm,FALSE,FALSE,D,2025,1,8,Salix alba,FALSE,L.
+1_9,359,Frangula alnus,Fra_aln,Frangula,angiosperm,FALSE,FALSE,D,2014,1,9,Frangula alnus,FALSE,Mill.
+20_1,183,Ulmus minor,Ulm_min,Ulmus,angiosperm,FALSE,TRUE,C,2012,20,1,Ulmus minor,FALSE,Mill.
+20_2,184,Malus sylvestris,Mal_syl,Malus,angiosperm,FALSE,FALSE,C,2012,20,2,Malus sylvestris,FALSE,(L.) Mill.
+20_3,185,Crataegus monogyna,Cra_mon,Crataegus,angiosperm,FALSE,FALSE,C,2012,20,3,Crataegus monogyna,FALSE,Jacq.
+20_4,186,Prunus avium,Pru_avi,Prunus,angiosperm,FALSE,TRUE,C,2012,20,4,Prunus avium,FALSE,(L.) L.
+20_5,187,Picea sitchensis,Pic_sit,Picea,gymnosperm,TRUE,FALSE,D,2012,20,5,Picea sitchensis,FALSE,(Bong.) Carrière
+21_1,188,Salix cinerea,Sal_cin,Salix,angiosperm,FALSE,FALSE,C,2012,21,1,Salix cinerea,FALSE,L.
+21_10,193,Pinus nigra,Pin_nig,Pinus,gymnosperm,TRUE,FALSE,E,2012,21,10,Pinus nigra,FALSE,J.F.Arnold
+21_11,194,Corylus colurna,Cor_col,Corylus,angiosperm,FALSE,FALSE,E,2012,21,11,Corylus colurna,FALSE,L.
+21_12,449,Tilia cordata,Til_cor,Tilia,angiosperm,FALSE,FALSE,E,2014,21,12,Tilia cordata,FALSE,Mill.
+21_13,195,Larix kaempferi,Lar_kae,Larix,gymnosperm,FALSE,FALSE,E,2012,21,13,Larix kaempferi,FALSE,(Lamb.) Carrière
+21_2,189,Juglans nigra,Jug_nig,Juglans,angiosperm,FALSE,FALSE,C,2012,21,2,Juglans nigra,FALSE,L.
+21_3,448,Fraxinus pennsylvanica,Fra_pen,Fraxinus,angiosperm,FALSE,FALSE,C,BOGA2014/2017,21,3,Fraxinus pennsylvanica,FALSE,Marshall
+21_4,190,Quercus cerris,Que_cer,Quercus,angiosperm,FALSE,FALSE,C,2012,21,4,Quercus cerris,FALSE,L.
+21_5,191,Castanea sativa,Cas_sat,Castanea,angiosperm,FALSE,FALSE,D,2012,21,5,Castanea sativa,FALSE,Mill.
+21_9,192,Pinus nigra,Pin_nig,Pinus,gymnosperm,TRUE,FALSE,D,2012,21,9,Pinus nigra,FALSE,J.F.Arnold
+22_1,196,Acer campestre,Ace_cam,Acer,angiosperm,FALSE,FALSE,C,2012,22,1,Acer campestre,FALSE,L.
+22_10,204,Alnus incana,Aln_inc,Alnus,angiosperm,FALSE,FALSE,E,2012,22,10,Alnus incana,FALSE,(L.) Moench
+22_11,205,Betula pendula,Bet_pen,Betula,angiosperm,FALSE,FALSE,E,2012,22,11,Betula pendula,FALSE,Roth
+22_12,206,Thuja occidentalis,Thu_occ,Thuja,gymnosperm,TRUE,FALSE,E,2012,22,12,Thuja occidentalis,FALSE,L.
+22_13,451,Prunus mahaleb,Pru_mah,Prunus,angiosperm,FALSE,FALSE,E,2014,22,13,Prunus mahaleb,FALSE,L.
+22_2,450,Sambucus racemosa,Sam_rac,Sambucus,angiosperm,FALSE,FALSE,C,2014,22,2,Sambucus racemosa,FALSE,L.
+22_3,197,Acer monspessulanum,Ace_mon,Acer,angiosperm,FALSE,FALSE,C,2012,22,3,Acer monspessulanum,FALSE,L.
+22_4,554,Ulmus glabra,Ulm_gla,Ulmus,angiosperm,FALSE,FALSE,C,2022,22,4,Ulmus glabra,FALSE,Huds.
+22_5,199,Juglans regia,Jug_reg,Juglans,angiosperm,FALSE,FALSE,D,2012,22,5,Juglans regia,FALSE,L.
+22_6,200,Sorbus torminalis,Sor_tor,Sorbus,angiosperm,FALSE,FALSE,D,2012,22,6,Torminalis glaberrima,TRUE,(Gand.) Sennikov & Kurtto
+22_7,201,Prunus avium,Pru_avi,Prunus,angiosperm,FALSE,FALSE,D,2012,22,7,Prunus avium,FALSE,(L.) L.
+22_8,202,Juglans nigra,Jug_nig,Juglans,angiosperm,FALSE,FALSE,D,2012,22,8,Juglans nigra,FALSE,L.
+22_9,594,Quercus petraea,Que_pet,Quercus,angiosperm,FALSE,FALSE,D,2025,22,9,Quercus petraea,FALSE,(Matt.) Liebl.
+23_1,595,Salix fragilis,Sal_fra,Salix,angiosperm,FALSE,FALSE,C,2025,23,1,Salix fragilis,FALSE,L.
+23_10,213,Ulmus minor,Ulm_min,Ulmus,angiosperm,FALSE,TRUE,B,2012,23,10,Ulmus minor,FALSE,Mill.
+23_11,214,Morus alba,Mor_alb,Morus,angiosperm,FALSE,FALSE,B,2012,23,11,Morus alba,FALSE,L.
+23_12,557,Pterocarya fraxinifolia,Pte_fra,Pterocarya,angiosperm,FALSE,FALSE,B,2022,23,12,Pterocarya fraxinifolia,FALSE,(Poir.) Spach
+23_13,558,Cedrus deodara,Ced_deo,Cedrus,gymnosperm,TRUE,FALSE,E,2022,23,13,Cedrus deodara,FALSE,(Roxb. ex D.Don) G.Don
+23_2,452,Euonymus europaeus,Euo_eur,Euonymus,angiosperm,FALSE,FALSE,C,2014,23,2,Euonymus europaeus,FALSE,L.
+23_3,208,Betula pubescens,Bet_pub,Betula,angiosperm,FALSE,FALSE,C,2012,23,3,Betula pubescens,FALSE,Ehrh.
+23_4,453,Corylus avellana,Cor_ave,Corylus,angiosperm,FALSE,FALSE,C,2014,23,4,Corylus avellana,FALSE,L.
+23_5,596,Quercus petraea,Que_pet,Quercus,angiosperm,FALSE,FALSE,A,2025,23,5,Quercus petraea,FALSE,(Matt.) Liebl.
+23_6,454,Picea pungens,Pic_pun,Picea,gymnosperm,TRUE,FALSE,A,2014,23,6,Picea pungens,FALSE,Engelm.
+23_7,210,Larix kaempferi,Lar_kae,Larix,gymnosperm,FALSE,FALSE,A,2012,23,7,Larix kaempferi,FALSE,(Lamb.) Carrière
+23_8,597,Acer opalus,Ace_opa,Acer,angiosperm,FALSE,FALSE,B,2025,23,8,Acer opalus,FALSE,Mill.
+23_9,212,Acer saccharinum,Ace_sac,Acer,angiosperm,FALSE,FALSE,B,2012,23,9,Acer saccharinum,FALSE,L.
+24_1,216,Pinus sylvestris,Pin_syl,Pinus,gymnosperm,TRUE,TRUE,C,2012,24,1,Pinus sylvestris,FALSE,L.
+24_10,463,Salix viminalis,Sal_vim,Salix,angiosperm,FALSE,FALSE,B,2014,24,10,Salix viminalis,FALSE,L.
+24_11,599,Frangula alnus,Fra_aln,Frangula,angiosperm,FALSE,FALSE,B,2025,24,11,Frangula alnus,FALSE,Mill.
+24_12,465,Celtis occidentalis,Cel_occ,Celtis,angiosperm,FALSE,FALSE,B,2014,24,12,Celtis occidentalis,FALSE,L.
+24_13,561,Tsuga heterophylla,Tsu_het,Tsuga,gymnosperm,TRUE,FALSE,B,2022,24,13,Tsuga heterophylla,FALSE,(Raf.) Sarg.
+24_2,458,Salix viminalis,Sal_vim,Salix,angiosperm,FALSE,FALSE,C,2014,24,2,Salix viminalis,FALSE,L.
+24_3,217,Castanea sativa,Cas_sat,Castanea,angiosperm,FALSE,TRUE,C,2012,24,3,Castanea sativa,FALSE,Mill.
+24_4,559,Celtis australis,Cel_aus,Celtis,angiosperm,FALSE,FALSE,C,2022,24,4,Celtis australis,FALSE,L.
+24_5,460,Salix viminalis,Sal_vim,Salix,angiosperm,FALSE,FALSE,A,2014,24,5,Salix viminalis,FALSE,L.
+24_6,218,Betula pubescens,Bet_pub,Betula,angiosperm,FALSE,FALSE,A,2012,24,6,Betula pubescens,FALSE,Ehrh.
+24_7,461,Frangula alnus,Fra_aln,Frangula,angiosperm,FALSE,FALSE,A,2014,24,7,Frangula alnus,FALSE,Mill.
+24_8,462,Acer monspessulanum,Ace_mon,Acer,angiosperm,FALSE,FALSE,B,2014,24,8,Acer monspessulanum,FALSE,L.
+24_9,220,Sorbus aucuparia,Sor_auc,Sorbus,angiosperm,FALSE,TRUE,B,2012,24,9,Sorbus aucuparia,FALSE,L.
+25_1,221,Aesculus hippocastanum,Aes_hip,Aesculus,angiosperm,FALSE,TRUE,C,2012,25,1,Aesculus hippocastanum,FALSE,L.
+25_10,226,Betula pubescens,Bet_pub,Betula,angiosperm,FALSE,FALSE,B,2012,25,10,Betula pubescens,FALSE,Ehrh.
+25_11,472,Sambucus racemosa,Sam_rac,Sambucus,angiosperm,FALSE,FALSE,B,2014,25,11,Sambucus racemosa,FALSE,L.
+25_12,227,Larix decidua,Lar_dec,Larix,gymnosperm,FALSE,TRUE,B,2012,25,12,Larix decidua,FALSE,Mill.
+25_13,228,Abies alba,Abi_alb,Abies,gymnosperm,TRUE,TRUE,B,2012,25,13,Abies alba,FALSE,Mill.
+25_2,467,Tilia tomentosa,Til_tom,Tilia,angiosperm,FALSE,TRUE,C,2014,25,2,Tilia tomentosa,FALSE,Moench
+25_3,468,Tsuga heterophylla,Tsu_het,Tsuga,gymnosperm,TRUE,FALSE,C,2014,25,3,Tsuga heterophylla,FALSE,(Raf.) Sarg.
+25_4,469,Pinus strobus,Pin_str,Pinus,gymnosperm,TRUE,FALSE,C,2014,25,4,Pinus strobus,FALSE,L.
+25_5,223,Picea sitchensis,Pic_sit,Picea,gymnosperm,TRUE,TRUE,A,2012,25,5,Picea sitchensis,FALSE,(Bong.) Carrière
+25_6,470,Celtis australis,Cel_aus,Celtis,angiosperm,FALSE,FALSE,A,2014,25,6,Celtis australis,FALSE,L.
+25_7,471,Celtis occidentalis,Cel_occ,Celtis,angiosperm,FALSE,FALSE,A,2014,25,7,Celtis occidentalis,FALSE,L.
+25_8,224,Pinus mugo,Pin_mug,Pinus,gymnosperm,TRUE,FALSE,B,2012,25,8,Pinus mugo,FALSE,Turra
+25_9,225,Salix cinerea,Sal_cin,Salix,angiosperm,FALSE,FALSE,B,2012,25,9,Salix cinerea,FALSE,L.
+26_1,229,Castanea sativa,Cas_sat,Castanea,angiosperm,FALSE,TRUE,A,2012,26,1,Castanea sativa,FALSE,Mill.
+26_10,236,Pinus ponderosa,Pin_pon,Pinus,gymnosperm,TRUE,TRUE,B,2012,26,10,Pinus ponderosa,FALSE,Douglas ex C.Lawson
+26_11,237,Picea glauca,Pic_gla,Picea,gymnosperm,TRUE,FALSE,B,2012,26,11,Picea laxa,TRUE,(Münchh.) Sarg.
+26_12,476,Crataegus monogyna,Cra_mon,Crataegus,angiosperm,FALSE,FALSE,B,2014,26,12,Crataegus monogyna,FALSE,Jacq.
+26_13,239,Larix kaempferi,Lar_kae,Larix,gymnosperm,FALSE,FALSE,B,2012,26,13,Larix kaempferi,FALSE,(Lamb.) Carrière
+26_2,230,Prunus padus,Pru_pad,Prunus,angiosperm,FALSE,FALSE,A,2012,26,2,Prunus padus,FALSE,L.
+26_3,473,Prunus mahaleb,Pru_mah,Prunus,angiosperm,FALSE,FALSE,A,2014,26,3,Prunus mahaleb,FALSE,L.
+26_4,231,Crataegus monogyna,Cra_mon,Crataegus,angiosperm,FALSE,FALSE,A,2012,26,4,Crataegus monogyna,FALSE,Jacq.
+26_5,232,Prunus avium,Pru_avi,Prunus,angiosperm,FALSE,TRUE,A,2012,26,5,Prunus avium,FALSE,(L.) L.
+26_6,600,Acer opalus,Ace_opa,Acer,angiosperm,FALSE,FALSE,A,2025,26,6,Acer opalus,FALSE,Mill.
+26_7,234,Ulmus laevis,Ulm_lae,Ulmus,angiosperm,FALSE,FALSE,A,2012,26,7,Ulmus laevis,FALSE,Pall.
+26_8,235,Sorbus torminalis,Sor_tor,Sorbus,angiosperm,FALSE,TRUE,B,2012,26,8,Torminalis glaberrima,TRUE,(Gand.) Sennikov & Kurtto
+26_9,475,Mespilus germanica,Mes_ger,Mespilus,angiosperm,FALSE,FALSE,B,2014,26,9,Crataegus germanica,TRUE,(L.) Kuntze
+27_1,240,Alnus cordata,Aln_cor,Alnus,angiosperm,FALSE,FALSE,A,2012,27,1,Alnus cordata,FALSE,(Loisel.) Duby
+27_10,247,Populus tremula,Pop_tre,Populus,angiosperm,FALSE,TRUE,B,2012,27,10,Populus tremula,FALSE,L.
+27_11,248,Quercus rubra,Que_rub,Quercus,angiosperm,FALSE,FALSE,B,2012,27,11,Quercus rubra,FALSE,L.
+27_12,479,Corylus avellana,Cor_ave,Corylus,angiosperm,FALSE,FALSE,B,2014,27,12,Corylus avellana,FALSE,L.
+27_13,480,Euonymus europaeus,Euo_eur,Euonymus,angiosperm,FALSE,FALSE,B,2014,27,13,Euonymus europaeus,FALSE,L.
+27_2,562,Gleditsia triacanthos,Gle_tri,Gleditsia,angiosperm,FALSE,FALSE,A,2022,27,2,Gleditsia triacanthos,FALSE,L.
+27_3,241,Acer platanoides,Ace_pla,Acer,angiosperm,FALSE,TRUE,A,2012,27,3,Acer platanoides,FALSE,L.
+27_4,242,Sorbus intermedia,Sor_int,Sorbus,angiosperm,FALSE,FALSE,A,2012,27,4,Scandosorbus intermedia,TRUE,(Ehrh.) Sennikov
+27_5,563,Abies nordmanniana,Abi_nor,Abies,gymnosperm,TRUE,FALSE,A,2022,27,5,Abies nordmanniana,FALSE,(Steven) Spach
+27_6,243,Acer saccharinum,Ace_sac,Acer,angiosperm,FALSE,FALSE,A,2012,27,6,Acer saccharinum,FALSE,L.
+27_7,244,Juglans nigra,Jug_nig,Juglans,angiosperm,FALSE,FALSE,A,2012,27,7,Juglans nigra,FALSE,L.
+27_8,245,Fagus sylvatica,Fag_syl,Fagus,angiosperm,FALSE,TRUE,B,2012,27,8,Fagus sylvatica,FALSE,L.
+27_9,246,Robinia pseudoacacia,Rob_pse,Robinia,angiosperm,FALSE,TRUE,B,2012,27,9,Robinia pseudoacacia,FALSE,L.
+28_1,249,Salix alba,Sal_alb,Salix,angiosperm,FALSE,FALSE,A,2012,28,1,Salix alba,FALSE,L.
+28_10,483,Quercus pubescens,Que_pub,Quercus,angiosperm,FALSE,TRUE,B,2014,28,10,Quercus pubescens,FALSE,Willd.
+28_11,256,Tsuga canadensis,Tsu_can,Tsuga,gymnosperm,TRUE,TRUE,B,2012,28,11,Tsuga canadensis,FALSE,(L.) Carrière
+28_12,257,Pseudotsuga menziesii,Pse_men,Pseudotsuga,gymnosperm,TRUE,TRUE,B,2012,28,12,Pseudotsuga menziesii,FALSE,(Mirb.) Franco
+28_13,484,Gleditsia triacanthos,Gle_tri,Gleditsia,angiosperm,FALSE,FALSE,B,2014,28,13,Gleditsia triacanthos,FALSE,L.
+28_2,250,Sorbus aucuparia,Sor_auc,Sorbus,angiosperm,FALSE,TRUE,A,2012,28,2,Sorbus aucuparia,FALSE,L.
+28_3,251,Quercus robur,Que_rob,Quercus,angiosperm,FALSE,TRUE,A,2012,28,3,Quercus robur,FALSE,L.
+28_4,481,Sambucus nigra,Sam_nig,Sambucus,angiosperm,FALSE,FALSE,A,2014,28,4,Sambucus nigra,FALSE,L.
+28_5,482,Picea abies,Pic_abi,Picea,gymnosperm,TRUE,TRUE,A,2014,28,5,Picea abies,FALSE,(L.) H.Karst.
+28_6,252,Taxus baccata,Tax_bac,Taxus,gymnosperm,TRUE,FALSE,A,2012,28,6,Taxus baccata,FALSE,L.
+28_7,253,Sorbus domestica,Sor_dom,Sorbus,angiosperm,FALSE,TRUE,A,2012,28,7,Cormus domestica,TRUE,(L.) Spach
+28_8,254,Malus sylvestris,Mal_syl,Malus,angiosperm,FALSE,FALSE,B,2012,28,8,Malus sylvestris,FALSE,(L.) Mill.
+28_9,255,Pinus contorta,Pin_con,Pinus,gymnosperm,TRUE,FALSE,B,2012,28,9,Pinus contorta,FALSE,Douglas ex Loudon
+29_1,258,Salix triandra,Sal_tri,Salix,angiosperm,FALSE,FALSE,A,2012,29,1,Salix triandra,FALSE,L.
+29_10,266,Pinus sylvestris,Pin_syl,Pinus,gymnosperm,TRUE,TRUE,B,2012,29,10,Pinus sylvestris,FALSE,L.
+29_11,267,Thuja occidentalis,Thu_occ,Thuja,gymnosperm,TRUE,TRUE,B,2012,29,11,Thuja occidentalis,FALSE,L.
+29_12,268,Fraxinus excelsior,Fra_exc,Fraxinus,angiosperm,FALSE,TRUE,B,2012,29,12,Fraxinus excelsior,FALSE,L.
+29_13,564,Salix triandra,Sal_tri,Salix,angiosperm,FALSE,FALSE,B,2022,29,13,Salix triandra,FALSE,L.
+29_2,259,Aesculus hippocastanum,Aes_hip,Aesculus,angiosperm,FALSE,TRUE,A,2012,29,2,Aesculus hippocastanum,FALSE,L.
+29_3,260,Pinus cembra,Pin_cem,Pinus,gymnosperm,TRUE,FALSE,A,2012,29,3,Pinus cembra,FALSE,L.
+29_4,485,Corylus avellana,Cor_ave,Corylus,angiosperm,FALSE,FALSE,A,2014,29,4,Corylus avellana,FALSE,L.
+29_5,261,Ulmus glabra,Ulm_gla,Ulmus,angiosperm,FALSE,FALSE,A,2012,29,5,Ulmus glabra,FALSE,Huds.
+29_6,262,Acer negundo,Ace_neg,Acer,angiosperm,FALSE,TRUE,A,2012,29,6,Acer negundo,FALSE,L.
+29_7,263,Prunus serotina,Pru_ser,Prunus,angiosperm,FALSE,FALSE,A,2012,29,7,Prunus serotina,FALSE,Ehrh.
+29_8,264,Corylus colurna,Cor_col,Corylus,angiosperm,FALSE,TRUE,B,2012,29,8,Corylus colurna,FALSE,L.
+29_9,265,Acer negundo,Ace_neg,Acer,angiosperm,FALSE,TRUE,B,2012,29,9,Acer negundo,FALSE,L.
+2_1,582,Salix alba,Sal_alb,Salix,angiosperm,FALSE,FALSE,C,2025,2,1,Salix alba,FALSE,L.
+2_10,14,Aesculus hippocastanum,Aes_hip,Aesculus,angiosperm,FALSE,FALSE,E,2012,2,10,Aesculus hippocastanum,FALSE,L.
+2_11,15,Acer negundo,Ace_neg,Acer,angiosperm,FALSE,FALSE,E,2012,2,11,Acer negundo,FALSE,L.
+2_12,16,Betula pubescens,Bet_pub,Betula,angiosperm,FALSE,FALSE,E,2012,2,12,Betula pubescens,FALSE,Ehrh.
+2_13,369,Frangula alnus,Fra_aln,Frangula,angiosperm,FALSE,FALSE,E,2014,2,13,Frangula alnus,FALSE,Mill.
+2_14,370,Picea glauca,Pic_gla,Picea,gymnosperm,TRUE,FALSE,E,2014,2,14,Picea laxa,TRUE,(Münchh.) Sarg.
+2_2,9,Abies grandis,Abi_gra,Abies,gymnosperm,TRUE,TRUE,C,2012,2,2,Abies grandis,FALSE,(Douglas ex D.Don) Lindl.
+2_3,10,Prunus serotina,Pru_ser,Prunus,angiosperm,FALSE,FALSE,C,2012,2,3,Prunus serotina,FALSE,Ehrh.
+2_4,11,Fraxinus excelsior,Fra_exc,Fraxinus,angiosperm,FALSE,TRUE,C,2012,2,4,Fraxinus excelsior,FALSE,L.
+2_5,365,Corylus colurna,Cor_col,Corylus,angiosperm,FALSE,FALSE,D,2014,2,5,Corylus colurna,FALSE,L.
+2_6,366,Prunus mahaleb,Pru_mah,Prunus,angiosperm,FALSE,FALSE,D,2014,2,6,Prunus mahaleb,FALSE,L.
+2_7,367,Cedrus libani,Ced_lib,Cedrus,gymnosperm,TRUE,FALSE,D,2014,2,7,Cedrus libani,FALSE,A.Rich.
+2_8,368,Picea pungens,Pic_pun,Picea,gymnosperm,TRUE,FALSE,D,2014,2,8,Picea pungens,FALSE,Engelm.
+2_9,13,Picea glauca,Pic_gla,Picea,gymnosperm,TRUE,FALSE,D,2012,2,9,Picea laxa,TRUE,(Münchh.) Sarg.
+30_1,270,Alnus glutinosa,Aln_glu,Alnus,angiosperm,FALSE,TRUE,A,2012,30,1,Alnus glutinosa,FALSE,(L.) Gaertn.
+30_10,278,Alnus incana,Aln_inc,Alnus,angiosperm,FALSE,FALSE,B,2012,30,10,Alnus incana,FALSE,(L.) Moench
+30_11,488,Platanus acerifolia,Pla_ace,Platanus,angiosperm,FALSE,TRUE,B,2014,30,11,Platanus hispanica,TRUE,Mill. ex Münchh.
+30_12,279,Acer campestre,Ace_cam,Acer,angiosperm,FALSE,FALSE,B,2012,30,12,Acer campestre,FALSE,L.
+30_13,566,Pterocarya fraxinifolia,Pte_fra,Pterocarya,angiosperm,FALSE,FALSE,B,2022,30,13,Pterocarya fraxinifolia,FALSE,(Poir.) Spach
+30_2,487,Cedrus libani,Ced_lib,Cedrus,gymnosperm,TRUE,FALSE,A,2014,30,2,Cedrus libani,FALSE,A.Rich.
+30_3,271,Fagus sylvatica,Fag_syl,Fagus,angiosperm,FALSE,TRUE,A,2012,30,3,Fagus sylvatica,FALSE,L.
+30_4,272,Salix cinerea,Sal_cin,Salix,angiosperm,FALSE,FALSE,A,2012,30,4,Salix cinerea,FALSE,L.
+30_5,273,Populus nigra,Pop_nig,Populus,angiosperm,FALSE,FALSE,A,2012,30,5,Populus nigra,FALSE,L.
+30_6,274,Populus tremula,Pop_tre,Populus,angiosperm,FALSE,TRUE,A,2012,30,6,Populus tremula,FALSE,L.
+30_7,275,Picea glauca,Pic_gla,Picea,gymnosperm,TRUE,FALSE,A,2012,30,7,Picea laxa,TRUE,(Münchh.) Sarg.
+30_8,565,Ulmus glabra,Ulm_gla,Ulmus,angiosperm,FALSE,FALSE,B,2022,30,8,Ulmus glabra,FALSE,Huds.
+30_9,277,Prunus avium,Pru_avi,Prunus,angiosperm,FALSE,TRUE,B,2012,30,9,Prunus avium,FALSE,(L.) L.
+31_1,567,Tilia platyphyllos,Til_pla,Tilia,angiosperm,FALSE,FALSE,A,2022,31,1,Tilia platyphyllos,FALSE,Scop.
+31_10,494,Prunus mahaleb,Pru_mah,Prunus,angiosperm,FALSE,FALSE,B,2014,31,10,Prunus mahaleb,FALSE,L.
+31_11,569,Quercus petraea,Que_pet,Quercus,angiosperm,FALSE,FALSE,B,2022,31,11,Quercus petraea,FALSE,(Matt.) Liebl.
+31_12,286,Castanea sativa,Cas_sat,Castanea,angiosperm,FALSE,TRUE,B,2012,31,12,Castanea sativa,FALSE,Mill.
+31_13,495,Zelkova carpinifolia,Zel_car,Zelkova,angiosperm,FALSE,FALSE,B,BOGA2014/2017,31,13,Zelkova carpinifolia,FALSE,(Pall.) K.Koch
+31_2,280,Carpinus betulus,Car_bet,Carpinus,angiosperm,FALSE,TRUE,A,2012,31,2,Carpinus betulus,FALSE,L.
+31_3,281,Larix decidua,Lar_dec,Larix,gymnosperm,FALSE,TRUE,A,2012,31,3,Larix decidua,FALSE,Mill.
+31_4,282,Salix pentandra,Sal_pen,Salix,angiosperm,FALSE,FALSE,A,2012,31,4,Salix pentandra,FALSE,L.
+31_5,283,Pinus mugo,Pin_mug,Pinus,gymnosperm,TRUE,FALSE,A,2012,31,5,Pinus mugo,FALSE,Turra
+31_6,491,Sambucus racemosa,Sam_rac,Sambucus,angiosperm,FALSE,FALSE,A,2014,31,6,Sambucus racemosa,FALSE,L.
+31_7,608,Fagus orientalis,Fag_ori,Fagus,angiosperm,FALSE,FALSE,A,2025,31,7,Fagus orientalis,FALSE,Lipsky
+31_8,568,Abies nordmanniana,Abi_nor,Abies,gymnosperm,TRUE,FALSE,B,2022,31,8,Abies nordmanniana,FALSE,(Steven) Spach
+31_9,284,Populus nigra,Pop_nig,Populus,angiosperm,FALSE,FALSE,B,2012,31,9,Populus nigra,FALSE,L.
+32_1,287,Alnus incana,Aln_inc,Alnus,angiosperm,FALSE,FALSE,A,2012,32,1,Alnus incana,FALSE,(L.) Moench
+32_10,294,Aesculus hippocastanum,Aes_hip,Aesculus,angiosperm,FALSE,TRUE,B,2012,32,10,Aesculus hippocastanum,FALSE,L.
+32_11,499,Tilia tomentosa,Til_tom,Tilia,angiosperm,FALSE,TRUE,B,2014,32,11,Tilia tomentosa,FALSE,Moench
+32_12,295,Fraxinus ornus,Fra_orn,Fraxinus,angiosperm,FALSE,FALSE,B,2012,32,12,Fraxinus ornus,FALSE,L.
+32_13,296,Acer platanoides,Ace_pla,Acer,angiosperm,FALSE,TRUE,B,2012,32,13,Acer platanoides,FALSE,L.
+32_2,288,Pinus strobus,Pin_str,Pinus,gymnosperm,TRUE,FALSE,A,2012,32,2,Pinus strobus,FALSE,L.
+32_3,496,Thuja plicata,Thu_pli,Thuja,gymnosperm,TRUE,FALSE,A,2014,32,3,Thuja plicata,FALSE,Donn ex D.Don
+32_4,289,Sorbus torminalis,Sor_tor,Sorbus,angiosperm,FALSE,TRUE,A,2012,32,4,Torminalis glaberrima,TRUE,(Gand.) Sennikov & Kurtto
+32_5,290,Morus alba,Mor_alb,Morus,angiosperm,FALSE,FALSE,A,2012,32,5,Morus alba,FALSE,L.
+32_6,570,Malus sylvestris,Mal_syl,Malus,angiosperm,FALSE,FALSE,A,2022,32,6,Malus sylvestris,FALSE,(L.) Mill.
+32_7,571,Pterocarya fraxinifolia,Pte_fra,Pterocarya,angiosperm,FALSE,FALSE,A,2022,32,7,Pterocarya fraxinifolia,FALSE,(Poir.) Spach
+32_8,292,Quercus robur,Que_rob,Quercus,angiosperm,FALSE,TRUE,B,2014,32,8,Quercus robur,FALSE,L.
+32_9,293,Juglans regia,Jug_reg,Juglans,angiosperm,FALSE,TRUE,B,2012,32,9,Juglans regia,FALSE,L.
+33_1,572,Cedrus deodara,Ced_deo,Cedrus,gymnosperm,TRUE,FALSE,A,2022,33,1,Cedrus deodara,FALSE,(Roxb. ex D.Don) G.Don
+33_10,305,Picea sitchensis,Pic_sit,Picea,gymnosperm,TRUE,TRUE,B,2012,33,10,Picea sitchensis,FALSE,(Bong.) Carrière
+33_11,502,Cedrus deodara,Ced_deo,Cedrus,gymnosperm,TRUE,TRUE,B,2014,33,11,Cedrus deodara,FALSE,(Roxb. ex D.Don) G.Don
+33_12,307,Salix pentandra,Sal_pen,Salix,angiosperm,FALSE,FALSE,B,2012,33,12,Salix pentandra,FALSE,L.
+33_2,298,Abies grandis,Abi_gra,Abies,gymnosperm,TRUE,TRUE,A,2012,33,2,Abies grandis,FALSE,(Douglas ex D.Don) Lindl.
+33_3,299,Sorbus aria,Sor_ari,Sorbus,angiosperm,FALSE,FALSE,A,2012,33,3,Aria edulis,TRUE,(Willd.) M.Roem.
+33_4,300,Abies alba,Abi_alb,Abies,gymnosperm,TRUE,TRUE,A,2012,33,4,Abies alba,FALSE,Mill.
+33_5,573,Ulmus minor,Ulm_min,Ulmus,angiosperm,FALSE,FALSE,A,2022,33,5,Ulmus minor,FALSE,Mill.
+33_6,302,Acer campestre,Ace_cam,Acer,angiosperm,FALSE,FALSE,A,2012,33,6,Acer campestre,FALSE,L.
+33_7,303,Carpinus betulus,Car_bet,Carpinus,angiosperm,FALSE,TRUE,B,2012,33,7,Carpinus betulus,FALSE,L.
+33_8,601,Celtis australis,Cel_aus,Celtis,angiosperm,FALSE,FALSE,B,2025,33,8,Celtis australis,FALSE,L.
+33_9,304,Ostrya carpinifolia,Ost_car,Ostrya,angiosperm,FALSE,FALSE,B,2012,33,9,Ostrya carpinifolia,FALSE,Scop.
+34_1,308,Fraxinus ornus,Fra_orn,Fraxinus,angiosperm,FALSE,FALSE,A,2012,34,1,Fraxinus ornus,FALSE,L.
+34_10,504,Fraxinus pennsylvanica,Fra_pen,Fraxinus,angiosperm,FALSE,FALSE,B,BOGA2014/2017,34,10,Fraxinus pennsylvanica,FALSE,Marshall
+34_11,316,Salix alba,Sal_alb,Salix,angiosperm,FALSE,FALSE,B,2012,34,11,Salix alba,FALSE,L.
+34_12,505,Sambucus nigra,Sam_nig,Sambucus,angiosperm,FALSE,FALSE,B,2014,34,12,Sambucus nigra,FALSE,L.
+34_2,309,Pinus sylvestris,Pin_syl,Pinus,gymnosperm,TRUE,TRUE,A,2012,34,2,Pinus sylvestris,FALSE,L.
+34_3,503,Euonymus europaeus,Euo_eur,Euonymus,angiosperm,FALSE,FALSE,A,2014,34,3,Euonymus europaeus,FALSE,L.
+34_4,310,Corylus colurna,Cor_col,Corylus,angiosperm,FALSE,TRUE,A,2012,34,4,Corylus colurna,FALSE,L.
+34_5,311,Acer pseudoplatanus,Ace_pse,Acer,angiosperm,FALSE,TRUE,A,2012,34,5,Acer pseudoplatanus,FALSE,L.
+34_6,312,Robinia pseudoacacia,Rob_pse,Robinia,angiosperm,FALSE,TRUE,A,2012,34,6,Robinia pseudoacacia,FALSE,L.
+34_7,313,Alnus glutinosa,Aln_glu,Alnus,angiosperm,FALSE,TRUE,B,2012,34,7,Alnus glutinosa,FALSE,(L.) Gaertn.
+34_8,314,Quercus cerris,Que_cer,Quercus,angiosperm,FALSE,FALSE,B,2012,34,8,Quercus cerris,FALSE,L.
+34_9,315,Acer pseudoplatanus,Ace_pse,Acer,angiosperm,FALSE,TRUE,B,2012,34,9,Acer pseudoplatanus,FALSE,L.
+35_1,506,Fraxinus pennsylvanica,Fra_pen,Fraxinus,angiosperm,FALSE,FALSE,A,BOGA2014/2017,35,1,Fraxinus pennsylvanica,FALSE,Marshall
+35_10,509,Alnus cordata,Aln_cor,Alnus,angiosperm,FALSE,FALSE,B,2014,35,10,Alnus cordata,FALSE,(Loisel.) Duby
+35_11,324,Taxus baccata,Tax_bac,Taxus,gymnosperm,TRUE,TRUE,B,2012,35,11,Taxus baccata,FALSE,L.
+35_12,325,Pinus cembra,Pin_cem,Pinus,gymnosperm,TRUE,FALSE,B,2012,35,12,Pinus cembra,FALSE,L.
+35_2,574,Ostrya carpinifolia,Ost_car,Ostrya,angiosperm,FALSE,FALSE,A,2022,35,2,Ostrya carpinifolia,FALSE,Scop.
+35_3,318,Pinus contorta,Pin_con,Pinus,gymnosperm,TRUE,FALSE,A,2012,35,3,Pinus contorta,FALSE,Douglas ex Loudon
+35_4,319,Fraxinus excelsior,Fra_exc,Fraxinus,angiosperm,FALSE,FALSE,A,2012,35,4,Fraxinus excelsior,FALSE,L.
+35_5,320,Pinus ponderosa,Pin_pon,Pinus,gymnosperm,TRUE,TRUE,A,2012,35,5,Pinus ponderosa,FALSE,Douglas ex C.Lawson
+35_6,321,Juglans regia,Jug_reg,Juglans,angiosperm,FALSE,TRUE,A,2012,35,6,Juglans regia,FALSE,L.
+35_7,507,Picea abies,Pic_abi,Picea,gymnosperm,TRUE,TRUE,B,2014,35,7,Picea abies,FALSE,(L.) H.Karst.
+35_8,607,Fagus orientalis,Fag_ori,Fagus,angiosperm,FALSE,FALSE,B,2025,35,8,Fagus orientalis,FALSE,Lipsky
+35_9,322,Sorbus intermedia,Sor_int,Sorbus,angiosperm,FALSE,FALSE,B,2012,35,9,Scandosorbus intermedia,TRUE,(Ehrh.) Sennikov
+36_1,326,Quercus cerris,Que_cer,Quercus,angiosperm,FALSE,FALSE,A,2012,36,1,Quercus cerris,FALSE,L.
+36_10,515,Tilia platyphyllos,Til_pla,Tilia,angiosperm,FALSE,FALSE,B,2014,36,10,Tilia platyphyllos,FALSE,Scop.
+36_11,331,Juglans nigra,Jug_nig,Juglans,angiosperm,FALSE,FALSE,B,2012,36,11,Juglans nigra,FALSE,L.
+36_12,332,Pinus nigra,Pin_nig,Pinus,gymnosperm,TRUE,TRUE,B,2012,36,12,Pinus nigra,FALSE,J.F.Arnold
+36_2,575,Morus nigra,Mor_nig,Morus,angiosperm,FALSE,FALSE,A,2022,36,2,Morus nigra,FALSE,L.
+36_3,327,Salix caprea,Sal_cap,Salix,angiosperm,FALSE,TRUE,A,2012,36,3,Salix caprea,FALSE,L.
+36_4,576,Pyrus communis,Pyr_com,Pyrus,angiosperm,FALSE,FALSE,A,2022,36,4,Pyrus communis,FALSE,L.
+36_5,512,Mespilus germanica,Mes_ger,Mespilus,angiosperm,FALSE,FALSE,A,2014,36,5,Crataegus germanica,TRUE,(L.) Kuntze
+36_6,329,Juniperus communis,Jun_com,Juniperus,gymnosperm,TRUE,FALSE,A,2012,36,6,Juniperus communis,FALSE,L.
+36_7,330,Ilex aquifolium,Ile_aqu,Ilex,angiosperm,TRUE,FALSE,B,2012,36,7,Ilex aquifolium,FALSE,L.
+36_8,513,Picea pungens,Pic_pun,Picea,gymnosperm,TRUE,FALSE,B,2014,36,8,Picea pungens,FALSE,Engelm.
+36_9,602,Morus nigra,Mor_nig,Morus,angiosperm,FALSE,FALSE,B,2025,36,9,Morus nigra,FALSE,L.
+37_1,333,Pinus nigra,Pin_nig,Pinus,gymnosperm,TRUE,TRUE,A,2012,37,1,Pinus nigra,FALSE,J.F.Arnold
+37_10,337,Sorbus domestica,Sor_dom,Sorbus,angiosperm,FALSE,TRUE,B,2012,37,10,Cormus domestica,TRUE,(L.) Spach
+37_11,338,Pinus strobus,Pin_str,Pinus,gymnosperm,TRUE,FALSE,B,2012,37,11,Pinus strobus,FALSE,L.
+37_12,521,Abies balsamea,Abi_bal,Abies,gymnosperm,TRUE,FALSE,B,2014,37,12,Abies balsamea,FALSE,(L.) Mill.
+37_2,516,Quercus pubescens,Que_pub,Quercus,angiosperm,FALSE,TRUE,A,2014,37,2,Quercus pubescens,FALSE,Willd.
+37_3,334,Acer monspessulanum,Ace_mon,Acer,angiosperm,FALSE,FALSE,A,2012,37,3,Acer monspessulanum,FALSE,L.
+37_4,517,Tilia cordata,Til_cor,Tilia,angiosperm,FALSE,TRUE,A,2014,37,4,Tilia cordata,FALSE,Mill.
+37_5,518,Tilia tomentosa,Til_tom,Tilia,angiosperm,FALSE,TRUE,A,2014,37,5,Tilia tomentosa,FALSE,Moench
+37_6,603,Quercus frainetto,Que_fra,Quercus,angiosperm,FALSE,FALSE,A,2025,37,6,Quercus frainetto,FALSE,Ten.
+37_7,335,Prunus padus,Pru_pad,Prunus,angiosperm,FALSE,FALSE,B,2012,37,7,Prunus padus,FALSE,L.
+37_8,604,Quercus frainetto,Que_fra,Quercus,angiosperm,FALSE,FALSE,B,2025,37,8,Quercus frainetto,FALSE,Ten.
+37_9,336,Prunus serotina,Pru_ser,Prunus,angiosperm,FALSE,FALSE,B,2012,37,9,Prunus serotina,FALSE,Ehrh.
+38_1,339,Thuja occidentalis,Thu_occ,Thuja,gymnosperm,TRUE,TRUE,A,2012,38,1,Thuja occidentalis,FALSE,L.
+38_10,346,Juniperus communis,Jun_com,Juniperus,gymnosperm,TRUE,FALSE,B,2012,38,10,Juniperus communis,FALSE,L.
+38_11,524,Tilia cordata,Til_cor,Tilia,angiosperm,FALSE,TRUE,B,2014,38,11,Tilia cordata,FALSE,Mill.
+38_12,347,Pyrus communis,Pyr_com,Pyrus,angiosperm,FALSE,FALSE,B,2012,38,12,Pyrus communis,FALSE,L.
+38_2,340,Betula pendula,Bet_pen,Betula,angiosperm,FALSE,TRUE,A,2012,38,2,Betula pendula,FALSE,Roth
+38_3,341,Salix fragilis,Sal_fra,Salix,angiosperm,FALSE,TRUE,A,2012,38,3,Salix fragilis,FALSE,L.
+38_4,342,Pseudotsuga menziesii,Pse_men,Pseudotsuga,gymnosperm,TRUE,TRUE,A,2012,38,4,Pseudotsuga menziesii,FALSE,(Mirb.) Franco
+38_5,522,Abies balsamea,Abi_bal,Abies,gymnosperm,TRUE,FALSE,A,2014,38,5,Abies balsamea,FALSE,(L.) Mill.
+38_6,343,Quercus rubra,Que_rub,Quercus,angiosperm,FALSE,FALSE,A,2012,38,6,Quercus rubra,FALSE,L.
+38_7,344,Abies grandis,Abi_gra,Abies,gymnosperm,TRUE,TRUE,B,2012,38,7,Abies grandis,FALSE,(Douglas ex D.Don) Lindl.
+38_8,523,Thuja plicata,Thu_pli,Thuja,gymnosperm,TRUE,FALSE,B,2014,38,8,Thuja plicata,FALSE,Donn ex D.Don
+38_9,345,Salix fragilis,Sal_fra,Salix,angiosperm,FALSE,TRUE,B,2012,38,9,Salix fragilis,FALSE,L.
+39_1,348,Tsuga canadensis,Tsu_can,Tsuga,gymnosperm,TRUE,TRUE,A,2012,39,1,Tsuga canadensis,FALSE,(L.) Carrière
+39_10,354,Ulmus laevis,Ulm_lae,Ulmus,angiosperm,FALSE,FALSE,B,2012,39,10,Ulmus laevis,FALSE,Pall.
+39_11,528,Cedrus libani,Ced_lib,Cedrus,gymnosperm,TRUE,FALSE,B,2014,39,11,Cedrus libani,FALSE,A.Rich.
+39_12,355,Crataegus laevigata,Cra_lae,Crataegus,angiosperm,FALSE,FALSE,B,2012,39,12,Crataegus laevigata,FALSE,(Poir.) DC.
+39_2,580,Tsuga heterophylla,Tsu_het,Tsuga,gymnosperm,TRUE,FALSE,A,2022,39,2,Tsuga heterophylla,FALSE,(Raf.) Sarg.
+39_3,349,Crataegus laevigata,Cra_lae,Crataegus,angiosperm,FALSE,FALSE,A,2012,39,3,Crataegus laevigata,FALSE,(Poir.) DC.
+39_4,526,Zelkova carpinifolia,Zel_car,Zelkova,angiosperm,FALSE,FALSE,A,BOGA2014/2017,39,4,Zelkova carpinifolia,FALSE,(Pall.) K.Koch
+39_5,350,Ilex aquifolium,Ile_aqu,Ilex,angiosperm,TRUE,FALSE,A,2012,39,5,Ilex aquifolium,FALSE,L.
+39_6,527,Platanus acerifolia,Pla_ace,Platanus,angiosperm,FALSE,FALSE,A,2014,39,6,Platanus hispanica,TRUE,Mill. ex Münchh.
+39_7,351,Sorbus aria,Sor_ari,Sorbus,angiosperm,FALSE,FALSE,B,2012,39,7,Aria edulis,TRUE,(Willd.) M.Roem.
+39_8,352,Betula pendula,Bet_pen,Betula,angiosperm,FALSE,TRUE,B,2012,39,8,Betula pendula,FALSE,Roth
+39_9,353,Salix caprea,Sal_cap,Salix,angiosperm,FALSE,TRUE,B,2012,39,9,Salix caprea,FALSE,L.
+3_1,18,Pinus cembra,Pin_cem,Pinus,gymnosperm,TRUE,FALSE,C,2012,3,1,Pinus cembra,FALSE,L.
+3_10,25,Sorbus domestica,Sor_dom,Sorbus,angiosperm,FALSE,FALSE,E,2012,3,10,Cormus domestica,TRUE,(L.) Spach
+3_11,26,Morus alba,Mor_alb,Morus,angiosperm,FALSE,FALSE,E,2012,3,11,Morus alba,FALSE,L.
+3_12,373,Euonymus europaeus,Euo_eur,Euonymus,angiosperm,FALSE,FALSE,E,2014,3,12,Euonymus europaeus,FALSE,L.
+3_13,27,Prunus avium,Pru_avi,Prunus,angiosperm,FALSE,FALSE,E,2012,3,13,Prunus avium,FALSE,(L.) L.
+3_14,28,Carpinus betulus,Car_bet,Carpinus,angiosperm,FALSE,FALSE,E,2012,3,14,Carpinus betulus,FALSE,L.
+3_2,371,Quercus pubescens,Que_pub,Quercus,angiosperm,FALSE,TRUE,C,2014,3,2,Quercus pubescens,FALSE,Willd.
+3_3,372,Frangula alnus,Fra_aln,Frangula,angiosperm,FALSE,FALSE,C,2014,3,3,Frangula alnus,FALSE,Mill.
+3_4,19,Larix kaempferi,Lar_kae,Larix,gymnosperm,FALSE,FALSE,C,2012,3,4,Larix kaempferi,FALSE,(Lamb.) Carrière
+3_5,20,Pinus sylvestris,Pin_syl,Pinus,gymnosperm,TRUE,FALSE,D,2012,3,5,Pinus sylvestris,FALSE,L.
+3_6,21,Robinia pseudoacacia,Rob_pse,Robinia,angiosperm,FALSE,FALSE,D,2012,3,6,Robinia pseudoacacia,FALSE,L.
+3_7,22,Carpinus betulus,Car_bet,Carpinus,angiosperm,FALSE,FALSE,D,2012,3,7,Carpinus betulus,FALSE,L.
+3_8,23,Abies alba,Abi_alb,Abies,gymnosperm,TRUE,FALSE,D,2012,3,8,Abies alba,FALSE,Mill.
+3_9,24,Larix kaempferi,Lar_kae,Larix,gymnosperm,FALSE,FALSE,D,2012,3,9,Larix kaempferi,FALSE,(Lamb.) Carrière
+4_1,29,Carpinus betulus,Car_bet,Carpinus,angiosperm,FALSE,TRUE,C,2012,4,1,Carpinus betulus,FALSE,L.
+4_10,35,Pinus contorta,Pin_con,Pinus,gymnosperm,TRUE,FALSE,E,2012,4,10,Pinus contorta,FALSE,Douglas ex Loudon
+4_11,36,Abies grandis,Abi_gra,Abies,gymnosperm,TRUE,FALSE,E,2012,4,11,Abies grandis,FALSE,(Douglas ex D.Don) Lindl.
+4_12,37,Castanea sativa,Cas_sat,Castanea,angiosperm,FALSE,FALSE,E,2012,4,12,Castanea sativa,FALSE,Mill.
+4_13,605,Fagus orientalis,Fag_ori,Fagus,angiosperm,FALSE,FALSE,E,2025,4,13,Fagus orientalis,FALSE,Lipsky
+4_14,378,Corylus avellana,Cor_ave,Corylus,angiosperm,FALSE,FALSE,E,2014,4,14,Corylus avellana,FALSE,L.
+4_2,30,Quercus rubra,Que_rub,Quercus,angiosperm,FALSE,FALSE,C,2012,4,2,Quercus rubra,FALSE,L.
+4_3,31,Juglans regia,Jug_reg,Juglans,angiosperm,FALSE,TRUE,C,2012,4,3,Juglans regia,FALSE,L.
+4_4,32,Sorbus aucuparia,Sor_auc,Sorbus,angiosperm,FALSE,FALSE,C,2012,4,4,Sorbus aucuparia,FALSE,L.
+4_5,33,Salix pentandra,Sal_pen,Salix,angiosperm,FALSE,FALSE,D,2012,4,5,Salix pentandra,FALSE,L.
+4_6,374,Corylus avellana,Cor_ave,Corylus,angiosperm,FALSE,FALSE,D,2014,4,6,Corylus avellana,FALSE,L.
+4_7,375,Tilia tomentosa,Til_tom,Tilia,angiosperm,FALSE,FALSE,D,2014,4,7,Tilia tomentosa,FALSE,Moench
+4_8,583,Salix viminalis,Sal_vim,Salix,angiosperm,FALSE,FALSE,D,2025,4,8,Salix viminalis,FALSE,L.
+4_9,34,Crataegus laevigata,Cra_lae,Crataegus,angiosperm,FALSE,FALSE,D,2012,4,9,Crataegus laevigata,FALSE,(Poir.) DC.
+5_1,38,Salix caprea,Sal_cap,Salix,angiosperm,FALSE,TRUE,C,2012,5,1,Salix caprea,FALSE,L.
+5_10,382,Celtis australis,Cel_aus,Celtis,angiosperm,FALSE,FALSE,E,2014,5,10,Celtis australis,FALSE,L.
+5_11,584,Quercus petraea,Que_pet,Quercus,angiosperm,FALSE,FALSE,E,2025,5,11,Quercus petraea,FALSE,(Matt.) Liebl.
+5_12,46,Fraxinus ornus,Fra_orn,Fraxinus,angiosperm,FALSE,FALSE,E,2012,5,12,Fraxinus ornus,FALSE,L.
+5_13,533,Cedrus libani,Ced_lib,Cedrus,gymnosperm,TRUE,FALSE,E,2022,5,13,Cedrus libani,FALSE,A.Rich.
+5_14,47,Pinus ponderosa,Pin_pon,Pinus,gymnosperm,TRUE,FALSE,E,2012,5,14,Pinus ponderosa,FALSE,Douglas ex C.Lawson
+5_2,39,Acer saccharinum,Ace_sac,Acer,angiosperm,FALSE,FALSE,C,2012,5,2,Acer saccharinum,FALSE,L.
+5_3,40,Crataegus laevigata,Cra_lae,Crataegus,angiosperm,FALSE,FALSE,C,2012,5,3,Crataegus laevigata,FALSE,(Poir.) DC.
+5_4,379,Prunus mahaleb,Pru_mah,Prunus,angiosperm,FALSE,FALSE,C,2014,5,4,Prunus mahaleb,FALSE,L.
+5_5,380,Sorbus domestica,Sor_dom,Sorbus,angiosperm,FALSE,FALSE,D,2014,5,5,Cormus domestica,TRUE,(L.) Spach
+5_6,381,Tilia platyphyllos,Til_pla,Tilia,angiosperm,FALSE,FALSE,D,2014,5,6,Tilia platyphyllos,FALSE,Scop.
+5_7,42,Juniperus communis,Jun_com,Juniperus,gymnosperm,TRUE,FALSE,D,2012,5,7,Juniperus communis,FALSE,L.
+5_8,43,Populus tremula,Pop_tre,Populus,angiosperm,FALSE,FALSE,D,2012,5,8,Populus tremula,FALSE,L.
+5_9,44,Ulmus glabra,Ulm_gla,Ulmus,angiosperm,FALSE,FALSE,D,2012,5,9,Ulmus glabra,FALSE,Huds.
+6_1,534,Quercus frainetto,Que_fra,Quercus,angiosperm,FALSE,FALSE,C,2022,6,1,Quercus frainetto,FALSE,Ten.
+6_10,388,Zelkova carpinifolia,Zel_car,Zelkova,angiosperm,FALSE,FALSE,E,BOGA2014/2017,6,10,Zelkova carpinifolia,FALSE,(Pall.) K.Koch
+6_11,537,Abies nordmanniana,Abi_nor,Abies,gymnosperm,TRUE,FALSE,E,2022,6,11,Abies nordmanniana,FALSE,(Steven) Spach
+6_12,390,Mespilus germanica,Mes_ger,Mespilus,angiosperm,FALSE,FALSE,E,2014,6,12,Crataegus germanica,TRUE,(L.) Kuntze
+6_13,587,Salix pentandra,Sal_pen,Salix,angiosperm,FALSE,FALSE,E,2025,6,13,Salix pentandra,FALSE,L.
+6_14,56,Fagus sylvatica,Fag_syl,Fagus,angiosperm,FALSE,FALSE,E,2012,6,14,Fagus sylvatica,FALSE,L.
+6_2,48,Ostrya carpinifolia,Ost_car,Ostrya,angiosperm,FALSE,FALSE,C,2012,6,2,Ostrya carpinifolia,FALSE,Scop.
+6_3,585,Acer opalus,Ace_opa,Acer,angiosperm,FALSE,FALSE,C,2025,6,3,Acer opalus,FALSE,Mill.
+6_4,50,Pinus ponderosa,Pin_pon,Pinus,gymnosperm,TRUE,TRUE,C,2012,6,4,Pinus ponderosa,FALSE,Douglas ex C.Lawson
+6_5,586,Acer opalus,Ace_opa,Acer,angiosperm,FALSE,FALSE,D,2025,6,5,Acer opalus,FALSE,Mill.
+6_6,52,Aesculus hippocastanum,Aes_hip,Aesculus,angiosperm,FALSE,FALSE,D,2012,6,6,Aesculus hippocastanum,FALSE,L.
+6_7,535,Abies nordmanniana,Abi_nor,Abies,gymnosperm,TRUE,FALSE,D,2022,6,7,Abies nordmanniana,FALSE,(Steven) Spach
+6_8,536,Alnus cordata,Aln_cor,Alnus,angiosperm,FALSE,FALSE,D,2022,6,8,Alnus cordata,FALSE,(Loisel.) Duby
+6_9,54,Quercus cerris,Que_cer,Quercus,angiosperm,FALSE,FALSE,D,2012,6,9,Quercus cerris,FALSE,L.
+7_1,57,Pinus contorta,Pin_con,Pinus,gymnosperm,TRUE,FALSE,C,2012,7,1,Pinus contorta,FALSE,Douglas ex Loudon
+7_10,392,Platanus acerifolia,Pla_ace,Platanus,angiosperm,FALSE,FALSE,E,2014,7,10,Platanus hispanica,TRUE,Mill. ex Münchh.
+7_11,538,Ilex aquifolium,Ile_aqu,Ilex,angiosperm,TRUE,FALSE,E,2022,7,11,Ilex aquifolium,FALSE,L.
+7_12,393,Picea pungens,Pic_pun,Picea,gymnosperm,TRUE,FALSE,E,2014,7,12,Picea pungens,FALSE,Engelm.
+7_13,394,Tilia tomentosa,Til_tom,Tilia,angiosperm,FALSE,FALSE,E,2014,7,13,Tilia tomentosa,FALSE,Moench
+7_14,67,Crataegus monogyna,Cra_mon,Crataegus,angiosperm,FALSE,FALSE,E,2012,7,14,Crataegus monogyna,FALSE,Jacq.
+7_2,58,Alnus incana,Aln_inc,Alnus,angiosperm,FALSE,FALSE,C,2012,7,2,Alnus incana,FALSE,(L.) Moench
+7_3,391,Picea sitchensis,Pic_sit,Picea,gymnosperm,TRUE,TRUE,C,2014,7,3,Picea sitchensis,FALSE,(Bong.) Carrière
+7_4,60,Ilex aquifolium,Ile_aqu,Ilex,angiosperm,TRUE,FALSE,C,2012,7,4,Ilex aquifolium,FALSE,L.
+7_5,61,Acer monspessulanum,Ace_mon,Acer,angiosperm,FALSE,FALSE,D,2012,7,5,Acer monspessulanum,FALSE,L.
+7_6,62,Salix caprea,Sal_cap,Salix,angiosperm,FALSE,FALSE,D,2012,7,6,Salix caprea,FALSE,L.
+7_7,63,Prunus padus,Pru_pad,Prunus,angiosperm,FALSE,FALSE,D,2012,7,7,Prunus padus,FALSE,L.
+7_8,64,Acer pseudoplatanus,Ace_pse,Acer,angiosperm,FALSE,FALSE,D,2012,7,8,Acer pseudoplatanus,FALSE,L.
+7_9,65,Ilex aquifolium,Ile_aqu,Ilex,angiosperm,TRUE,FALSE,D,2012,7,9,Ilex aquifolium,FALSE,L.
+8_1,395,Picea abies,Pic_abi,Picea,gymnosperm,TRUE,TRUE,C,2014,8,1,Picea abies,FALSE,(L.) H.Karst.
+8_10,399,Populus tremula,Pop_tre,Populus,angiosperm,FALSE,FALSE,E,2014,8,10,Populus tremula,FALSE,L.
+8_11,400,Celtis occidentalis,Cel_occ,Celtis,angiosperm,FALSE,FALSE,E,2014,8,11,Celtis occidentalis,FALSE,L.
+8_12,75,Ulmus minor,Ulm_min,Ulmus,angiosperm,FALSE,FALSE,E,2012,8,12,Ulmus minor,FALSE,Mill.
+8_13,401,Sambucus racemosa,Sam_rac,Sambucus,angiosperm,FALSE,FALSE,E,2014,8,13,Sambucus racemosa,FALSE,L.
+8_14,540,Ulmus glabra,Ulm_gla,Ulmus,angiosperm,FALSE,FALSE,E,2022,8,14,Ulmus glabra,FALSE,Huds.
+8_2,68,Morus alba,Mor_alb,Morus,angiosperm,FALSE,FALSE,C,2012,8,2,Morus alba,FALSE,L.
+8_3,588,Sorbus aria,Sor_ari,Sorbus,angiosperm,FALSE,FALSE,C,2025,8,3,Aria edulis,TRUE,(Willd.) M.Roem.
+8_4,70,Alnus cordata,Aln_cor,Alnus,angiosperm,FALSE,FALSE,C,2012,8,4,Alnus cordata,FALSE,(Loisel.) Duby
+8_5,397,Sambucus nigra,Sam_nig,Sambucus,angiosperm,FALSE,FALSE,D,2014,8,5,Sambucus nigra,FALSE,L.
+8_6,71,Larix decidua,Lar_dec,Larix,gymnosperm,FALSE,FALSE,D,2012,8,6,Larix decidua,FALSE,Mill.
+8_7,589,Quercus frainetto,Que_fra,Quercus,angiosperm,FALSE,FALSE,D,2025,8,7,Quercus frainetto,FALSE,Ten.
+8_8,72,Thuja occidentalis,Thu_occ,Thuja,gymnosperm,TRUE,FALSE,D,2012,8,8,Thuja occidentalis,FALSE,L.
+8_9,73,Pinus strobus,Pin_str,Pinus,gymnosperm,TRUE,FALSE,D,2012,8,9,Pinus strobus,FALSE,L.
+9_1,402,Tilia platyphyllos,Til_pla,Tilia,angiosperm,FALSE,FALSE,C,2014,9,1,Tilia platyphyllos,FALSE,Scop.
+9_10,81,Acer saccharinum,Ace_sac,Acer,angiosperm,FALSE,FALSE,E,2012,9,10,Acer saccharinum,FALSE,L.
+9_11,543,Ostrya carpinifolia,Ost_car,Ostrya,angiosperm,FALSE,FALSE,E,2022,9,11,Ostrya carpinifolia,FALSE,Scop.
+9_12,407,Chamaecyparis lawsoniana,Cha_law,Chamaecyparis,gymnosperm,TRUE,FALSE,E,2014,9,12,Chamaecyparis lawsoniana,FALSE,(A.Murray bis) Parl.
+9_13,84,Quercus robur,Que_rob,Quercus,angiosperm,FALSE,FALSE,E,2012,9,13,Quercus robur,FALSE,L.
+9_14,85,Alnus cordata,Aln_cor,Alnus,angiosperm,FALSE,FALSE,E,2012,9,14,Alnus cordata,FALSE,(Loisel.) Duby
+9_2,77,Sorbus torminalis,Sor_tor,Sorbus,angiosperm,FALSE,TRUE,C,2012,9,2,Torminalis glaberrima,TRUE,(Gand.) Sennikov & Kurtto
+9_3,78,Taxus baccata,Tax_bac,Taxus,gymnosperm,TRUE,TRUE,C,2012,9,3,Taxus baccata,FALSE,L.
+9_4,541,Pterocarya fraxinifolia,Pte_fra,Pterocarya,angiosperm,FALSE,FALSE,C,2022,9,4,Pterocarya fraxinifolia,FALSE,(Poir.) Spach
+9_5,79,Acer campestre,Ace_cam,Acer,angiosperm,FALSE,FALSE,D,2012,9,5,Acer campestre,FALSE,L.
+9_6,404,Zelkova carpinifolia,Zel_car,Zelkova,angiosperm,FALSE,FALSE,D,BOGA2014/2017,9,6,Zelkova carpinifolia,FALSE,(Pall.) K.Koch
+9_7,405,Fraxinus pennsylvanica,Fra_pen,Fraxinus,angiosperm,FALSE,FALSE,D,BOGA2014/2017,9,7,Fraxinus pennsylvanica,FALSE,Marshall
+9_8,80,Tsuga canadensis,Tsu_can,Tsuga,gymnosperm,TRUE,FALSE,D,2012,9,8,Tsuga canadensis,FALSE,(L.) Carrière
+9_9,591,Gleditsia triacanthos,Gle_tri,Gleditsia,angiosperm,FALSE,FALSE,D,2025,9,9,Gleditsia triacanthos,FALSE,L.
