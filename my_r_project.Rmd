@@ -20,7 +20,7 @@ tabs_dir <- file.path("text", "tables")
 required_packages <- c(
   "readxl", "dplyr", "tidyr", "ggplot2",
   "forcats", "factoextra", "nlme",
-  "missForest", "rfPermute", "vip",
+  "missForest", "rfPermute",
   "ranger", "pdp", "purrr", "iml",
   "ggcorrplot", "psych", "reshape2"
 )
@@ -41,9 +41,7 @@ For this study, shallow water was defined as source water found within the top 2
 #upload isotope results for twigs
 twigs <- read_excel(file.path(prelim_dir, "d18O_extracted water_twig_samples.xlsx"))
 twigs <- twigs %>%
-  select("Pos_ID", "Species", "d18O")
-#change column names
-colnames(twigs)[1] <- "Tree_ID"
+  select("block", "species_code", "d18O")
 colnames(twigs)[3] <- "twig_d18O"
 
 #upload soil water data
@@ -52,8 +50,8 @@ soil <- read_excel(file.path(prelim_dir, "d18O_extracted water_soil_samples.xlsx
 
 #two end member mixing model - average of soil water d18O from 30.06 and 04.08
 soil_endmembers_3 <- soil %>%
-  filter(`Sampling date` == c("30.06.2025", "04.08.2025")) %>%
-  mutate(Source = ifelse(Depth <= 20, "Shallow", "Deep"))
+  filter(`sampling_date` == c("30.06.2025", "04.08.2025")) %>%
+  mutate(Source = ifelse(depth <= 20, "Shallow", "Deep"))
 soil_endmembers_3 <- soil_endmembers_3 %>%
   group_by(Source) %>%
   summarize( 
@@ -75,13 +73,13 @@ twigs_mix_3 <- twigs_mix_3 %>%
   mutate(
     f_shallow = pmin(pmax(f_shallow, 0), 1), 
     f_deep    = 1 - f_shallow,
-    Species   = factor(twigs_mix_3$Species, levels = sort(unique(twigs_mix_3$Species))))
+    species_code   = factor(twigs_mix_3$species_code, levels = sort(unique(twigs_mix_3$species_code))))
 
 twigs_mix_3 <- twigs_mix_3 %>%
   mutate(
     f_shallow = pmin(pmax(f_shallow, 0), 1),
     f_deep    = 1 - f_shallow,
-    Species   = factor(as.character(Species))  # resets levels alphabetically
+    species_code   = factor(as.character(species_code))  # resets levels alphabetically
   )
 
 #remove NAs
@@ -91,25 +89,22 @@ twigs_mix_3 <- twigs_mix_3 %>%
 In order to distinguish between angiosperms and gymnosperms for Figure 1 (below), information on the clade of each species was added to the twigs_mix_3 data frame
 ```{r}
 #upload clade data
-clade<-read_excel(file.path(prelim_dir,"Arbofun_VITs2025only.xlsx"))
+clade<-read_excel(file.path(prelim_dir,"clade.xlsx"))
 #select columns we need
 clade_subset <- clade %>%
-  select("Spec short", "Angio/Gymno", "ID_tree")
-colnames(clade_subset)[1] <- "Species"
-colnames(clade_subset)[2] <- "Clade"
-colnames(clade_subset)[3] <- "Tree_ID"
+  select("block","species_code", "clade")
 #merge clade_subset with twigs_mix_3 by ID_tree and Species
-twigs_mix_3 <- left_join(twigs_mix_3, clade_subset, by =c("Tree_ID", "Species"))
-#for Tree_ID=32, Clade is NA, change to "A"
-twigs_mix_3$Clade[twigs_mix_3$Tree_ID == 32] <- "A"
+twigs_mix_3 <- left_join(twigs_mix_3, clade_subset, by =c("block", "species_code"))
+#for block=C, species_code=sor auc, clade= NA - change to A
+twigs_mix_3$clade[twigs_mix_3$species_code == "Sal fra" & twigs_mix_3$block == "C"] <- "A"
 ```
 ## Calculate the predicted rooting depth for each species
 To quantify the relationship between tree height and rooting depth, we fitted a linear mixed-effects model with rooting depth as the response variable and tree height as a fixed effect. Species was included as a random effect, allowing both intercepts and the effect of tree height (i.e., slopes) to vary among species. To develop the predictive model, rooting depth data was primarily obtained from the online database of Kutschera & Lichtenegger (2002). For 12 species lacking data, additional information was sourced from the RSIP (Root Systems of Individual Plants) database from Tumber-Dávila et al. (2022). 
 ```{r}
 #upload rooting depth data compiled from the Kutschera and Lichtenegger (2002) database, Wageningen University and the RSIP database
 roots2 <- read.csv(file.path(prelim_dir, "Root_data_Wageningen_Lateral_Extent_RSIP.csv"))
-mod2<-lme(Root_depth_cm ~ Height_plant_cm,
-          random = ~ Height_plant_cm| Species,
+mod2<-lme(root_depth_cm ~ height_plant_cm,
+          random = ~ height_plant_cm| species,
           data = roots2,
           na.action = na.omit)
 
@@ -117,153 +112,27 @@ mod2<-lme(Root_depth_cm ~ Height_plant_cm,
 pred_10_mod2 <- predict(
   mod2,
   newdata = data.frame(
-    Height_plant_cm = 10,
-    Species = unique(roots2$Species)
+    height_plant_cm = 10,
+    species = unique(roots2$species)
   )
 )
 #tidy table
 root_data <- expand.grid(
-  Height_plant_cm = 10,
-  Species = unique(roots2$Species)
+  height_plant_cm = 10,
+  species = unique(roots2$species)
 )
 root_data$pred_root_depth <- predict(mod2, root_data)
 root_data <- root_data %>%
-  select(Species, pred_root_depth)
+  select(species, pred_root_depth)
 
 #change species Tsuga canadensis Carr. to Tsuga canadensis
-root_data$Species <- gsub("Tsuga canadensis Carr.", "Tsuga canadensis", root_data$Species)
-```
-## Calculate the soil moisture for each individual tree
-The soil moisture for 2 days prior to, and the day of, each twig sampling date was extracted; 3-5 June and 9-11 June. This was done to avoid including soil moisture data from the precipitation events (which occurred on the 7th and 8th of June), as this significantly influences the topsoil moisture. The mean soil moisture for these six days was calculated for each sensor/VIT. 
-```{r}
-##upload the complete soil moisture data for all sensors
-soil_moist<-read.csv(file.path(prelim_dir, "soil_moisture_2025.csv"))
-unique_combinations <- soil_moist %>%
-  distinct(row, pos)
-#118 records
-
-#format the timestamp column to date, month, year, hour, minute
-soil_moist$Timestamp <- as.POSIXct(
-  soil_moist$Timestamp,
-  format = "%d/%m/%Y %H:%M"
-)
-#check for NAs
-any(is.na(soil_moist$O_soil_moist))
-
-#select subset of soil moisture data for the period 2025-06-03 to 2025-06-11, which includes both twig sampling dates
-soil_subset <- subset(
-  soil_moist,
-  Timestamp >= as.POSIXct("2025-06-03 00:00") &
-    Timestamp <= as.POSIXct("2025-06-11 23:59")
-)
-unique_combinations <- soil_subset %>%
-  distinct(row, pos)
-#115 records remaining
-
-#select only the relevant columns needed
-soil_moist_sub<-soil_subset[,c("species", "O_SDI12_SMT100_soil_moisture_SWC_percent","Timestamp","Sensor_ID")]
-colnames(soil_moist_sub)[1] <- "Species"
-```
-During preliminary analyses, it became clear that the tree identification in the soil moisture data did not match the sensor identification, therefore the correct tree identification corresponding to each sensorID was uploaded from a separate dataset and joined to the soil moisture data. This other data could, however, not be used alone, as it is not complete
-```{r}
-#upload data containing the correct tree identification corresponding to each sensor ID 
-sensor_data<-read.csv(file.path(prelim_dir, "Soil_moisture_subset.csv"))
-#for each unique sensor_ID, get corresponding tree identification: Row, Pos, Species
-sensor_info <- sensor_data %>%
-  select(Sensor_ID, Row, Pos, Species) %>%
-  distinct()
-#join sensor_info to soil_moist_sub, by Sensor_ID and species
-#need to do this because the row, pos (therefore tree ID) is incorrect in the SM data
-soil_moist_sub <- left_join(soil_moist_sub, sensor_info, by = c("Sensor_ID", "Species"))
-
-#Select specific dates for soil moisture measurements- 3 days around each twig sampling event - reason, excludes the rain which occurred on 7 and 8 June
-
-#create subset from soil_moist_sub, selecting specific dates: 2025-06-03;2025-06-04; 2025-06-05; 2025-06-09; 2025-06-10; 2025-06-11
-soil_moist_sub$Timestamp <- as.POSIXct(soil_moist_sub$Timestamp)
-soil_moist_sub <- subset(
-  soil_moist_sub,
-  Timestamp >= as.POSIXct("2025-06-03 00:00") &
-    Timestamp <= as.POSIXct("2025-06-05 23:59") |
-    Timestamp >= as.POSIXct("2025-06-09 00:00") &
-    Timestamp <= as.POSIXct("2025-06-11 23:59")
-)
-```
-In order to combine the soil moisture data with other data required for later analyses, we need the "ID_tree" - in the experiment, each tree has a unique ID number, which corresponds to a species, row and position (location on the map/in the experiment)
-```{r}
-#upload the experimental master table, containing information on all trees
-master_table <- read.csv(file = file.path(prelim_dir, "ARBOfun_ID_master.csv"))
-#select only the columns we need
-master_sub <- master_table %>%
-  select(tree_ID,grid_row,grid_col)
-colnames(master_sub)[1] <- "ID_tree"
-colnames(master_sub)[2] <- "Row"
-colnames(master_sub)[3] <- "Pos"
-#delete duplicate rows
-master_sub <- master_sub %>%
-  distinct(Row, Pos, .keep_all = TRUE)
-#500
-
-#join inventory_sub to soil_moist_sub, by row and pos
-soil_moist_sub <- left_join(soil_moist_sub, master_sub, by=c("Row", "Pos"))
-unique(soil_moist_sub$ID_tree)
-#Sensor Id 658 has NA for ID_tree - because in Lena's data, there is no sensor 658
-#but in SM data, Sensor ID 658 refers to row 28, pos 7 (Sor dom), which is tree ID 253 in the master table
-
-# in soil_moist_sub, for Sensor_ID=658, assign ID_tree = 253, Row = 28, Pos = 7
-soil_moist_sub <- soil_moist_sub %>%
-  mutate(ID_tree = ifelse(Sensor_ID == 658, 253, ID_tree ),
-         Row = ifelse(Sensor_ID == 658, 28, Row),
-         Pos = ifelse(Sensor_ID == 658, 7, Pos))
-unique(soil_moist_sub$ID_tree)
-#115 records
-```
-Each individual sensor needs to be inspected to ensure it was running correctly over the entire period, and that there are no unexplained peaks in values - any sensors which are not working correctly, or have unexplained peaks in values, need to be removed from the data set. The soil moisture readings from each sensor were plotted over time to identify any sensors which were not working correctly.
-```{r}
-#plot soil moisture readings from each sensor
-# Make sure Timestamp is datetime format
-soil_moist_sub$Timestamp <- as.POSIXct(soil_moist_sub$Timestamp)
-
-# Basic time series plot for each sensor
-ggplot(soil_moist_sub, aes(x = Timestamp,
-               y = O_SDI12_SMT100_soil_moisture_SWC_percent,
-               group = Sensor_ID)) +
-  
-  geom_line(color = "steelblue") +
-  
-  facet_wrap(~ Sensor_ID, scales = "free_y") +
-  
-  labs(
-    x = "Time",
-    y = "Soil moisture (%)",
-    title = "Soil moisture over time for each sensor"
-  ) +
-  
-  theme_bw()           
-
-#remove sensors: 552, 587 (not measuring (flat line)
-#check random peak in 579, 591 - compared to precipitation data from climate station, and there was no rain around, these dates,times - therefore they should be removed
-
-#remove sensors 552, 587 from soil_moist_sub
-soil_moist_sub <- soil_moist_sub %>%
-  filter(!Sensor_ID %in% c(552, 587))
-
-#remove timestamp 2025-06-03 22:32:00 and 2025-06-05 07:35:00 from soil_moist_sub, as these are outliers
-soil_moist_sub <- soil_moist_sub %>%
-  filter(!Timestamp %in% as.POSIXct(c("2025-06-03 22:32:00", "2025-06-05 07:35:00")))
-#rerun plot
-#113 (was 115, removed 2, so correct)
-
-#since outliers/errors were removed, can now calculate the mean soil moisture for each ID_tree
-soil_moist_mean <- soil_moist_sub %>%
-  group_by(ID_tree) %>%
-  summarise(mean_soil_moisture = mean(O_SDI12_SMT100_soil_moisture_SWC_percent, na.rm = TRUE))
+root_data$species <- gsub("Tsuga canadensis Carr.", "Tsuga canadensis", root_data$species)
 ```
 ## Calculate the Leaf Economic Spectrum (LES) PC1 axis for each species
 A principal component analysis (PCA) was performed using eight different functional traits expected to be important in predicting growth response. Several of the traits were measured directly from the trees in ARBOfun (specific leaf area (SLA), leaf nitrogen content (LNC), carbon to nitrogen ratio (C:N) and stomatal density). These trait measurements were obtained for individual trees and subsequently aggregated to the species level by calculating the mean value across all individuals sampled for each species. These species-specific mean trait values were then used in subsequent analyses. In addition to the measured traits, additional traits (wood density, P50, stomatal conductance and Amax (maximum photosynthetic assimilation rate, a measure for the photosynthetic capacity)) were taken from the gap-filled TRY data from Kretz et al. (2025).
 ```{r}
 #upload the TRY gap filled data from Kretz et al. 2025
 TRY<-read.csv(file.path(prelim_dir,"TRY_gap_filled_data.csv"))
-colnames(TRY)[1]<-"species"
 #Upload the measured traits data from the experiment
 measured_traits<-read.csv(file.path(prelim_dir,"measured_LES_traits.csv"))
 #select relevant columns
@@ -338,14 +207,14 @@ The δ18O results of the twig water (δ18Otwig) were tested for outliers. The ef
 ```{r}
 #test for outliers within Species
 outliers_by_species <- twigs %>% 
-  group_by(Species) %>% 
+  group_by(species_code) %>% 
   summarise(outliers = list(boxplot.stats(d18O)$out)) %>% 
   unnest(cols = c(outliers)) 
 print(outliers_by_species)
 #none
 
 #test for significant differences in d18O between species
-anova_species <- aov(d18O ~ Species, data = twigs)
+anova_species <- aov(d18O ~ species_code, data = twigs)
 summary(anova_species)
 ```
 ### Figure 1: 
@@ -353,16 +222,34 @@ Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ran
 ```{r}
 #from twigs mix 3, create ranked box-plots of mean twig_d18O by species, ranked by mean d18O
 library(forcats)
-#ranked by mean
+#calculate the mean d18O for deep and shallow soil water
+mean_10_20 <- soil %>%
+  filter(depth %in% c(10, 20)) %>%
+  summarise(mean = mean(d18O, na.rm = TRUE)) %>%
+  pull(mean)
+
+mean_gt20 <- soil %>%
+  filter(depth > 20) %>%
+  summarise(mean = mean(d18O, na.rm = TRUE)) %>%
+  pull(mean)
+
+mean_10_20
+mean_gt20
+
 ggplot(twigs_mix_3, 
-       aes(x = fct_reorder(Species, twig_d18O, .fun = mean), 
+       aes(x = fct_reorder(species_code, twig_d18O, .fun = mean), 
            y = twig_d18O,
-           fill = Clade)) +
+           fill = clade)) +
   geom_boxplot(color = "black") +
+  
+  # horizontal reference lines
+  geom_hline(yintercept = mean_10_20, color = "red",linetype = "dashed",  linewidth = 1) +
+  geom_hline(yintercept = mean_gt20, color = "red", linetype = "dashed", linewidth = 1) +
+  
   labs(
     x = "Species",
     y = expression("Twig water " * delta^18 * "O"),
-    fill = "Clade"   # Optional legend title
+    fill = "Clade"
   ) +
   scale_fill_manual(
     values = c(
@@ -394,11 +281,11 @@ Plot showing the fraction of water taken up from the shallow layers (fshallow) o
 ##plot the fraction of water shallow sources for each tree, by species, coloured by clade 
 #plot, to have species in order of mean f_shallow, and colour by clade
 twigs_mix_3 <- twigs_mix_3 %>%
-  mutate(Species = factor(
-    Species, 
-    levels = names(sort(tapply(f_shallow, Species, mean), decreasing = TRUE))))
+  mutate(species_code = factor(
+    species_code, 
+    levels = names(sort(tapply(f_shallow, species_code, mean), decreasing = TRUE))))
 
-ggplot(twigs_mix_3, aes(y = f_shallow, x = Species, fill = Clade)) +
+ggplot(twigs_mix_3, aes(y = f_shallow, x = species_code, fill = clade)) +
   geom_boxplot() +
   theme_bw() +
   labs(
@@ -441,13 +328,13 @@ set.seed(123)
 
 ##with removing the taxonomic information
 imp <- missForest(
-  Chpt1_data[,-c(1,2,4,5,6,7)],
+  Chpt1_data[,-c(1,3,4,5)],
   maxiter=100,
   ntree=2500)
 imputed_data <- imp$ximp
 
 # Original data used for imputation (excluding species column)
-Chpt1_data_variables<-Chpt1_data[,-c(1,2,4,5,6,7)]
+Chpt1_data_variables<-Chpt1_data[,-c(1,3,4,5)]
 
 # Calculate number and percentage of missing values
 n_missing <- sum(is.na(Chpt1_data_variables))
@@ -848,9 +735,9 @@ root_types <- read_xlsx(file.path(prelim_dir, "Root_category.xlsx"))
 #remove NAs
 root_types <- root_types %>%
   filter(!is.na(root_category))
-#add root types to pred_10, by Species
+#add root types to pred_10, by species
 root_var <- root_data %>%
-  left_join(root_types, by = "Species")
+  left_join(root_types, by = "species")
 #select only complete cases
 root_var <- root_var %>%
   filter(!is.na(root_category))
@@ -892,11 +779,11 @@ twigs <- read_excel(file.path(prelim_dir, "d18O_extracted water_twig_samples.xls
 
 #plot d18O of different block, depth, over the 3 different dates. include line connecting points of the same block and depth
 #change order of sampling date on x axis
-soil$`Sampling date` <- factor(soil$`Sampling date`, levels = c("11.04.2025", "30.06.2025", "04.08.2025"))
-ggplot(soil, aes(x =`Sampling date`, y = d18O, color = Block, group = interaction(Block, Depth))) +
+soil$`sampling_date` <- factor(soil$`sampling_date`, levels = c("11.04.2025", "30.06.2025", "04.08.2025"))
+ggplot(soil, aes(x =`sampling_date`, y = d18O, color = block, group = interaction(block, depth))) +
   geom_point() +
   geom_line() +
-  facet_wrap(~ Depth) +
+  facet_wrap(~ depth) +
   labs(title = "d18O of soil water by Block and Depth", x = "Sampling Date", y = "d18O") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -906,38 +793,39 @@ ggsave(file.path(suppl_dir, "Figure_A4.png"))
 
 #average soil d18O per depth, location and date
 soil_summary <- soil %>%
-  group_by(`Sampling date`, Block, Depth) %>%
+  group_by(`sampling_date`, block, depth) %>%
   summarize(
     mean_d18O = mean(d18O, na.rm = TRUE)
   )
 #calculate average soil d18O per depth, across all blocks and dates
 soil_avg <- soil %>%
-  group_by(Depth) %>%
+  group_by(depth) %>%
   summarize(mean_d18O = mean(d18O, na.rm = TRUE))
 
 #export soil_avg as table
 write.csv(soil_avg, file.path(suppl_dir, "soil_avg_d18O_by_depth.csv"), row.names = FALSE)
 
 #soil depth from which tree most likely gets its water (based on d18O)
-twig_sources <- expand.grid(Individual_Id = twigs$Individual_Id,
-                            Depth = soil_avg$Depth)
+twigs$ID<-paste(twigs$block, twigs$species_code, sep = "_")
+twig_sources <- expand.grid(ID = twigs$ID,
+                            depth = soil_avg$depth)
 View(twig_sources)
 # Join twig δ18O
 twig_sources <- twig_sources %>%
-  left_join(twigs, by = "Individual_Id") %>%
-  left_join(soil_avg, by = "Depth") %>%
+  left_join(twigs, by = "ID") %>%
+  left_join(soil_avg, by = "depth") %>%
   mutate(diff = abs(d18O - mean_d18O))
 
 # Find depth with minimum difference per tree
 best_depth <- twig_sources %>%
-  group_by(Individual_Id) %>%
+  group_by(ID) %>%
   slice_min(diff, n = 1) %>%
-  select(Individual_Id, Species, Depth, d18O, mean_d18O, diff)
+  select(ID, species_code, depth, d18O, mean_d18O, diff)
 #remove na
 best_depth <- best_depth[!is.na(best_depth$d18O) & !is.na(best_depth$mean_d18O), ]
 
 #create plot
-ggplot(best_depth, aes(x = Species, y = Depth)) +
+ggplot(best_depth, aes(x = species_code, y = depth)) +
   geom_jitter(width = 0.2, height = 0.2) +
   labs(title = "Estimated Water Source Depth by Tree Species", x = "Species", y = "Estimated Water Source Depth (cm)") +
   theme_minimal() +

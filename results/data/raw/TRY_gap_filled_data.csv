@@ -1,4 +1,4 @@
-Species,wood_density,Amax,P50,stomata_conductance
+species,wood_density,Amax,P50,stomatal_conductance
 Abies alba,0.501,0.033,-3.724,105.011
 Abies balsamea,0.461,0.059,-2.228,53.937
 Abies grandis,0.397,0.053,-3.525,71.158

@@ -1,4 +1,4 @@
-Species,Individual,Height_plant_cm,Root_depth_cm,Diameter_root_system,Reference
+species,individual,height_plant_cm,root_depth_cm,diameter_root_system,reference
 Abies alba,1,364,190,1006,"Kutschera & Lichtenegger, 2002. Available at: https://images.wur.nl/digital/collection/coll13/id/1370/rec/57"
 Abies alba,2,1275,280,1250,"Kutschera & Lichtenegger, 2002. Available at: https://images.wur.nl/digital/collection/coll13/id/1370/rec/58"
 Abies alba,3,1648,188,2120,"Kutschera & Lichtenegger, 2002. Available at: https://images.wur.nl/digital/collection/coll13/id/1370/rec/59"
