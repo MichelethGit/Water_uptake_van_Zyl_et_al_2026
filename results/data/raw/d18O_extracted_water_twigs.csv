@@ -1,0 +1,121 @@
+box,position,label_number,species_former_code,species_former_name,species,species_code,block,sampling_date,extraction_date,pressure,comments,d2H,d2H_stdev,d18O,d18O_stdev,run
+1,A1,1,Ace pla,Acer platanoides,Acer platanoides,Ace pla,A,6.2025,10.11.2025,5.0-2,Not perfectly sealed - pressure did not go as low as it should,-65.84551742,0.496444456,-9.163617145,0.026980467,1
+1,A2,2,Sor auc,Sorbus aucuparia,Sorbus aucuparia,Sor auc,A,6.2025,10.11.2025,5.0-2,NA,-62.99511776,0.832621096,-8.506703408,0.035600886,1
+1,A3,3,Til cor,Tilia cordata,Tilia cordata,Til cor,A,6.2025,10.11.2025,5.0-2,NA,-58.51141235,0.480996537,-8.163299925,0.007172134,1
+1,A4,4,Rob pse,Robinia pseudoacacia,Robinia pseudoacacia,Rob pse,B,6.2025,10.11.2025,5.0-2,NA,-66.22053753,0.660096675,-8.952613893,0.066970059,1
+1,A5,5,Cas sat,Castanea sativa,Castanea sativa,Cas sat,A,6.2025,10.11.2025,5.0-2,NA,-65.59594206,0.274243189,-8.981244885,0.053141013,1
+1,A6,6,Pin nig,Pinus nigra,Pinus nigra,Pin nig,A,6.2025,10.11.2025,5.0-2,milky,-67.63365267,0.82282104,-9.458941969,0.086159984,1
+1,A7,7,Pin syl,Pinus sylvestris,Pinus sylvestris,Pin syl,A,6.2025,10.11.2025,5.0-2,milky,-58.19368867,0.746978214,-7.927313493,0.051425666,1
+1,A8,8,Til tom,Tilia tomentosa,Tilia tomentosa,Til tom,A,6.2025,10.11.2025,5.0-2,NA,-61.75287292,0.146527236,-8.30281319,0.072847088,1
+1,A9,9,Cas sat,Castanea sativa,Castanea sativa,Cas sat,B,6.2025,10.11.2025,5.0-2,NA,-64.62334173,0.625134447,-8.465730906,0.053311297,1
+1,A10,10,Sor tor,Sorbus torminalis,Torminalis glaberrima,Tor gla,A,6.2025,10.11.2025,5.0-2,NA,-69.54960474,0.87572548,-8.902249055,0.084733658,1
+1,B1,11,Til tom,Tilia tomentosa,Tilia tomentosa,Til tom,C,6.2025,10.11.2025,5.0-2,NA,-62.63872527,0.28341997,-8.034546905,0.13223556,1
+1,B2,12,Ace neg,Acer negundo,Acer negundo,Ace neg,B,6.2025,10.11.2025,5.0-2,NA,-70.37003363,0.082345267,-9.060112367,0.028933517,1
+1,B3,13,Pic sit,Picea sitchensis,Picea sitchensis,Pic sit,B,6.2025,10.11.2025,5.0-2,NA,-49.86275686,0.557837331,-6.004456048,0.06010404,1
+1,B4,14,Pse men,Pseudotsuga menziesii,Pseudotsuga menziesii,Pse men,A,6.2025,10.11.2025,5.0-2,NA,-61.86648571,0.736249546,-8.305742316,0.026267842,1
+1,B5,15,Aln glu,Alnus glutinosa,Alnus glutinosa,Aln glu,A,6.2025,10.11.2025,5.0-2,NA,-68.68428148,0.125929995,-8.758612628,0.074500594,1
+1,B6,16,Thu occ,Thuja occidentalis,Thuja occidentalis,Thu occ,A,6.2025,10.11.2025,5.0-2,NA,-58.74964339,0.369057673,-8.085488049,0.110395073,1
+1,B7,17,Que rob,Quercus robur,Quercus robur,Que rob,A,6.2025,10.11.2025,5.0-2,NA,-66.59101294,0.428625017,-9.23184684,0.090551251,2
+1,B8,18,Pin pon,Pinus ponderosa,Pinus ponderosa,Pin pon,A,6.2025,10.11.2025,5.0-2,milky,-61.81776231,0.938589358,-8.340009795,0.088704007,2
+1,B9,19,Ace pse,Acer pseudoplatanus,Acer pseudoplatanus,Ace pse,A,6.2025,10.11.2025,5.0-2,NA,-66.18033472,1.094422165,-9.455170675,0.121985442,2
+1,B10,20,Aes hip,Aesculus hippocastanum,Aesculus hippocastanum,Aes hip,C,6.2025,10.11.2025,5.0-2,NA,-70.40078848,0.931818173,-9.711282888,0.13199879,2
+1,C1,1.1,Aln glu,Alnus glutinosa,Alnus glutinosa,Aln glu,B,6.2025,11.11.2025,2.4-2,NA,-60.07428556,0.95705854,-8.281881961,0.143459916,2
+1,C2,2.1,Abi alb,Abies alba,Abies alba,Abi alb,A,6.2025,11.11.2025,2.4-2,slightly milky,-56.75534201,0.631227613,-7.425309619,0.041562032,2
+1,C3,3.1,Sal cap,Salix caprea,Salix caprea,Sal cap,A,6.2025,11.11.2025,2.4-2,NA,-60.09514065,0.277976584,-7.443006848,0.079877337,2
+1,C4,4.1,Car bet,Carpinus betulus,Carpinus betulus,Car bet,B,6.2025,11.11.2025,2.4-2,NA,-64.23400641,0.184725921,-7.844967433,0.021540509,2
+1,C5,5.1,Sal fra,Salix fragilis,Salix fragilis,Sal fra,A,6.2025,11.11.2025,2.4-2,NA,-63.54037892,0.538063175,-7.847350527,0.11525451,2
+1,C6,6.1,Ulm min,Ulmus minor,Ulmus minor,Ulm min,B,6.2025,11.11.2025,2.4-2,NA,-65.65162215,0.754278038,-8.132690868,0.023244836,2
+1,C7,7.1,Que rob,Quercus robur,Quercus robur,Que rob,B,6.2025,11.11.2025,2.4-2,NA,-66.04637424,0.362320625,-8.600731106,0.06213797,2
+1,C8,8.1,Pop tre,Populus tremula,Populus tremula,Pop tre,B,6.2025,11.11.2025,2.4-2,NA,-66.74171328,0.926106972,-8.015143222,0.103663898,2
+1,C9,9.1,Pin syl,Pinus sylvestris,Pinus sylvestris,Pin syl,B,6.2025,11.11.2025,2.4-2,milky,-59.07784991,0.743069658,-7.914260412,0.095398835,2
+1,C10,10.1,Pop tre,Populus tremula,Populus tremula,Pop tre,A,6.2025,11.11.2025,2.4-2,NA,-67.25276902,0.811589492,-9.084802393,0.095135441,2
+1,D1,11.1,Til cor,Tilia cordata,Tilia cordata,Til cor,B,6.2025,11.11.2025,2.4-2,NA,-60.52815279,0.672198252,-8.216392037,0.080315509,2
+1,D2,12.1,Lar dec,Larix decidua,Larix decidua,Lar dec,A,6.2025,11.11.2025,2.4-2,milky,-58.90477685,0.935768151,-8.639569801,0.096831892,2
+1,D3,13.1,Fra exc,Fraxinus excelsior,Fraxinus excelsior,Fra exc,B,6.2025,11.11.2025,2.4-2,NA,-57.27357843,0.315209596,-8.008162893,0.163852699,3
+1,D4,14.1,Ace pse,Acer pseudoplatanus,Acer pseudoplatanus,Ace pse,B,6.2025,11.11.2025,2.4-2,NA,-67.20327093,0.208007335,-8.755063122,0.033778182,3
+1,D5,15.1,Pic sit,Picea sitchensis,Picea sitchensis,Pic sit,A,6.2025,11.11.2025,2.4-2,NA,-54.25290507,0.460846156,-7.827584038,0.10599066,3
+1,D6,16.1,Tax bac,Taxus baccata,Taxus baccata,Tax bac,B,6.2025,11.11.2025,2.4-2,NA,-57.52743212,0.446732432,-7.383088722,0.124868146,3
+1,D7,17.1,Sal fra,Salix fragilis,Salix fragilis,Sal fra,B,6.2025,11.11.2025,2.4-2,NA,-63.63863487,0.228836324,-7.864975781,0.03106536,3
+1,D8,No sample,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1,D9,19.1,Pru avi,Prunus avium,Prunus avium,Pru avi,B,6.2025,11.11.2025,2.4-2,NA,-64.32340773,0.568809066,-7.792532892,0.149271352,3
+1,D10,20.1,Cor col,Corylus colurna,Corylus colurna,Cor col,B,6.2025,11.11.2025,2.4-2,NA,-65.23271378,0.312544764,-8.272378579,0.12217377,3
+1,E1,1.2,Bet pen,Betula pendula,Betula pendula,Bet pen,A,6.2025,11.11.2025,2.0-2,NA,-68.1276838,0.855414658,-8.187595117,0.130197029,3
+1,E2,2.2,Aes hip,Aesculus hippocastanum,Aesculus hippocastanum,Aes hip,A,6.2025,11.11.2025,2.0-2,NA,-68.69073855,0.019326946,-8.662546188,0.005319145,3
+1,E3,3.2,Tsu can,Tsuga canadensis,Tsuga canadensis,Tsu can,A,6.2025,11.11.2025,2.0-2,NA,-55.96022227,0.69671058,-6.994919244,0.020854693,3
+1,E4,4.2,Abi gra,Abies grandis,Abies grandis,Abi gra,A,6.2025,11.11.2025,2.0-2,slightly milky,-59.47482423,0.522334617,-7.701340763,0.067834942,3
+1,E5,5.2,Fag syl,Fagus sylvatica,Fagus sylvatica,Fag syl,B,6.2025,11.11.2025,2.0-2,NA,-60.68626398,0.336430531,-7.915134751,0.068076098,3
+1,E6,6.2,Jug reg,Juglans regia,Juglans regia,Jug reg,B,6.2025,11.11.2025,2.0-2,NA,-62.39761319,0.559784067,-8.865745078,0.006074319,3
+1,E7,7.2,Tsu can,Tsuga canadensis,Tsuga canadensis,Tsu can,C,6.2025,11.11.2025,2.0-2,NA,-48.96011081,0.086908176,-6.623084542,0.092265713,3
+1,E8,8.2,Rob pse,Robinia pseudoacacia,Robinia pseudoacacia,Rob pse,A,6.2025,11.11.2025,2.0-2,NA,-63.40990603,0.401287049,-8.135151482,0.139296597,3
+1,E9,9.2,Tsu can,Tsuga canadensis,Tsuga canadensis,Tsu can,B,6.2025,11.11.2025,2.0-2,NA,-52.54902544,0.386438721,-7.198954548,0.024417441,3
+1,E10,10.2,Sal cap,Salix caprea,Salix caprea,Sal cap,B,6.2025,11.11.2025,2.0-2,NA,-66.2488593,0.501980684,-8.31233525,0.112689115,4
+1,F1,11.2,Cas sat,Castanea sativa,Castanea sativa,Cas sat,C,6.2025,11.11.2025,2.0-2,slightly milky; strong aroma,-66.05628865,1.084260834,-8.901958,0.022722251,4
+1,F2,12.2,Pic abi,Picea abies,Picea abies,Pic abi,B,6.2025,11.11.2025,2.0-2,NA,-52.44650536,0.533917303,-6.883664519,0.073715903,4
+1,F3,13.2,Abi gra,Abies grandis,Abies grandis,Abi gra,B,6.2025,11.11.2025,2.0-2,milky,-62.36729077,0.260855382,-8.776378058,0.113297611,4
+1,F4,14.2,Que pub,Quercus pubescens,Quercus pubescens,Que pub,B,6.2025,11.11.2025,2.0-2,NA,-66.88149218,0.113955487,-8.874829281,0.034536273,4
+1,F5,15.2,Ace pse,Acer pseudoplatanus,Acer pseudoplatanus,Ace pse,C,6.2025,11.11.2025,2.0-2,NA,-64.72940523,0.762241759,-8.1727873,0.140415058,4
+1,F6,16.2,Ced deo,Cedrus deodara,Cedrus deodara,Ced deo,B,6.2025,11.11.2025,2.0-2,slightly milky,-61.36956285,0.022911492,-8.294375776,0.021774117,4
+1,F7,17.2,Pin syl,Pinus sylvestris,Pinus sylvestris,Pin syl,C,6.2025,11.11.2025,2.0-2,very milky; strong aroma,-59.48183554,0.621380754,-7.688345443,0.005443642,4
+1,F8,18.2,Aes hip,Aesculus hippocastanum,Aesculus hippocastanum,Aes hip,B,6.2025,11.11.2025,2.0-2,NA,-61.95627814,0.329631102,-8.189075895,0.016387806,4
+1,F9,19.2,Cor col,Corylus colurna,Corylus colurna,Cor col,A,6.2025,11.11.2025,2.0-2,NA,-63.64081406,0.581448667,-7.950806519,0.131886223,4
+1,F10,20.2,Pru avi,Prunus avium,Prunus avium,Pru avi,A,6.2025,11.11.2025,2.0-2,NA,-61.22116772,1.025570779,-7.267154591,0.120390622,4
+1,G1,1.3,Pin pon,Pinus ponderosa,Pinus ponderosa,Pin pon,B,6.2025,11.11.2025,2.5-2,slightly milky; strong aroma,-59.27441593,0.272617075,-6.975315863,0.102993023,4
+1,G2,2.3,Bet pen,Betula pendula,Betula pendula,Bet pen,B,6.2025,11.11.2025,2.5-2,NA,-63.06344147,0.722643954,-7.706077915,0.114772386,4
+1,G3,3.3,Til tom,Tilia tomentosa,Tilia tomentosa,Til tom,B,6.2025,11.11.2025,2.5-2,NA,-55.65322449,0.703267081,-7.097455566,0.013083734,4
+1,G4,4.3,Pse men,Pseudotsuga menziesii,Pseudotsuga menziesii,Pse men,B,6.2025,11.11.2025,2.5-2,NA,-57.1308634,0.988573446,-7.899900527,0.056562933,4
+1,G5,5.3,Tax bac,Taxus baccata,Taxus baccata,Tax bac,C,6.2025,11.11.2025,2.5-2,NA,-61.32143967,0.29587999,-8.184053459,0.058457914,4
+1,G6,6.3,Ulm lae,Ulmus laevis,Ulmus laevis,Ulm lae,C,6.2025,11.11.2025,2.5-2,NA,-67.89863696,0.150591415,-8.587248375,0.081002449,5
+1,G7,7.3,Jug reg,Juglans regia,Juglans regia,Jug reg,A,6.2025,11.11.2025,2.5-2,NA,-58.60269975,1.004527104,-8.097848621,0.084560557,5
+1,G8,8.3,Pic sit,Picea sitchensis,Picea sitchensis,Pic sit,C,6.2025,11.11.2025,2.5-2,NA,-53.71598535,0.554356475,-7.380666686,0.067733159,5
+1,G9,9.3,Sor auc,Sorbus aucuparia,Sorbus aucuparia,Sor auc,B,6.2025,11.11.2025,2.5-2,NA,-62.12613172,0.374791585,-7.964077074,0.076444322,5
+1,G10,10.3,Sor dom,Sorbus domestica,Cormus domestica,Cor dom,A,6.2025,11.11.2025,2.5-2,NA,-69.1677838,0.130001415,-9.024220811,0.115905317,5
+1,H1,11.3,Sor dom,Sorbus domestica,Cormus domestica,Cor dom,C,6.2025,11.11.2025,2.5-2,NA,-66.70277102,0.108105306,-8.448003121,0.063016171,5
+1,H2,12.3,Pla ace,Platanus acerifolia,Platanus hispanica,Pla his,D,6.2025,11.11.2025,2.5-2,NA,-62.51520275,0.610507587,-7.911640536,0.035635133,5
+1,H3,13.3,Pin nig,Pinus nigra,Pinus nigra,Pin nig,B,6.2025,11.11.2025,2.5-2,milky; strong aroma,-60.56589934,0.353106494,-7.582204881,0.018366637,5
+1,H4,14.3,Thu occ,Thuja occidentalis,Thuja occidentalis,Thu occ,B,6.2025,11.11.2025,2.5-2,NA,-56.78132434,0.387728935,-7.594092911,0.036839871,5
+1,H5,15.3,Sal fra,Salix fragilis,Salix fragilis,Sal fra,C,6.2025,11.11.2025,2.5-2,NA,-70.20332989,0.347323311,-8.710176529,0.069376762,5
+1,H6,16.3,Lar dec,Larix decidua,Larix decidua,Lar dec,B,6.2025,11.11.2025,2.5-2,"Pressure not ideal, after had leak and explotion from 17.3. 17.3 was discarded. H6 slightly milky",-61.32923419,0.422300484,-7.872636378,0.040469036,5
+1,H7,17.3,Cor col,Corylus colurna,Corylus colurna,Cor col,C,6.2025,11.11.2025,2.5-2,NA,-67.5722718,0.654107202,-8.784218074,0.057617493,5
+1,H8,18.3,Tax bac,Taxus baccata,Taxus baccata,Tax bac,D,6.2025,11.11.2025,2.5-2,NA,-57.66706385,0.05285184,-7.015639897,0.017764397,5
+1,H9,19.3,Ace pla,Acer platanoides,Acer platanoides,Ace pla,C,6.2025,11.11.2025,2.5-2,NA,-65.62974681,0.311421952,-9.11488028,0.043365588,5
+1,H10,20.3,Ulm lae,Ulmus laevis,Ulmus laevis,Ulm lae,D,6.2025,11.11.2025,2.5-2,NA,-68.31549223,0.600028158,-8.64223379,0.054902121,5
+1,I1,1.4,Fag syl,Fagus sylvatica,Fagus sylvatica,Fag syl,A,6.2025,12.11.2025,2.1-2,NA,-60.90905054,0.516527732,-7.31072857,0.036447704,5
+1,I2,2.4,Que pub,Quercus pubescens,Quercus pubescens,Que pub,A,6.2025,12.11.2025,2.1-2,NA,-64.22667748,0.591350666,-8.213215871,0.036430424,6
+1,I3,3.4,Fag syl,Fagus sylvatica,Fagus sylvatica,Fag syl,C,6.2025,12.11.2025,2.1-2,NA,-65.70517157,0.67723256,-8.501801668,0.052828861,6
+1,I4,4.4,Lar dec,Larix decidua,Larix decidua,Lar dec,C,6.2025,12.11.2025,2.1-2,"milky, strong odour",-60.51076554,0.064399395,-8.669576123,0.028211151,6
+1,I5,5.4,Car bet,Carpinus betulus,Carpinus betulus,Car bet,A,6.2025,12.11.2025,2.1-2,NA,-63.48846142,0.286176571,-8.072468885,0.057637321,6
+1,I6,6.4,Abi alb,Abies alba,Abies alba,Abi alb,B,6.2025,12.11.2025,2.1-2,NA,-58.51282356,0.358991747,-7.680960013,0.034658365,6
+1,I7,7.4,Pic abi,Picea abies,Picea abies,Pic abi,A,6.2025,12.11.2025,2.1-2,NA,-52.88223128,0.638915717,-6.738075214,0.040517384,6
+1,I8,8.4,Jug reg,Juglans regia,Juglans regia,Jug reg,C,6.2025,12.11.2025,2.1-2,NA,-60.03792384,0.558371681,-8.208617353,0.050677893,6
+1,I9,9.4,Aln glu,Alnus glutinosa,Alnus glutinosa,Aln glu,C,6.2025,12.11.2025,2.1-2,NA,-61.6007362,1.047151022,-7.722415446,0.064723086,6
+1,I10,10.4,Car bet,Carpinus betulus,Carpinus betulus,Car bet,C,6.2025,12.11.2025,2.1-2,NA,-57.02409197,0.34575691,-6.961029279,0.047951041,6
+1,J1,11.4,Pop tre,Populus tremula,Populus tremula,Pop tre,C,6.2025,12.11.2025,2.1-2,NA,-66.08735744,0.500053328,-7.829065621,0.145759425,6
+1,J2,12.4,Que rob,Quercus robur,Quercus robur,Que rob,C,6.2025,12.11.2025,2.1-2,NA,-65.08867738,0.287937398,-8.334116111,0.215239632,6
+1,J3,13.4,Til cor,Tilia cordata,Tilia cordata,Til cor,C,6.2025,12.11.2025,2.1-2,NA,-59.14014544,0.891487631,-7.56247044,0.125445992,6
+1,J4,14.4,Ace pla,Acer platanoides,Acer platanoides,Ace pla,B,6.2025,12.11.2025,2.1-2,NA,-60.7054134,0.746183432,-7.978022172,0.064421309,6
+1,J5,15.4,Pru avi,Prunus avium,Prunus avium,Pru avi,C,6.2025,12.11.2025,2.1-2,NA,-64.7851075,0.245885092,-8.234238528,0.023718495,6
+1,J6,16.4,Pla ace,Platanus acerifolia,Platanus hispanica,Pla his,B,6.2025,12.11.2025,2.1-2,NA,-63.53281826,0.701790594,-8.168740983,0.116765759,6
+1,J7,17.4,Ace neg,Acer negundo,Acer negundo,Ace neg,A,6.2025,12.11.2025,2.1-2,strong odour (but clear),-66.78507745,0.745911343,-8.250098725,0.117583397,6
+1,J8,18.4,Ace neg,Acer negundo,Acer negundo,Ace neg,C,6.2025,12.11.2025,2.1-2,NA,-63.14332678,0.335704699,-8.668229283,0.012442491,7
+1,J9,19.4,Sor dom,Sorbus domestica,Cormus domestica,Cor dom,B,6.2025,12.11.2025,2.1-2,NA,-68.4966617,0.28541949,-9.541413135,0.017516698,7
+1,J10,20.4,Fra exc,Fraxinus excelsior,Fraxinus excelsior,Fra exc,C,6.2025,12.11.2025,2.1-2,NA,-64.07212356,0.330470639,-8.983694436,0.007841706,7
+2,A1,1.5,Sal cap,Salix caprea,Salix caprea,Sal cap,C,6.2025,12.11.2025,2.1-2,NA,-60.44435148,0.595390777,-8.054473675,0.096575762,7
+2,A2,2.5,Ulm min,Ulmus minor,Ulmus minor,Ulm min,C,6.2025,12.11.2025,2.1-2,NA,-68.66685373,0.388585936,-8.938854054,0.069044886,7
+2,A3,3.5,Abi alb,Abies alba,Abies alba,Abi alb,C,6.2025,12.11.2025,2.1-2,NA,-57.140029,0.963203422,-7.931998035,0.100454546,7
+2,A4,4.5,Bet pen,Betula pendula,Betula pendula,Bet pen,C,6.2025,12.11.2025,2.1-2,NA,-68.12078873,0.588315596,-8.711537516,0.019902984,7
+2,A5,5.5,Pse men,Pseudotsuga menziesii,Pseudotsuga menziesii,Pse men,C,6.2025,12.11.2025,2.1-2,NA,-57.95289829,0.490044122,-8.010507332,0.022731752,7
+2,A6,6.5,Sor tor,Sorbus torminalis,Torminalis glaberrima,Tor gla,C,6.2025,12.11.2025,2.1-2,NA,-66.56555264,4.028388499,-8.444145405,0.261869012,7
+2,A7,7.5,Pic abi,Picea abies,Picea abies,Pic abi,C,6.2025,12.11.2025,2.1-2,"slightly milky, slight odour",-55.71092867,1.043174228,-7.627166691,0.06075874,7
+2,A8,8.5,Sor auc,Sorbus aucuparia,Sorbus aucuparia,Sor auc,C,6.2025,12.11.2025,2.1-2,NA,-66.50932015,0.498365406,-8.643605065,0.037828888,7
+2,A9,9.5,Fra exc,Fraxinus excelsior,Fraxinus excelsior,Fra exc,D,6.2025,12.11.2025,2.1-2,NA,-64.71829604,0.385545616,-8.008922822,0.071515989,7
+2,A10,10.5,Ulm min,Ulmus minor,Ulmus minor,Ulm min,D,6.2025,12.11.2025,2.1-2,NA,-68.53706326,0.710522762,-8.646665696,0.041785635,7
+2,B1,11.5,Ced deo,Cedrus deodara,Cedrus deodara,Ced deo,D,6.2025,12.11.2025,2.1-2,NA,-66.49941085,0.207644742,-8.85919563,0.054427002,7
+2,B2,12.5,Ced deo,Cedrus deodara,Cedrus deodara,Ced deo,C,6.2025,12.11.2025,2.1-2,NA,-64.71403576,0.211589625,-9.091116201,0.113041379,7
+2,B3,13.5,Thu occ,Thuja occidentalis,Thuja occidentalis,Thu occ,C,6.2025,12.11.2025,2.1-2,NA,-58.63696377,0.768217861,-8.120161709,0.113016816,7
+2,B4,14.5,Rob pse,Robinia pseudoacacia,Robinia pseudoacacia,Rob pse,C,6.2025,12.11.2025,2.1-2,"aroma, but clear",-65.87713956,0.856357846,-9.450197162,0.011807624,8
+2,B5,15.5,Pla ace,Platanus acerifolia,Platanus hispanica,Pla his,C,6.2025,12.11.2025,2.1-2,NA,-60.0280405,1.316121129,-8.522682722,0.152331502,8
+2,B6,16.5,Pin pon,Pinus ponderosa,Pinus ponderosa,Pin pon,C,6.2025,12.11.2025,2.1-2,very milky; strong aroma,-65.56691329,0.990092042,-8.668967809,0.166950376,8
+2,B7,17.5,Abi gra,Abies grandis,Abies grandis,Abi gra,C,6.2025,12.11.2025,2.1-2,very milky; strong aroma,-57.73643743,0.639863523,-8.560629003,0.118685041,8
+2,B8,18.5,Que pub,Quercus pubescens,Quercus pubescens,Que pub,C,6.2025,12.11.2025,2.1-2,NA,-64.60254531,0.256526377,-8.680068818,0.083617672,8
+2,B9,19.5,Pin nig,Pinus nigra,Pinus nigra,Pin nig,C,6.2025,12.11.2025,2.1-2,very milky; strong aroma,-66.07599603,0.707999384,-9.051949203,0.093006054,8
+2,B10,20.5,Ulm lae,Ulmus laevis,Ulmus laevis,Ulm lae,E,6.2025,12.11.2025,2.1-2,NA,-71.03070549,0.505468312,-8.898790212,0.027981372,8

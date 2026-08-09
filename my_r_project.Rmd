@@ -39,26 +39,32 @@ fshallow = fraction of water from shallow soil, and,
 For this study, shallow water was defined as source water found within the top 20 cm below ground (0 - 20 cm), whilst deep water refers to water below 20 cm underground (>20cm). Only the δ18Osoil from the final two sampling dates (30.06 and 04.08.2025) were used in the model, as they were closest to the dates of the twig sampling. Therefore, δ18Odeep was calculated as the mean δ18Osoil across the two sampling dates, across all three locations, for depths over 20cm (50, 100, 150, 200, and 250 cm below ground), whilst δ18Oshallow refers to the mean δ18Osoil across the two sampling dates, across all three locations, for depths of 0 - 20 cm (10, 20 cm below ground). This model was applied to each tree and the values were constrained to be between zero and one [0:1]. This model, therefore, shows what fraction of the source water of different trees is coming from deep and shallow soils.
 ```{r}
 #upload isotope results for twigs
-twigs <- read_excel(file.path(prelim_dir, "d18O_extracted water_twig_samples.xlsx"))
+twigs <- read.csv(file.path(prelim_dir, "d18O_extracted_water_twigs.csv"))
 twigs <- twigs %>%
   select("block", "species_code", "d18O")
 colnames(twigs)[3] <- "twig_d18O"
 
 #upload soil water data
 #Soil water - d18O
-soil <- read_excel(file.path(prelim_dir, "d18O_extracted water_soil_samples.xlsx"))
+soil <- read.csv(file.path(prelim_dir, "d18O_extracted_water_soil.csv"))
 
 #two end member mixing model - average of soil water d18O from 30.06 and 04.08
+library(dplyr)
+
 soil_endmembers_3 <- soil %>%
-  filter(`sampling_date` == c("30.06.2025", "04.08.2025")) %>%
-  mutate(Source = ifelse(depth <= 20, "Shallow", "Deep"))
+  dplyr::filter(sampling_date %in% c("30.06.2025", "04.08.2025")) %>%
+  dplyr::mutate(Source = ifelse(depth <= 20, "Shallow", "Deep"))
+
 soil_endmembers_3 <- soil_endmembers_3 %>%
-  group_by(Source) %>%
-  summarize( 
+  dplyr::group_by(Source) %>%
+  dplyr::summarise(
     mean_d18O = mean(d18O, na.rm = TRUE),
     sd_d18O   = sd(d18O, na.rm = TRUE),
-    n         = n()
+    n         = dplyr::n(),
+    .groups = "drop"
   )
+
+
 d18O_shallow_3 <- soil_endmembers_3$mean_d18O[soil_endmembers_3$Source == "Shallow"]
 d18O_deep_3    <- soil_endmembers_3$mean_d18O[soil_endmembers_3$Source == "Deep"]
 
@@ -89,7 +95,7 @@ twigs_mix_3 <- twigs_mix_3 %>%
 In order to distinguish between angiosperms and gymnosperms for Figure 1 (below), information on the clade of each species was added to the twigs_mix_3 data frame
 ```{r}
 #upload clade data
-clade<-read_excel(file.path(prelim_dir,"clade.xlsx"))
+clade<-read.csv(file.path(prelim_dir,"clade.csv"))
 #select columns we need
 clade_subset <- clade %>%
   select("block","species_code", "clade")
@@ -102,7 +108,7 @@ twigs_mix_3$clade[twigs_mix_3$species_code == "Sal fra" & twigs_mix_3$block == "
 To quantify the relationship between tree height and rooting depth, we fitted a linear mixed-effects model with rooting depth as the response variable and tree height as a fixed effect. Species was included as a random effect, allowing both intercepts and the effect of tree height (i.e., slopes) to vary among species. To develop the predictive model, rooting depth data was primarily obtained from the online database of Kutschera & Lichtenegger (2002). For 12 species lacking data, additional information was sourced from the RSIP (Root Systems of Individual Plants) database from Tumber-Dávila et al. (2022). 
 ```{r}
 #upload rooting depth data compiled from the Kutschera and Lichtenegger (2002) database, Wageningen University and the RSIP database
-roots2 <- read.csv(file.path(prelim_dir, "Root_data_Wageningen_Lateral_Extent_RSIP.csv"))
+roots2 <- read.csv(file.path(prelim_dir, "root_depth.csv"))
 mod2<-lme(root_depth_cm ~ height_plant_cm,
           random = ~ height_plant_cm| species,
           data = roots2,
@@ -125,10 +131,8 @@ root_data$pred_root_depth <- predict(mod2, root_data)
 root_data <- root_data %>%
   select(species, pred_root_depth)
 
-#change species Tsuga canadensis Carr. to Tsuga canadensis
-root_data$species <- gsub("Tsuga canadensis Carr.", "Tsuga canadensis", root_data$species)
 ```
-## Calculate the Leaf Economic Spectrum (LES) PC1 axis for each species
+## Calculate the slow-fast PC1 axis for each species
 A principal component analysis (PCA) was performed using eight different functional traits expected to be important in predicting growth response. Several of the traits were measured directly from the trees in ARBOfun (specific leaf area (SLA), leaf nitrogen content (LNC), carbon to nitrogen ratio (C:N) and stomatal density). These trait measurements were obtained for individual trees and subsequently aggregated to the species level by calculating the mean value across all individuals sampled for each species. These species-specific mean trait values were then used in subsequent analyses. In addition to the measured traits, additional traits (wood density, P50, stomatal conductance and Amax (maximum photosynthetic assimilation rate, a measure for the photosynthetic capacity)) were taken from the gap-filled TRY data from Kretz et al. (2025).
 ```{r}
 #upload the TRY gap filled data from Kretz et al. 2025
@@ -178,7 +182,7 @@ percent_missing <- (n_missing / n_total) * 100
 percent_missing
 ##9 %
 ```
-The resulting complete dataset was used to perform a PCA using the “prcomp” function (“stats” package) (R Core Team 2026). We found that the LES traits (SLA, LNC, C:N and Amax) were mainly associated with the first PCA axis (PC1) (Figure A5), such that positive values represent an acquisitive trait expression. Therefore the loadings of PC1 for each species were used as an indicator of the position on the LES spectrum from slow to fast strategies.
+The resulting complete dataset was used to perform a PCA using the “prcomp” function (“stats” package) (R Core Team 2026). We found that the slow-fast traits (SLA, LNC, C:N and Amax) were mainly associated with the first PCA axis (PC1) (Figure A5), such that positive values represent an acquisitive trait expression. Therefore the loadings of PC1 for each species were used as an indicator of the position on the slow-fast spectrum.
 ```{r}
 pca<-prcomp(imputed_data_LES[,c("mean_SLA", "mean_leaf_N", "mean_leaf_CN", "mean_SD_sbs_mean", "Amax", "P50", "stomata_conductance", "wood_density")], center = TRUE, scale. = TRUE)
 
@@ -199,8 +203,8 @@ The outputs of the data processing steps described above were combined with othe
 
 # Read your processed data
 ```{r}
-twigs <- read_excel(file.path(data_dir, "twig_d18O.xlsx"))
-Chpt1_data<-read.csv(file.path(data_dir, "Chpt1_data.csv"))
+twigs <- read.csv(file.path(data_dir, "twig_d18O.csv"))
+Chpt1_data<-read.csv(file.path(data_dir, "Chpt1_data_new.csv"))
 ```
 # Data analyses
 The δ18O results of the twig water (δ18Otwig) were tested for outliers. The effect of species on source water uptake depth (δ18Otwig), was evaluated using a linear mixed-effect model. The significance of species on source water (δ18Otwig) was tested using analysis of variance (ANOVA) (“aov”).
@@ -328,13 +332,13 @@ set.seed(123)
 
 ##with removing the taxonomic information
 imp <- missForest(
-  Chpt1_data[,-c(1,3,4,5)],
+  Chpt1_data[,-c(1,2,3,4,5,6,7)],
   maxiter=100,
   ntree=2500)
 imputed_data <- imp$ximp
 
 # Original data used for imputation (excluding species column)
-Chpt1_data_variables<-Chpt1_data[,-c(1,3,4,5)]
+Chpt1_data_variables<-Chpt1_data[,-c(1,2,3,4,5,6,7)]
 
 # Calculate number and percentage of missing values
 n_missing <- sum(is.na(Chpt1_data_variables))
@@ -438,9 +442,9 @@ final_rf <- ranger(
 )
 
 final_rf
-#R2 (OOB)= 0.17; OOB predicted error (MSE) = 0.06 
+#R2 (OOB)= 0.22; OOB predicted error (MSE) = 0.07 
 ```
-To identify the relative contribution of predictor variables to the variation in fshallow and the statistical significance of the variable importance, we applied a random forest regression approach with the best-fit model using the “rfPermute” package (Archer, 2025) and 1000 permutations of the response variable. Predictor importance was evaluated using the percentage increase in mean squared error (%IncMSE), which represents the decrease in predictive accuracy when a given predictor is randomly permuted. A higher %IncMSE value can be interpreted as having greater predictive importance. Associated p-values were also obtained.
+To identify the relative contribution of predictor variables to the variation in fshallow and the statistical significance of the variable importance, we applied a random forest regression approach with the best-fit model using the “rfPermute” package (Archer, 2025) and 1000 permutations of the response variable.
 ```{r}
 # use rfpermute to get p-values for variable importance
 library(rfPermute)
@@ -450,18 +454,7 @@ rfp <- rfPermute::rfPermute(
   ntree = 2500,
   num.rep = 1000
 )
-# Extract importance values 
-rf_importance <- as.data.frame(rfPermute::importance(rfp))
-# Add predictor names as a column 
-rf_importance$Predictor <- rownames(rf_importance) 
-# Reorder columns 
-rf_importance <- rf_importance[, c("Predictor", setdiff(names(rf_importance), "Predictor"))] 
-# Sort by %IncMSE (highest to lowest) 
-rf_importance <- rf_importance[order(-rf_importance$`%IncMSE`), ] 
-# Reset row names 
-rownames(rf_importance) <- NULL 
-# View result 
-rf_importance
+
 ```
 ### Table 1: 
 Variable importance from the random forest model predicting fshallow (fraction of shallow water uptake), based on permutation importance (%IncMSE) and associated significance values derived from 1000 permutations. Higher %IncMSE values indicate greater importance of a predictor in reducing model accuracy when permuted
@@ -490,7 +483,7 @@ data <- rf_data[, c("f_shallow", predictor_vars)]
 
 label_map <- c(
   "sheltering_index" = "a) Sheltering index",
-  "PC1_score" = "b) LES position",
+  "PC1_score" = "b) Slow-fast position",
   "growth_response_mean" = "c) Growth resistance to drought",
   "q10_aridity" = "d) Aridity tolerance index",
   "q90_max_T" = "e) Max temperature tolerance",
@@ -562,7 +555,7 @@ pdp1 <- FeatureEffect$new(
 
 df <- pdp1$results
 ggplot(df, aes(
-  x = q10_aridity,
+  x = q10_aridity*10000,
   y = drought_tolerance_mean,
   fill = .value
 )) +
@@ -666,7 +659,7 @@ new_names <- c(
   mean_soil_moisture = "Mean soil moisture",
   pred_root_depth = "Predicted root depth",
   H_m = "Tree height",
-  PC1_score  = "LES position (PC1)",
+  PC1_score  = "slow-fast position (PC1)",
   growth_response_mean = "Growth resistance to drought"
 )
 
@@ -731,7 +724,7 @@ Apart from the predicted root depth calculated with the model previously, root s
 ```{r}
 #upload categorical root data  - classifications according to ATLAS
 #root types: 1= shallow, 2= intermediate, 3= deep
-root_types <- read_xlsx(file.path(prelim_dir, "Root_category.xlsx"))
+root_types <- read.csv(file.path(prelim_dir, "root_category.csv"))
 #remove NAs
 root_types <- root_types %>%
   filter(!is.na(root_category))
@@ -774,8 +767,8 @@ ggsave(file.path(suppl_dir, "Figure_A2.png"))
 ### Figure A4 and Figure A3
 Figure A3 shows the estimated water source depth of the individual trees by species. The estimated depth was calculated by comparing the twig water δ18O to the mean δ18O of the soil for each depth. The soil depth resulting in the lowest difference was used as an indicator of the estimated water source depth (y-axis). The table shows the mean soil water δ18O calculated for each depth. Figure A4 shows the change in δ18O of the soil water for the three sampling locations, over the three sampling dates layer whose mean soil water δ¹⁸O most closely matched the twig water δ¹⁸O. 
 ```{r}
-soil <- read_excel(file.path(prelim_dir, "d18O_extracted water_soil_samples.xlsx"))
-twigs <- read_excel(file.path(prelim_dir, "d18O_extracted water_twig_samples.xlsx"))
+soil <- read.csv(file.path(prelim_dir, "d18O_extracted_water_soil.csv"))
+twigs <- read.csv(file.path(prelim_dir, "d18O_extracted_water_twigs.csv"))
 
 #plot d18O of different block, depth, over the 3 different dates. include line connecting points of the same block and depth
 #change order of sampling date on x axis
@@ -793,10 +786,11 @@ ggsave(file.path(suppl_dir, "Figure_A4.png"))
 
 #average soil d18O per depth, location and date
 soil_summary <- soil %>%
-  group_by(`sampling_date`, block, depth) %>%
-  summarize(
+  group_by(sampling_date, block, depth) %>%
+  summarise(
     mean_d18O = mean(d18O, na.rm = TRUE)
   )
+
 #calculate average soil d18O per depth, across all blocks and dates
 soil_avg <- soil %>%
   group_by(depth) %>%
@@ -809,7 +803,6 @@ write.csv(soil_avg, file.path(suppl_dir, "soil_avg_d18O_by_depth.csv"), row.name
 twigs$ID<-paste(twigs$block, twigs$species_code, sep = "_")
 twig_sources <- expand.grid(ID = twigs$ID,
                             depth = soil_avg$depth)
-View(twig_sources)
 # Join twig δ18O
 twig_sources <- twig_sources %>%
   left_join(twigs, by = "ID") %>%
@@ -836,7 +829,7 @@ ggsave(file.path(suppl_dir, "Figure_A3.png"))
 
 ```
 ### Figure A5
-Principal Component Analysis (PCA) of eight traits related to the Leaf Economic Spectrum (LES), for 76 tree species. For Specific Leaf Area (SLA), leaf Nitrogen content (leaf_N), Carbon to Nitrogen ratio (leaf_CN) and stomatal density (SD_sbs_mean), the mean was calculated from trait measurements of individuals within the same species. For wood density, P50, stomatal conductance and photosynthetic capacity (Amax), values were taken from the TRY database.
+Principal Component Analysis (PCA) of eight traits related to the slow-fast gradient, for 76 tree species. For Specific Leaf Area (SLA), leaf Nitrogen content (leaf_N), Carbon to Nitrogen ratio (leaf_CN) and stomatal density (SD_sbs_mean), the mean was calculated from trait measurements of individuals within the same species. For wood density, P50, stomatal conductance and photosynthetic capacity (Amax), values were taken from the TRY database.
 ```{r}
 pca<-prcomp(imputed_data_LES[,c("mean_SLA", "mean_leaf_N", "mean_leaf_CN", "mean_SD_sbs_mean", "Amax", "P50", "stomata_conductance", "wood_density")], center = TRUE, scale. = TRUE)
 
