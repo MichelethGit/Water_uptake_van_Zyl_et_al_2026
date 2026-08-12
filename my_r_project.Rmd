@@ -64,7 +64,6 @@ soil_endmembers_3 <- soil_endmembers_3 %>%
     .groups = "drop"
   )
 
-
 d18O_shallow_3 <- soil_endmembers_3$mean_d18O[soil_endmembers_3$Source == "Shallow"]
 d18O_deep_3    <- soil_endmembers_3$mean_d18O[soil_endmembers_3$Source == "Deep"]
 
@@ -138,10 +137,16 @@ A principal component analysis (PCA) was performed using eight different functio
 #upload the TRY gap filled data from Kretz et al. 2025
 TRY<-read.csv(file.path(prelim_dir,"TRY_gap_filled_data.csv"))
 #Upload the measured traits data from the experiment
-measured_traits<-read.csv(file.path(prelim_dir,"measured_LES_traits.csv"))
+measured_traits<-read.csv(file.path(prelim_dir,"measured_traits.csv"))
 #select relevant columns
 measured_traits<-measured_traits %>%
-  select(tree_ID, species, SLA, leaf_N, leaf_CN,SD_sbs_mean)
+  select(species, species_former_name, block_ID, SLA, leaf_N, leaf_CN)
+#add stomatal density data
+
+
+#add stomatal density data ot the measured_traits
+
+
 #calculate mean of measured traits per species
 measured_traits_species<-measured_traits %>%
   dplyr::group_by(species) %>%
@@ -227,12 +232,15 @@ Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ran
 #from twigs mix 3, create ranked box-plots of mean twig_d18O by species, ranked by mean d18O
 library(forcats)
 #calculate the mean d18O for deep and shallow soil water
-mean_10_20 <- soil %>%
+soil_endmembers_3 <- soil %>%
+  dplyr::filter(sampling_date %in% c("30.06.2025", "04.08.2025")) %>%
+  dplyr::mutate(Source = ifelse(depth <= 20, "Shallow", "Deep"))
+mean_10_20 <- soil_endmembers_3 %>%
   filter(depth %in% c(10, 20)) %>%
   summarise(mean = mean(d18O, na.rm = TRUE)) %>%
   pull(mean)
 
-mean_gt20 <- soil %>%
+mean_gt20 <- soil_endmembers_3 %>%
   filter(depth > 20) %>%
   summarise(mean = mean(d18O, na.rm = TRUE)) %>%
   pull(mean)
@@ -719,7 +727,38 @@ ggsave(file.path(figs_dir, "Figure5.png"))
 
 ```
 # Supplementary Appendices
-### Figure A2
+### Figure A1
+```{r}
+mean_d18O <- soil_endmembers_3 %>%
+  group_by(Block, Depth) %>%
+  summarise(
+    mean_d18O = mean(d18O, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(data = mean_d18O,
+       aes(x = Block,
+           y = forcats::fct_rev(factor(Depth)),
+           fill = mean_d18O)) +
+  geom_tile(color = "white") +
+  scale_fill_viridis_c(name = expression(delta^18*O)) +
+  labs(x = "Block", y = "Depth") +
+  theme_classic()
+
+ggplot(data = mean_d18O,
+       aes(x = Block,
+           y = factor(Depth, levels = rev(unique(Depth))),
+           fill = mean_d18O)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = round(mean_d18O, 2)), 
+            color = "black", 
+            size = 5) +
+  scale_fill_viridis_c(name = expression(delta^18*O)) +
+  labs(x = "Block", y = "Depth") +
+  theme_classic()
+ggsave(file.path(suppl_dir, "Figure_A1.png"))
+```
+### Figure A3
 Apart from the predicted root depth calculated with the model previously, root system characteristics were further classified using “Wurzelatlas mitteleuropäischer Waldbäume und Sträucher” by Kutschera & Lichtenegger (2002), which provides detailed descriptions of root architecture in European trees and shrubs. Species were assigned to one of three categories: deep-rooted, shallow-rooted, or variable (species with high plasticity or mixed rooting strategies). This classification was available for 29 of the 40 species (73%). Predicted rooting depths at 10 m height were compared with atlas-based classifications to evaluate consistency
 ```{r}
 #upload categorical root data  - classifications according to ATLAS
@@ -762,10 +801,10 @@ ggplot(root_var, aes(x = factor(root_category),
   )
 
 #save figure in supplementary directory
-ggsave(file.path(suppl_dir, "Figure_A2.png"))
+ggsave(file.path(suppl_dir, "Figure_A3.png"))
 ```
-### Figure A4 and Figure A3
-Figure A3 shows the estimated water source depth of the individual trees by species. The estimated depth was calculated by comparing the twig water δ18O to the mean δ18O of the soil for each depth. The soil depth resulting in the lowest difference was used as an indicator of the estimated water source depth (y-axis). The table shows the mean soil water δ18O calculated for each depth. Figure A4 shows the change in δ18O of the soil water for the three sampling locations, over the three sampling dates layer whose mean soil water δ¹⁸O most closely matched the twig water δ¹⁸O. 
+### Figure A4 and Figure A5
+Figure A4 shows the estimated water source depth of the individual trees by species. The estimated depth was calculated by comparing the twig water δ18O to the mean δ18O of the soil for each depth. The soil depth resulting in the lowest difference was used as an indicator of the estimated water source depth (y-axis). The table shows the mean soil water δ18O calculated for each depth. Figure A5 shows the change in δ18O of the soil water for the three sampling locations, over the three sampling dates layer whose mean soil water δ¹⁸O most closely matched the twig water δ¹⁸O. 
 ```{r}
 soil <- read.csv(file.path(prelim_dir, "d18O_extracted_water_soil.csv"))
 twigs <- read.csv(file.path(prelim_dir, "d18O_extracted_water_twigs.csv"))
@@ -782,7 +821,7 @@ ggplot(soil, aes(x =`sampling_date`, y = d18O, color = block, group = interactio
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 #save image to supplementary directory
-ggsave(file.path(suppl_dir, "Figure_A4.png"))
+ggsave(file.path(suppl_dir, "Figure_A5.png"))
 
 #average soil d18O per depth, location and date
 soil_summary <- soil %>%
@@ -825,10 +864,10 @@ ggplot(best_depth, aes(x = species_code, y = depth)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 # shows that most individuals are getting their water from 10, 20 cm depths
 # only 8 individuals outside this range, which get their water at depths of 100-250 (or more?) cm
-ggsave(file.path(suppl_dir, "Figure_A3.png"))
+ggsave(file.path(suppl_dir, "Figure_A4.png"))
 
 ```
-### Figure A5
+### Figure A6
 Principal Component Analysis (PCA) of eight traits related to the slow-fast gradient, for 76 tree species. For Specific Leaf Area (SLA), leaf Nitrogen content (leaf_N), Carbon to Nitrogen ratio (leaf_CN) and stomatal density (SD_sbs_mean), the mean was calculated from trait measurements of individuals within the same species. For wood density, P50, stomatal conductance and photosynthetic capacity (Amax), values were taken from the TRY database.
 ```{r}
 pca<-prcomp(imputed_data_LES[,c("mean_SLA", "mean_leaf_N", "mean_leaf_CN", "mean_SD_sbs_mean", "Amax", "P50", "stomata_conductance", "wood_density")], center = TRUE, scale. = TRUE)
@@ -842,15 +881,15 @@ fviz_pca_biplot(pca,
                 col.var = "black",
                 title = "PCA of LES traits")
 
-ggsave(file.path(suppl_dir, "Figure_A5.png"))
+ggsave(file.path(suppl_dir, "Figure_A6.png"))
 ```
-### Figure A6
+### Figure A7
 Interaction strength of random forest model variables (height, drought tolerance, growth resistance to drought, sheltering index, maximum heat tolerance index, aridity tolerance index and LES position (PC1), respectively).
 ```{r}
 interaction <- Interaction$new(predictor)
 plot(interaction)
 interaction_results <- interaction$results
-ggsave(file.path(suppl_dir, "FigureA6.png"))
+ggsave(file.path(suppl_dir, "FigureA7.png"))
 ```
 
 *R version, the OS and attached or loaded packages:*
