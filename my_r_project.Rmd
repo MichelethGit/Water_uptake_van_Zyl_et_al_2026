@@ -1,5 +1,5 @@
 ---
-title: "Chapter 1"
+title: "van Zyl et al., 2026; water uptake"
 output:
   html_document:
     code_folding: hide
@@ -30,13 +30,7 @@ invisible(lapply(required_packages, library, character.only = TRUE))
 In order to perform the analyses for the final results of the manuscript, data from several sources were combined. Many of the variables in the final data set were simply extracted from the raw data, while others needed to be calculated or required processing of the raw data. For the latter, the steps required to prepare the data for analysis are described in the following sections.
 
 ## Calculate fshallow (fraction of water uptake from shallow soil) and fdeep (fraction of water uptake from deep soil) for each tree, using δ18O from twigs and soil water
-To get a more accurate indicator of source water and to account for species getting water from more than just one source, a two-end member mixing model was performed. The conceptual model assumes that each tree’s δ18Otwig is a mixture of two soil water sources; shallow water and deep water. 
-The conceptual two-end member mixing model can be described mathematically with the function:
-δ18Otwig = fshallow *δ18Oshallow + (1-fshallow)* δ18Odeep		(5)
-where, 
-fshallow = fraction of water from shallow soil, and,
-1- fshallow = fraction from deep soil (fdeep)
-For this study, shallow water was defined as source water found within the top 20 cm below ground (0 - 20 cm), whilst deep water refers to water below 20 cm underground (>20cm). Only the δ18Osoil from the final two sampling dates (30.06 and 04.08.2025) were used in the model, as they were closest to the dates of the twig sampling. Therefore, δ18Odeep was calculated as the mean δ18Osoil across the two sampling dates, across all three locations, for depths over 20cm (50, 100, 150, 200, and 250 cm below ground), whilst δ18Oshallow refers to the mean δ18Osoil across the two sampling dates, across all three locations, for depths of 0 - 20 cm (10, 20 cm below ground). This model was applied to each tree and the values were constrained to be between zero and one [0:1]. This model, therefore, shows what fraction of the source water of different trees is coming from deep and shallow soils.
+To get a more accurate indicator of source water and to account for species getting water from more than just one source, a two-end member mixing model was performed. The conceptual model assumes that each tree’s δ18Otwig is a mixture of two soil water sources; shallow water and deep water.For this study, shallow water was defined as source water found within the top 20 cm below ground (0 - 20 cm), whilst deep water refers to water below 20 cm underground (>20cm). Only the δ18Osoil from the final two sampling dates (30.06 and 04.08.2025) were used in the model, as they were closest to the dates of the twig sampling. Therefore, δ18Odeep was calculated as the mean δ18Osoil across the two sampling dates, across all three locations, for depths over 20cm (50, 100, 150, 200, and 250 cm below ground), whilst δ18Oshallow refers to the mean δ18Osoil across the two sampling dates, across all three locations, for depths of 0 - 20 cm (10, 20 cm below ground). This model was applied to each tree and the values were constrained to be between zero and one [0:1]. This model, therefore, shows what fraction of the source water of different trees is coming from deep and shallow soils.
 ```{r}
 #upload isotope results for twigs
 twigs <- read.csv(file.path(prelim_dir, "d18O_extracted_water_twigs.csv"))
@@ -96,9 +90,9 @@ clade<-read.csv(file.path(prelim_dir,"clade.csv"))
 #select columns we need
 clade_subset <- clade %>%
   select("block","species_code", "clade")
-#merge clade_subset with twigs_mix_3 by ID_tree and Species
+#merge clade_subset with twigs_mix_3 by block and species_code
 twigs_mix_3 <- left_join(twigs_mix_3, clade_subset, by =c("block", "species_code"))
-#for block=C, species_code=sor auc, clade= NA - change to A
+#for block=C, species_code = sor auc, clade= NA - change to A
 twigs_mix_3$clade[twigs_mix_3$species_code == "Sal fra" & twigs_mix_3$block == "C"] <- "A"
 ```
 ## Calculate the predicted rooting depth for each species
@@ -132,58 +126,101 @@ root_data <- root_data %>%
 ## Calculate the slow-fast PC1 axis for each species
 A principal component analysis (PCA) was performed using eight different functional traits expected to be important in predicting growth response. Several of the traits were measured directly from the trees in ARBOfun (specific leaf area (SLA), leaf nitrogen content (LNC), carbon to nitrogen ratio (C:N) and stomatal density). These trait measurements were obtained for individual trees and subsequently aggregated to the species level by calculating the mean value across all individuals sampled for each species. These species-specific mean trait values were then used in subsequent analyses. In addition to the measured traits, additional traits (wood density, P50, stomatal conductance and Amax (maximum photosynthetic assimilation rate, a measure for the photosynthetic capacity)) were taken from the gap-filled TRY data from Kretz et al. (2025).
 ```{r}
-#upload the TRY gap filled data from Kretz et al. 2025
+#upload the TRY gap filled data from Kretz et al. 2025 - species-level data
 TRY<-read.csv(file.path(prelim_dir,"TRY_gap_filled_data.csv"))
-#Upload the measured traits data from the experiment
-measured_traits<-read.csv(file.path(prelim_dir,"measured_traits.csv"))
-#select relevant columns
-measured_traits<-measured_traits %>%
+#Upload the measured traits data from ARBOfun- this data comes from already published data (see metadata)
+#SLA, leaf_N, leaf_CN
+Kretz<-read.csv(file.path(prelim_dir,"Kretz_et_al_2026.csv"))
+Kretz<-Kretz %>%
   select(species, species_former_name, block_ID, SLA, leaf_N, leaf_CN)
-#add stomatal density data
+colnames(Kretz)[3]<-"block"
 
+##Stomatal density
+#data for angiosperms - contains the new species names/nomenclature
+Sachsenmaier_angiosperms<-read.csv(file.path(prelim_dir,"Sachsenmaier_angiosperms.csv"))
+Sachsenmaier_angiosperms<-Sachsenmaier_angiosperms %>%
+  select(species, block, SD)
+#calculate mean SD for each individual/replicate
+Sachsenmaier_angiosperms_mean <- Sachsenmaier_angiosperms %>%
+  dplyr::group_by(species, block) %>%
+  dplyr::summarise(
+    SD = mean(SD, na.rm = TRUE),
+    .groups = "drop"
+  )
 
-#add stomatal density data ot the measured_traits
+#Gymnosperms data uses old names/nomenclature, however, no names changed for the species measured, so the old names = new names
+Sachsenmaier_gymno<-read.csv(file.path(prelim_dir,"Sachsenmaier_gymnosperms.csv"))
+Sachsenmaier_gymno<-Sachsenmaier_gymno %>%
+  select(species, tree_id, SD_sbs)
+colnames(Sachsenmaier_gymno)[1]<-"species_former_name"
+#calculate mean SD_sbs per tree_id
+Sachsenmaier_gymno<-Sachsenmaier_gymno %>%
+  dplyr::group_by(tree_id) %>%
+  dplyr::summarise(mean_SD_sbs = mean(SD_sbs, na.rm = TRUE))
 
+#the published data set used contain tree_id, however, we want to have the species and block combination - thus we need a dataframe containing both:
+gymno<-read.csv(file.path(prelim_dir,"gymno.csv"))
 
-#calculate mean of measured traits per species
-measured_traits_species<-measured_traits %>%
-  dplyr::group_by(species) %>%
+#join Sachsenmaier_gymno with gymno by tree_id
+gymno_Sachsenmaier<-left_join(Sachsenmaier_gymno, gymno, by = "tree_id")
+#some individuals have NAs because not VITs- manually edit
+
+gymno_Sachsenmaier<-gymno_Sachsenmaier %>%
+  select(mean_SD_sbs, block, species)
+colnames(gymno_Sachsenmaier)[1]<-"SD"
+#new names
+
+#combine gymno_Sachsenmaier and Sachsenmaier_angiosperms (new names)
+Sachsenmaier_combined<-rbind(gymno_Sachsenmaier, Sachsenmaier_angiosperms_mean)
+#121 - uses NEW names
+
+#join Sachsenmaier_combined to Kretz, by species, block  
+result <- Sachsenmaier_combined %>%
+  left_join(
+    Kretz,
+    by = c("species", "block")
+  )
+colnames(result)[1]<-"SD_sbs_mean"
+
+#calculate mean per species
+result<-result %>%
+  dplyr::group_by(species, species_former_name) %>%
   dplyr::summarise(
     mean_SLA = mean(SLA, na.rm = TRUE),
     mean_leaf_N = mean(leaf_N, na.rm = TRUE),
     mean_leaf_CN = mean(leaf_CN, na.rm = TRUE),
-    mean_SD_sbs_mean = mean(SD_sbs_mean, na.rm = TRUE)
+    mean_SD_sbs_mean = mean(SD_sbs_mean, na.rm = TRUE),
+    .groups = "drop_last"
   )
-#merge TRY to measured_traits_species by species
-LES<-left_join(TRY, measured_traits_species, by = "species")
-#complete cases for LES traits
-LES_complete<-LES %>%
-  filter(complete.cases(mean_SLA, mean_leaf_N, mean_leaf_CN, mean_SD_sbs_mean, Amax, P50, stomata_conductance))
+
+LES<-left_join(result, TRY, by = "species_former_name")
+
 #gap filling
+library(missForest)
+# Exclude the species and species_former_name columns for imputation
+x <- as.data.frame(LES[,c(-1,-2)])
+
 imp_LES <- missForest(
-  LES[,-1],  # Exclude the species column for imputation
+  x,  
   maxiter=100,
   ntree=2500)
 imputed_data_LES <- imp_LES$ximp
-pca<-prcomp(imputed_data_LES[,c("mean_SLA", "mean_leaf_N", "mean_leaf_CN", "mean_SD_sbs_mean", "Amax", "P50", "stomata_conductance", "wood_density")], center = TRUE, scale. = TRUE)
+pca<-prcomp(imputed_data_LES, center = TRUE, scale. = TRUE)
 PC1_scores<-pca$x[,1]
-PC1_scores_df<-data.frame(Species = LES$species, PC1_scores = PC1_scores)
+PC1_scores_df<-data.frame(Species = LES$species_former_name, PC1_scores = PC1_scores)
+#
 ```
-Missing trait values for species (9% of the total data) were imputed using a random forest–based imputation approach implemented in the “missForest”package (Stekhoven, 2025):
+Missing trait values for species (5.8% of the total data) were imputed using a random forest–based imputation approach implemented in the “missForest”package (Stekhoven, 2025):
 ```{r}
 # Original data used for imputation (excluding species column)
-LES_traits <- LES[,-1]
-
 # Calculate number and percentage of missing values
-LES_traits <- LES[,-1]
-
+LES_traits <- LES[,c(-1,-2)]  # Exclude the species and species_former_name columns for imputation
 n_missing <- sum(is.na(LES_traits))
 n_total <- nrow(LES_traits) * ncol(LES_traits)
 
 percent_missing <- (n_missing / n_total) * 100
 
 percent_missing
-##9 %
 ```
 The resulting complete dataset was used to perform a PCA using the “prcomp” function (“stats” package) (R Core Team 2026). We found that the slow-fast traits (SLA, LNC, C:N and Amax) were mainly associated with the first PCA axis (PC1) (Figure A5), such that positive values represent an acquisitive trait expression. Therefore the loadings of PC1 for each species were used as an indicator of the position on the slow-fast spectrum.
 ```{r}
@@ -200,14 +237,13 @@ fviz_pca_biplot(pca,
                 title = "PCA of LES traits")
 
 PC1_scores<-pca$x[,1]
-PC1_scores_df<-data.frame(Species = LES$species, PC1_scores = PC1_scores)
+PC1_scores_df<-data.frame(Species = LES$species_former_name, PC1_scores = PC1_scores)
 ```
 The outputs of the data processing steps described above were combined with other predictors to create a final dataset for the analyses. The final dataset was exported as a CSV file, which is used in the following sections for the analyses and figures.
-
 # Read your processed data
 ```{r}
 twigs <- read.csv(file.path(data_dir, "twig_d18O.csv"))
-Chpt1_data<-read.csv(file.path(data_dir, "Chpt1_data_new.csv"))
+data<-read.csv(file.path(data_dir, "Chpt1_data.csv"))
 ```
 # Data analyses
 The δ18O results of the twig water (δ18Otwig) were tested for outliers. The effect of species on source water uptake depth (δ18Otwig), was evaluated using a linear mixed-effect model. The significance of species on source water (δ18Otwig) was tested using analysis of variance (ANOVA) (“aov”).
@@ -225,7 +261,7 @@ anova_species <- aov(d18O ~ species_code, data = twigs)
 summary(anova_species)
 ```
 ### Figure 1: 
-Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ranked from lowest to highest species mean δ18O. Species are coloured according to their clade; angiosperms in green, and gymnosperms in blue.
+Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ranked from lowest to highest species mean δ18O. Species are coloured according to their clade; angiosperms in green, and gymnosperms in blue.The dashed red lines indicate the mean soil water δ18O of shallow (-7.8‰) and deep (-9.4‰) layers, where shallow layers include depths ≤20cm (10 and 20cm) and deep layers are depths >20cm (50, 100, 150, 200, 250cm). The pink shaded area indicates the standard deviation of the mean shallow and deep soil water δ18O.
 ```{r}
 #from twigs mix 3, create ranked box-plots of mean twig_d18O by species, ranked by mean d18O
 library(forcats)
@@ -328,7 +364,6 @@ ggplot(twigs_mix_3,
 #save figure in figures directory
 ggsave(file.path(figs_dir, "Figure1.png"))
 ```
-
 ### Figure 2:
 Plot showing the fraction of water taken up from the shallow layers (fshallow) of soil (20cm), by different tree individuals within the same species. Boxplots are ranked from highest to lowest species mean fshallow. Species are coloured according to their clade; angiosperms in green, and gymnosperms in blue.
 ```{r}
@@ -345,7 +380,7 @@ ggplot(twigs_mix_3, aes(y = f_shallow, x = species_code, fill = clade)) +
   labs(
     y = "Fraction shallow water uptake",
     x = "Species",
-    fill = "Clade"   # Legend title (optional)
+    fill = "Clade"   # Legend title
   ) +
   scale_fill_manual(
     values = c(
@@ -373,35 +408,34 @@ ggsave(file.path(figs_dir, "Figure2.png"))
 ### Aim and Structure:
 A random forest regression model was used to identify the important mechanisms driving water uptake depth. The model had the following structure:
 fshallow ~ predicted root depth + sheltering index + LES position axis + growth resistance to drought + aridity tolerance index + maximum temperature tolerance index + soil moisture + drought tolerance + height
-
 ### Gap-filling
-Prior to the analysis, missing values (5% of the original data) in the predictor variables were imputed using a random forest- based imputation approach implemented in the “missForest” function (Stekhoven & Bühlmann, 2012). Both the imputation and the subsequent RFMs were run with 2500 trees. The imputation had up to 100 iterations, to ensure convergence and stability of imputed values. The resulting complete dataset was used for all subsequent analyses.
+Prior to the analysis, missing values (6% of the original data) in the predictor variables were imputed using a random forest- based imputation approach implemented in the “missForest” function (Stekhoven & Bühlmann, 2012). Both the imputation and the subsequent RFMs were run with 2500 trees. The imputation had up to 100 iterations, to ensure convergence and stability of imputed values. The resulting complete dataset was used for all subsequent analyses.
 ```{r}
 library(missForest)
 set.seed(123)
 
-##with removing the taxonomic information
+# Remove the taxonomic information
 imp <- missForest(
-  Chpt1_data[,-c(1,2,3,4,5,6,7)],
+  data[,-c(1,2,3,4,5,6,7)],
   maxiter=100,
   ntree=2500)
 imputed_data <- imp$ximp
 
-# Original data used for imputation (excluding species column)
-Chpt1_data_variables<-Chpt1_data[,-c(1,2,3,4,5,6,7)]
+#Original data used for imputation (excluding species column)
+data_variables<-data[,-c(1,2,3,4,5,6,7)]
 
 # Calculate number and percentage of missing values
-n_missing <- sum(is.na(Chpt1_data_variables))
-n_total <- nrow(Chpt1_data_variables) * ncol(Chpt1_data_variables)
+n_missing <- sum(is.na(data_variables))
+n_total <- nrow(data_variables) * ncol(data_variables)
 
 percent_missing <- (n_missing / n_total) * 100
 
 percent_missing
-#5%
 ```
 ### Finding the best-fit model
 To identify a subset of predictors that best predict fshallow, a recursive feature elimination (RFE) procedure was implemented. Starting with the full set of predictors, variables were sequentially removed based on their importance, with the least important variable removed at each iteration. At each step, a new random forest model was fitted and model performance was evaluated using out-of-bag (OOB) estimates of the coefficient of determination (R²) and root mean squared error (RMSE). The optimal model was selected as the one with the highest R² value. This procedure resulted in a reduced predictor set of seven variables. A final random forest model was then fitted using only the selected set of optimal predictor variables. 
 ```{r}
+library(ranger)
 rf_model <- ranger(
   f_shallow ~ .,
   data = imputed_data,
@@ -526,18 +560,18 @@ rf_importance
 write.csv(rf_importance, file.path(tabs_dir,"Table1.csv"))
 ```
 ### Figure 3:
-Partial dependence plots (PDPs) showing the marginal effect of each predictor on the model’s predicted response (fshallow), while averaging over all other variables in the random forest. Each panel represents a single predictor, with the x-axis showing the observed range of that variable and the y-axis showing the corresponding change in predicted fshallow. For d) the unit was multiplied by ten thousand for visualisation. These plots illustrate potential non-linear relationships and the direction and strength of each predictor’s influence on the model output.
+Partial dependence plots (PDPs) showing the marginal effect of each predictor on the model’s predicted response (fshallow), while averaging over all other variables in the random forest. Each panel represents a single predictor, with the x-axis showing the observed range of that variable and the y-axis showing the corresponding change in predicted fshallow. For a) the unit was multiplied by ten thousand for visualisation. These plots illustrate potential non-linear relationships and the direction and strength of each predictor’s influence on the model output.
 ```{r}
 predictor_vars <- best_predictors
 data <- rf_data[, c("f_shallow", predictor_vars)]
 
 label_map <- c(
-  "sheltering_index" = "a) Sheltering index",
-  "PC1_score" = "b) Slow-fast position",
-  "growth_response_mean" = "c) Growth resistance to drought",
-  "q10_aridity" = "d) Aridity tolerance index",
-  "q90_max_T" = "e) Max temperature tolerance",
-  "drought_tolerance_mean" = "f) Drought tolerance",
+  "q10_aridity" = "a) Aridity tolerance index",
+  "drought_tolerance_mean" = "b) Drought tolerance",
+  "q90_max_T" = "c) Max temperature tolerance",
+  "sheltering_index" = "d) Sheltering index",
+  "growth_response_mean" = "e) Growth resistance to drought",
+  "PC1_scores" = "f) Slow-fast position (PC1)",
   "H_m" = "g) Tree height"
 )
 pdp_list <- lapply(predictor_vars, function(x) {
@@ -709,7 +743,7 @@ new_names <- c(
   mean_soil_moisture = "Mean soil moisture",
   pred_root_depth = "Predicted root depth",
   H_m = "Tree height",
-  PC1_score  = "slow-fast position (PC1)",
+  PC1_scores  = "slow-fast position (PC1)",
   growth_response_mean = "Growth resistance to drought"
 )
 
@@ -720,8 +754,8 @@ colnames(cor_matrix) <- dplyr::recode(colnames(cor_matrix), !!!new_names)
 rownames(p_matrix) <- rownames(cor_matrix)
 colnames(p_matrix) <- colnames(cor_matrix)
 
-df_cor <- melt(cor_matrix)
-df_p   <- melt(p_matrix)
+df_cor <- reshape2::melt(cor_matrix)
+df_p   <- reshape2::melt(p_matrix)
 
 df <- cbind(df_cor, p = df_p$value)
 colnames(df) <- c("Var1", "Var2", "r", "p")
@@ -770,26 +804,18 @@ ggsave(file.path(figs_dir, "Figure5.png"))
 ```
 # Supplementary Appendices
 ### Figure A1
+Heatmap showing the mean soil water δ18O (‰) for each Block × Depth combination, calculated from samples collected on 30 June and 4 August 2025. Tile colours represent the magnitude of mean δ18O values, while the numbers within tiles indicate the corresponding mean δ18O (‰). This figure was created to show support that the soil is homogenous across the site. 
 ```{r}
 mean_d18O <- soil_endmembers_3 %>%
-  group_by(Block, Depth) %>%
+  group_by(block, depth) %>%
   summarise(
     mean_d18O = mean(d18O, na.rm = TRUE),
     .groups = "drop"
   )
 
 ggplot(data = mean_d18O,
-       aes(x = Block,
-           y = forcats::fct_rev(factor(Depth)),
-           fill = mean_d18O)) +
-  geom_tile(color = "white") +
-  scale_fill_viridis_c(name = expression(delta^18*O)) +
-  labs(x = "Block", y = "Depth") +
-  theme_classic()
-
-ggplot(data = mean_d18O,
-       aes(x = Block,
-           y = factor(Depth, levels = rev(unique(Depth))),
+       aes(x = block,
+           y = factor(depth, levels = rev(unique(depth))),
            fill = mean_d18O)) +
   geom_tile(color = "white") +
   geom_text(aes(label = round(mean_d18O, 2)), 
@@ -852,7 +878,7 @@ soil <- read.csv(file.path(prelim_dir, "d18O_extracted_water_soil.csv"))
 twigs <- read.csv(file.path(prelim_dir, "d18O_extracted_water_twigs.csv"))
 
 #plot d18O of different block, depth, over the 3 different dates. include line connecting points of the same block and depth
-#change order of sampling date on x axis
+# Change order of sampling date on x axis
 soil$`sampling_date` <- factor(soil$`sampling_date`, levels = c("11.04.2025", "30.06.2025", "04.08.2025"))
 ggplot(soil, aes(x =`sampling_date`, y = d18O, color = block, group = interaction(block, depth))) +
   geom_point() +
@@ -862,25 +888,25 @@ ggplot(soil, aes(x =`sampling_date`, y = d18O, color = block, group = interactio
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-#save image to supplementary directory
+# save image to supplementary directory
 ggsave(file.path(suppl_dir, "Figure_A5.png"))
 
-#average soil d18O per depth, location and date
+# Average soil d18O per depth, location and date
 soil_summary <- soil %>%
   group_by(sampling_date, block, depth) %>%
   summarise(
     mean_d18O = mean(d18O, na.rm = TRUE)
   )
 
-#calculate average soil d18O per depth, across all blocks and dates
+# Calculate average soil d18O per depth, across all blocks and dates
 soil_avg <- soil %>%
   group_by(depth) %>%
   summarize(mean_d18O = mean(d18O, na.rm = TRUE))
 
-#export soil_avg as table
+# Export soil_avg as table
 write.csv(soil_avg, file.path(suppl_dir, "soil_avg_d18O_by_depth.csv"), row.names = FALSE)
 
-#soil depth from which tree most likely gets its water (based on d18O)
+# Soil depth from which tree most likely gets its water (based on d18O)
 twigs$ID<-paste(twigs$block, twigs$species_code, sep = "_")
 twig_sources <- expand.grid(ID = twigs$ID,
                             depth = soil_avg$depth)
@@ -895,10 +921,10 @@ best_depth <- twig_sources %>%
   group_by(ID) %>%
   slice_min(diff, n = 1) %>%
   select(ID, species_code, depth, d18O, mean_d18O, diff)
-#remove na
+# Remove NAs
 best_depth <- best_depth[!is.na(best_depth$d18O) & !is.na(best_depth$mean_d18O), ]
 
-#create plot
+# Create plot
 ggplot(best_depth, aes(x = species_code, y = depth)) +
   geom_jitter(width = 0.2, height = 0.2) +
   labs(title = "Estimated Water Source Depth by Tree Species", x = "Species", y = "Estimated Water Source Depth (cm)") +
@@ -928,6 +954,8 @@ ggsave(file.path(suppl_dir, "Figure_A6.png"))
 ### Figure A7
 Interaction strength of random forest model variables (height, drought tolerance, growth resistance to drought, sheltering index, maximum heat tolerance index, aridity tolerance index and LES position (PC1), respectively).
 ```{r}
+renv::install("rstudioapi")
+library(rstudioapi)
 interaction <- Interaction$new(predictor)
 plot(interaction)
 interaction_results <- interaction$results

@@ -1,103 +1,100 @@
-species,species_former_name,wood_density,Amax,P50,stomatal_conductance
-Larix decidua,Larix decidua,0.575,0.066,-3.576,241.069
-Salix cinerea,Salix cinerea,0.477,0.183,-1.894,258.506
-Pseudotsuga menziesii,Pseudotsuga menziesii,0.466,0.039,-3.191,89.369
-Acer campestre,Acer campestre,0.578,0.105,-2.456,165.7
-Populus nigra,Populus nigra,0.443,0.151,-2.643,259.996
-Cedrus libani,Cedrus libani,0.487,0.027,-7.344,61.291
-Tilia cordata,Tilia cordata,0.46,0.126,-2.494,218.207
-Sambucus racemosa,Sambucus racemosa,0.472,0.269,-1.36,224.752
-Acer platanoides,Acer platanoides,0.546,0.104,-2.166,72.468
-Betula pubescens,Betula pubescens,0.579,0.123,-1.938,249.598
-Euonymus europaeus,Euonymus europaeus,0.536,0.088,-4.518,163.672
-Abies grandis,Abies grandis,0.397,0.053,-3.525,71.158
-Pinus nigra,Pinus nigra,0.614,0.043,-3.248,50.89
-Pinus strobus,Pinus strobus,0.408,0.039,-3.704,99.289
-Sorbus aucuparia,Sorbus aucuparia,0.641,0.081,-3.834,156.448
-Taxus baccata,Taxus baccata,0.652,0.036,-7.212,204.592
-Juglans nigra,Juglans nigra,0.535,0.167,-2.076,229.766
-Alnus glutinosa,Alnus glutinosa,0.519,0.134,-1.798,214.473
-Corylus colurna,Corylus colurna,NA,NA,NA,NA
-Abies balsamea,Abies balsamea,0.461,0.059,-2.228,53.937
-Pinus contorta,Pinus contorta,0.416,0.05,-3.275,111.483
-Acer negundo,Acer negundo,0.476,0.167,-1.782,99.655
-Celtis australis,Celtis australis,0.599,0.119,-1.574,253.906
-Pinus cembra,Pinus cembra,0.471,0.04,-3.322,64.901
-Alnus incana,Alnus incana,0.436,0.142,-1.174,292.527
-Juniperus communis,Juniperus communis,0.621,0.033,-5.785,98.772
-Salix viminalis,Salix viminalis,0.575,0.154,-1.708,202.432
-Salix alba,Salix alba,0.476,0.152,-1.61,200.522
-Quercus rubra,Quercus rubra,0.568,0.134,-1.686,154.251
-Abies alba,Abies alba,0.501,0.033,-3.724,105.011
-Thuja occidentalis,Thuja occidentalis,0.311,0.035,-3.612,158.802
-Pinus mugo,Pinus mugo,0.601,0.032,-3.581,75.587
-Pterocarya fraxinifolia,Pterocarya fraxinifolia,NA,NA,NA,NA
-Cedrus deodara,Cedrus deodara,0.54,0.022,-4.913,41.312
-Acer saccharinum,Acer saccharinum,0.984,0.101,NA,110.875
-Fraxinus excelsior,Fraxinus excelsior,0.66,0.183,-2.717,200.486
-Crataegus laevigata,Crataegus laevigata,0.591,0.126,-7.798,217.243
-Prunus padus,Prunus padus,0.425,0.125,-3.521,73.636
-Quercus pubescens,Quercus pubescens,0.722,0.098,-2.368,169.714
-Thuja plicata,Thuja plicata,0.377,0.031,-4.441,129.955
-Zelkova carpinifolia,Zelkova carpinifolia,NA,NA,NA,NA
-Salix fragilis,Salix fragilis,NA,NA,NA,NA
-Pyrus communis,Pyrus communis,0.705,0.119,-3.373,281.883
-Celtis occidentalis,Celtis occidentalis,0.687,0.137,-1.4,402.058
-Abies nordmanniana,Abies nordmanniana,0.45,0.028,-3.993,64.667
-Morus nigra,Morus nigra,0.6,0.249,-0.599,NA
-Prunus serotina,Prunus serotina,0.532,0.13,-4.035,62.487
-Pinus sylvestris,Pinus sylvestris,0.543,0.042,-3.328,73.043
-Gleditsia triacanthos,Gleditsia triacanthos,0.701,NA,NA,NA
-Salix triandra,Salix triandra,0.458,0.135,-1.406,183.955
-Fagus orientalis,Fagus orientalis,NA,NA,NA,NA
-Robinia pseudoacacia,Robinia pseudoacacia,0.709,0.223,NA,132.99
-Ostrya carpinifolia,Ostrya carpinifolia,0.608,0.098,-1.612,172.95
-Tilia platyphyllos,Tilia platyphyllos,0.492,0.126,-2.999,196.593
-Juglans regia,Juglans regia,0.603,0.124,-2.042,211.302
-Betula pendula,Betula pendula,0.582,0.148,-2.204,NA
-Ulmus laevis,Ulmus laevis,0.565,0.132,NA,97.292
-Tsuga heterophylla,Tsuga heterophylla,0.475,0.041,-3.163,196.182
-Ulmus minor,Ulmus minor,0.632,0.108,-1.061,94.662
-Malus sylvestris,Malus sylvestris,0.642,0.121,-4.991,101.881
-Fraxinus ornus,Fraxinus ornus,0.67,0.086,-2.079,98.028
-Fagus sylvatica,Fagus sylvatica,0.692,0.119,-2.295,180.828
-Picea abies,Picea abies,0.494,0.034,-3.777,49.784
-Fraxinus pennsylvanica,Fraxinus pennsylvanica,0.542,0.171,NA,241.271
-Acer pseudoplatanus,Acer pseudoplatanus,0.589,0.104,-1.989,105.367
-Quercus robur,Quercus robur,0.565,0.113,-2.259,NA
-Crataegus monogyna,Crataegus monogyna,0.541,0.118,-6.471,229.684
-Quercus cerris,Quercus cerris,0.701,0.102,-2.1,137.227
-Tsuga canadensis,Tsuga canadensis,0.474,0.038,-2.957,131.88
-Quercus frainetto,Quercus frainetto,0.723,0.083,NA,129.359
-Quercus petraea,Quercus petraea,0.723,0.085,-2.691,146.679
-Picea pungens,Picea pungens,0.427,0.024,-3.966,110.128
-Populus tremula,Populus tremula,0.528,0.141,-1.633,264.432
-Salix caprea,Salix caprea,0.516,0.076,-1.947,121.969
-Acer monspessulanum,Acer monspessulanum,0.842,0.093,-3.013,70.429
-Picea sitchensis,Picea sitchensis,0.405,0.041,-3.734,104.034
-Pinus ponderosa,Pinus ponderosa,0.444,0.027,-2.527,101.221
-Sambucus nigra,Sambucus nigra,0.416,0.231,-1.472,214.549
-Nyssa sylvatica,Nyssa sylvatica,0.52,0.167,-1.702,80.67
-Salix pentandra,Salix pentandra,0.569,0.163,-1.506,183.034
-Morus alba,Morus alba,0.619,0.219,NA,578.017
-Frangula alnus,Frangula alnus,0.474,0.137,-2.794,100.083
-Prunus avium,Prunus avium,0.538,0.101,-4.577,85.85
-Larix kaempferi,Larix kaempferi,0.46,0.076,-3.372,126.662
-Castanea sativa,Castanea sativa,0.584,0.062,-1.785,65.571
-Prunus mahaleb,Prunus mahaleb,0.708,0.164,-5.11,104.396
-Ulmus glabra,Ulmus glabra,0.608,0.115,-0.561,112.838
-Corylus avellana,Corylus avellana,0.578,0.205,-1.952,662.397
-Acer opalus,Acer opalus,NA,NA,NA,NA
-Aesculus hippocastanum,Aesculus hippocastanum,0.583,0.089,-1.949,124.835
-Tilia tomentosa,Tilia tomentosa,NA,NA,NA,NA
-Alnus cordata,Alnus cordata,0.465,0.136,-1.374,269.495
-Carpinus betulus,Carpinus betulus,0.706,0.122,-3.611,205.253
-Ilex aquifolium,Ilex aquifolium,0.68,0.059,-5.056,86.401
-Chamaecyparis lawsoniana,Chamaecyparis lawsoniana,NA,NA,NA,NA
-Scandosorbus intermedia,Sorbus intermedia,0.634,0.096,-3.264,89.149
-Crataegus germanica,Mespilus germanica,NA,0.12,NA,210.223
-Cormus domestica,Sorbus domestica,0.632,0.11,-3.271,82.985
-Platanus hispanica,Platanus acerifolia,0.543,NA,-1.768,NA
-Picea laxa,Picea glauca,0.436,0.038,-3.584,141.728
-Torminalis glaberrima,Sorbus torminalis,0.77,0.103,-2.746,115.792
-Aria edulis,Sorbus aria,0.712,0.087,-5.057,88.397
+species_former_name,wood_density,Amax,P50,stomata_conductance
+Abies alba,0.501,0.033,-3.724,105.011
+Abies balsamea,0.461,0.059,-2.228,53.937
+Abies grandis,0.397,0.053,-3.525,71.158
+Abies nordmanniana,0.45,0.028,-3.993,64.667
+Acer campestre,0.578,0.105,-2.456,165.7
+Acer monspessulanum,0.842,0.093,-3.013,70.429
+Acer negundo,0.476,0.167,-1.782,99.655
+Acer platanoides,0.546,0.104,-2.166,72.468
+Acer pseudoplatanus,0.589,0.104,-1.989,105.367
+Acer saccharinum,0.984,0.101,NA,110.875
+Aesculus hippocastanum,0.583,0.089,-1.949,124.835
+Alnus cordata,0.465,0.136,-1.374,269.495
+Alnus glutinosa,0.519,0.134,-1.798,214.473
+Alnus incana,0.436,0.142,-1.174,292.527
+Betula pendula,0.582,0.148,-2.204,NA
+Betula pubescens,0.579,0.123,-1.938,249.598
+Carpinus betulus,0.706,0.122,-3.611,205.253
+Castanea sativa,0.584,0.062,-1.785,65.571
+Cedrus deodara,0.54,0.022,-4.913,41.312
+Cedrus libani,0.487,0.027,-7.344,61.291
+Celtis australis,0.599,0.119,-1.574,253.906
+Celtis occidentalis,0.687,0.137,-1.4,402.058
+Corylus avellana,0.578,0.205,-1.952,662.397
+Corylus colurna,NA,NA,NA,NA
+Crataegus laevigata,0.591,0.126,-7.798,217.243
+Crataegus monogyna,0.541,0.118,-6.471,229.684
+Euonymus europaeus,0.536,0.088,-4.518,163.672
+Fagus sylvatica,0.692,0.119,-2.295,180.828
+Frangula alnus,0.474,0.137,-2.794,100.083
+Fraxinus excelsior,0.66,0.183,-2.717,200.486
+Fraxinus ornus,0.67,0.086,-2.079,98.028
+Fraxinus pennsylvanica,0.542,0.171,NA,241.271
+Gleditsia triacanthos,0.701,NA,NA,NA
+Ilex aquifolium,0.68,0.059,-5.056,86.401
+Juglans nigra,0.535,0.167,-2.076,229.766
+Juglans regia,0.603,0.124,-2.042,211.302
+Juniperus communis,0.621,0.033,-5.785,98.772
+Larix decidua,0.575,0.066,-3.576,241.069
+Larix kaempferi,0.46,0.076,-3.372,126.662
+Malus sylvestris,0.642,0.121,-4.991,101.881
+Mespilus germanica,NA,0.12,NA,210.223
+Morus alba,0.619,0.219,NA,578.017
+Morus nigra,0.6,0.249,-0.599,NA
+Nyssa sylvatica,0.52,0.167,-1.702,80.67
+Ostrya carpinifolia,0.608,0.098,-1.612,172.95
+Picea abies,0.494,0.034,-3.777,49.784
+Picea glauca,0.436,0.038,-3.584,141.728
+Picea pungens,0.427,0.024,-3.966,110.128
+Picea sitchensis,0.405,0.041,-3.734,104.034
+Pinus cembra,0.471,0.04,-3.322,64.901
+Pinus contorta,0.416,0.05,-3.275,111.483
+Pinus mugo,0.601,0.032,-3.581,75.587
+Pinus nigra,0.614,0.043,-3.248,50.89
+Pinus ponderosa,0.444,0.027,-2.527,101.221
+Pinus strobus,0.408,0.039,-3.704,99.289
+Pinus sylvestris,0.543,0.042,-3.328,73.043
+Platanus acerifolia,0.543,NA,-1.768,NA
+Populus nigra,0.443,0.151,-2.643,259.996
+Populus tremula,0.528,0.141,-1.633,264.432
+Prunus avium,0.538,0.101,-4.577,85.85
+Prunus mahaleb,0.708,0.164,-5.11,104.396
+Prunus padus,0.425,0.125,-3.521,73.636
+Prunus serotina,0.532,0.13,-4.035,62.487
+Pseudotsuga menziesii,0.466,0.039,-3.191,89.369
+Pterocarya fraxinifolia,NA,NA,NA,NA
+Pyrus communis,0.705,0.119,-3.373,281.883
+Quercus cerris,0.701,0.102,-2.1,137.227
+Quercus frainetto,0.723,0.083,NA,129.359
+Quercus petraea,0.723,0.085,-2.691,146.679
+Quercus pubescens,0.722,0.098,-2.368,169.714
+Quercus robur,0.565,0.113,-2.259,NA
+Quercus rubra,0.568,0.134,-1.686,154.251
+Robinia pseudoacacia,0.709,0.223,NA,132.99
+Salix alba,0.476,0.152,-1.61,200.522
+Salix caprea,0.516,0.076,-1.947,121.969
+Salix cinerea,0.477,0.183,-1.894,258.506
+Salix fragilis,NA,NA,NA,NA
+Salix pentandra,0.569,0.163,-1.506,183.034
+Salix triandra,0.458,0.135,-1.406,183.955
+Salix viminalis,0.575,0.154,-1.708,202.432
+Sambucus nigra,0.416,0.231,-1.472,214.549
+Sambucus racemosa,0.472,0.269,-1.36,224.752
+Sorbus aria,0.712,0.087,-5.057,88.397
+Sorbus aucuparia,0.641,0.081,-3.834,156.448
+Sorbus domestica,0.632,0.11,-3.271,82.985
+Sorbus intermedia,0.634,0.096,-3.264,89.149
+Sorbus torminalis,0.77,0.103,-2.746,115.792
+Taxus baccata,0.652,0.036,-7.212,204.592
+Thuja occidentalis,0.311,0.035,-3.612,158.802
+Thuja plicata,0.377,0.031,-4.441,129.955
+Tilia cordata,0.46,0.126,-2.494,218.207
+Tilia platyphyllos,0.492,0.126,-2.999,196.593
+Tilia tomentosa,NA,NA,NA,NA
+Tsuga canadensis,0.474,0.038,-2.957,131.88
+Tsuga heterophylla,0.475,0.041,-3.163,196.182
+Ulmus glabra,0.608,0.115,-0.561,112.838
+Ulmus laevis,0.565,0.132,NA,97.292
+Ulmus minor,0.632,0.108,-1.061,94.662
+Zelkova carpinifolia,NA,NA,NA,NA
