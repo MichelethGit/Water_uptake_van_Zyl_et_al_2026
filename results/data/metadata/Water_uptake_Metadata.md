@@ -21,7 +21,7 @@ Mechanisms driving interspecific variation in tree water uptake depth
 
 ## Abstract
 
-In this study, we investigated the drivers of interspecific variation in water uptake depth across 40 tree species (120 individuals) growing in the research arboretum (ARBOfun) in Großpösna near Leipzig, Germany. Stable oxygen isotopes and a two-end-member mixing model were used to estimate the proportion of shallow versus deep water uptake (fshallow and fdeep), while random forest models identified the climatic, morphological, and functional traits explaining variation in water uptake depth. fshallow was used as a response variable, and several variables were used as predictors: tree height, airidty and maximum temperature tolerance indices, drought tolerance index, sheltering index (shading potential), predicted rooting depth index, the mean soil moisture, growth response to drought and the position of a species on the LES (leaf economic spectrum).
+In this study, we investigated the drivers of interspecific variation in water uptake depth across 40 tree species (120 individuals) growing in the research arboretum (ARBOfun) in Großpösna near Leipzig, Germany. Stable oxygen isotopes and a two-end-member mixing model were used to estimate the proportion of shallow versus deep water uptake (fshallow and fdeep), while random forest models identified the climatic, morphological, and functional traits explaining variation in water uptake depth. fshallow was used as a response variable, and several variables were used as predictors: tree height, aridity and maximum temperature tolerance indices, drought tolerance index, sheltering index (shading potential), predicted rooting depth index, the mean soil moisture, growth response to drought and the position of a species on the LES (leaf economic spectrum) and P50 (xylem water potential at which a plant loses 50% of its hydraulic conductivity due to drought-induced embolism).
 
 ## Comments
 
@@ -78,9 +78,8 @@ Therefore, δ18Odeep was calculated as the mean δ18Osoil across the two samplin
 
 See van Zyl et al., 2026 for detailed description of analyses and how the other variables were collected/calculated.
 
-
 Due to the data coming from various sources, there are several Na's (6% of data)- variables for which there is no data for the given species. 
-Thus, a gap- filling was also done using this data to create a more complete dataset. 
+Thus, in the paper, a gap- filling was also done using this data to create a more complete dataset. 
 During the analyses of the isotope results, it was realised that one individual (Sor auc, block C), was sampled instead of Sor auc block D. This was because the individual included as a VIT changed in 2024. However, this individual was still included for analyses, even if it is no longer a VIT, in order to still have 3 replicates of the species. 
 The names of the species are according to the World Checklist of Vascular Plants (WCVP)- because some of the names changed during the course of the experiment, the data refers to the old and new names
 
@@ -117,8 +116,8 @@ sheltering_index	          Sheltering index, as a measure of shading potential o
 pred_root_depth	            The predicted rooting depth
 mean_soil_moisture	        Mean soil moisture for individual tree/sensor, across 6 days (3-5 June and 9-11 June 2025), where soil moisture calcualted as soil water content (SWC)
 growth_response_mean	      Growth response to drought
-PC1_score	                  Score of the first axis of a PCA from 8 leaf traits. This represents the species position on the LES axis from slow to fast strategies
-
+PC1_score	                  Score of the first axis of a PCA from 7 leaf traits. This represents the species position on the LES axis from slow to fast strategies
+P50	                        Xylem water potential at which a plant loses 50% of its hydraulic conductivity due to drought-induced embolism
 
 ## Contact
 
