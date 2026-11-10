@@ -339,8 +339,7 @@ ggplot(twigs_mix_3,
     linetype = "dashed", 
     linewidth = 1
   ) +
-  
-  # ± 1 SD around shallow soil mean
+# ± 1 SD around shallow soil mean
   annotate(
     "rect", 
     xmin = -Inf, 
@@ -348,7 +347,7 @@ ggplot(twigs_mix_3,
     ymin = mean_10_20 - stdv_10_20, 
     ymax = mean_10_20 + stdv_10_20, 
     alpha = 0.2, 
-    fill = "pink"
+    fill = "grey"
   ) +
   
   # ± 1 SD around deep soil mean
@@ -359,7 +358,7 @@ ggplot(twigs_mix_3,
     ymin = mean_gt20 - stdv_gt20, 
     ymax = mean_gt20 + stdv_gt20, 
     alpha = 0.2, 
-    fill = "pink"
+    fill = "grey"
   ) +
   
   labs(
@@ -387,7 +386,9 @@ ggplot(twigs_mix_3,
       angle = 90,
       vjust = 0.5,
       hjust = 1
-    )
+    ),
+    legend.title = element_text(size = 16),
+    legend.text = element_text(size = 14)
   )
 #save figure in figures directory
 ggsave(file.path(figs_dir, "Figure1.png"))
