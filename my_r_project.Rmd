@@ -288,7 +288,7 @@ summary(anova_species)
 
 ### Figure 1:
 
-Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ranked from lowest to highest species mean δ18O. Species are coloured according to their clade; angiosperms in green, and gymnosperms in blue.The dashed red lines indicate the mean soil water δ18O of shallow (-7.8‰) and deep (-9.4‰) layers, where shallow layers include depths ≤20cm (10 and 20cm) and deep layers are depths \>20cm (50, 100, 150, 200, 250cm). The pink shaded area indicates the standard deviation of the mean shallow and deep soil water δ18O.
+Boxplots of the δ18O of the twig water (xylem) across species. Boxplots are ranked from lowest to highest species mean δ18O. Species are coloured according to their clade; angiosperms in green, and gymnosperms in blue.The dashed red lines indicate the mean soil water δ18O of shallow (-7.8‰) and deep (-9.4‰) layers, where shallow layers include depths ≤20cm (10 and 20cm) and deep layers are depths \>20cm (50, 100, 150, 200, 250cm). The grey shaded area indicates the standard deviation of the mean shallow and deep soil water δ18O.
 
 ```{r}
 #from twigs mix 3, create ranked box-plots of mean twig_d18O by species, ranked by mean d18O
@@ -559,7 +559,7 @@ result$p
 
 ### Finding the best-fit model
 
-To identify a subset of predictors that best predict f~shallow~, a recursive feature elimination (RFE) procedure was implemented. Starting with the full set of predictors, variables were sequentially removed based on their importance, with the least important variable removed at each iteration. At each step, a new random forest model was fitted and model performance was evaluated using out-of-bag (OOB) estimates of the coefficient of determination (R²) and root mean squared error (RMSE). The optimal model was selected as the one with the highest R² value. This procedure resulted in a reduced predictor set of seven variables. A final random forest model was then fitted using only the selected set of optimal predictor variables.
+To identify a subset of predictors that best predict f~shallow~, a recursive feature elimination (RFE) procedure was implemented. Starting with the full set of predictors, variables were sequentially removed based on their importance, with the least important variable removed at each iteration. At each step, a new random forest model was fitted and model performance was evaluated using out-of-bag (OOB) estimates of the coefficient of determination (R²) and root mean squared error (RMSE). The optimal model was selected as the one with the highest R² value. This procedure resulted in a reduced predictor set of eight variables. A final random forest model was then fitted using only the selected set of optimal predictor variables.
 
 ```{r}
 library(ranger)
